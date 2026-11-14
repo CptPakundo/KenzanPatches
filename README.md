@@ -158,7 +158,8 @@ One custom configuration for the game, with Vblank Rate 120.
 3. Click **Save**, then tick `120 FPS` (not `60 FPS`) under your version's title.
 4. Using an ultrawide screen too? Do the [Ultrawide setup](#ultrawide-setup) as well: both settings go in the same custom configuration.
 
-> [!IMPORTANT]
+> **Important**
+>
 > Kenzan runs its logic once per frame. The patch keeps the game's speed by drawing fewer frames when your PC falls behind, down to about 30 FPS. That helps as long as your PC keeps up with the game logic itself. If it cannot, the game slows down, and in cutscenes the picture falls behind the sound.
 >
 > **On a weaker PC, use the 60 FPS entry.** It asks much less of your CPU. Very crowded places, such as the Gion festival at night, are the hardest, and there the limit is the emulated graphics work, so a lower Resolution Scale may not help.
@@ -199,7 +200,8 @@ Replace `imported_patch.yml`, open Game Patches and **tick your entries again**,
 
 Up to 2.2 every entry sat under one title, with the game version at the end of its name. 3.0 has one title per game version and puts the group at the front of each name. RPCS3 keeps each tick under the executable hash, the entry name and the title, so the old ticks no longer match anything. The frame-rate entries and `Clean picture` do exactly what they did in 2.2.
 
-> [!WARNING]
+> **Warning**
+>
 > **Untick the old entries.** RPCS3's own downloaded patch list still shows this game's entries under the old names, under the plain title `Ryu ga Gotoku Kenzan!`. Untick every entry under that plain title, then tick the new ones under your version's title.
 > If you leave both ticked, the old and new 60 / 120 FPS entries share a group, so only one of them applies, but other entries ticked in both lists, such as Clean picture and the minigame entries, are applied twice.
 
@@ -227,7 +229,8 @@ The minigame entries now carry the English translation's own names for the minig
 
 In 2.2 the translation's initial release used the `(English translation)` minigame entries. In 3.0 the minigame entries are listed under each English title (patch 13, patches 6 to 12 and the initial release share the same minigame files), and the Japanese original has its own.
 
-> [!NOTE]
+> **Note**
+>
 > **Used the optional `sh_iori_ps3.par` from 1.7 or older?** You no longer need it: tick `Clean picture` instead. You can leave your copied file or restore your backup of the original: either is safe, and the picture is the same.
 
 </details>
