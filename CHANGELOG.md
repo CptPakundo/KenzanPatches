@@ -1,5 +1,47 @@
 # Changelog
 
+## 3.0 (2026-11-14)
+
+**KenzanPatches 3.0:** the 60 FPS and 120 FPS patches of 2.2, now with full ultrawide support, save anywhere from the pause menu (Experimental), easier substory tracking, and a wide variety of patches for visuals and game functionality, with optional cheats.
+
+**New name.** The project started as a frame-rate patch and is now a collection of patches, so the GitHub repository is now called KenzanPatches. Old links to the repository, its issues and its releases keep working. The old address of the picture slider does not; the README has the new one.
+
+### For users of 2.2 or older
+
+- **Tick your entries again, once.** Game Patches now lists the game four times, once per version (one title per executable hash):
+  - `Ryu ga Gotoku Kenzan! (English translation)`: translation patch 13, the current version and the default
+  - `Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)`
+  - `Ryu ga Gotoku Kenzan! (English translation, initial release)`
+  - `Ryu ga Gotoku Kenzan! (Japanese original)`
+
+  Open yours and ignore the others. Each entry name now starts with its group and no longer ends with the game version, for example `Framerate - Core: 60 FPS` and `Visuals and Functionality: Clean picture`. RPCS3 keeps each tick under the executable hash, the entry name and the title, so the old ticks do not carry over.
+- **Untick the old entries.** RPCS3's own downloaded patch list still shows this game's entries under the old names, under the plain title `Ryu ga Gotoku Kenzan!`. The old and new 60 / 120 FPS entries share a group, so only one applies, but other entries ticked in both lists are applied twice.
+- **The minigame entries use the English translation's own names**, as in the game's Completion List: Bowling is now Tokkuri Toppling, Chohan is Cho-han, Hanafuda is Koi-koi, K Yabusame is Jiraiya Training, Kamerace is Turtle Racing, Karuta is Iroha Karuta, Konpira is Konpira Fune Fune, R Yabusame is Yabusame, Suika is Iaigiri Spirit Tempering, Tintiro is Cee-lo, Tousenkyo is Tosenkyo, Waterfall is Waterfall Meditation. Mahjong and Shogi keep their names. Each one is now `Framerate - Minigames: <name>`. The README has the full table of old and new names.
+- **The frame-rate entries and Clean picture work as in 2.2.** Same patch, new names.
+- **The minigame entries are listed under each English title** (the minigame files are the same from the initial release to patch 13), and the Japanese original has its own.
+
+### Supports translation patch 13, the new default
+
+Patch 13 of the English translation has a new EBOOT with its own executable hash (`PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1`). It is now the default: it takes the plain title `Ryu ga Gotoku Kenzan! (English translation)`. Patches 6 to 12 (`PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6`) have their own title, `Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)`, so two different hashes never share a title. The entries are the same for both, line for line. After moving from patch 12 or older to patch 13, tick your entries again once under `Ryu ga Gotoku Kenzan! (English translation)`: patch 13 has a new hash. The minigame entries keep their ticks (same minigame files).
+
+### New: 78 optional entries and one bug fix
+
+All are off until you tick them. Every entry is an RPCS3 patch entry: no game file is changed. The README lists each entry with its values and its default. Six entries are marked Experimental below and in their notes in RPCS3.
+
+- **Ultrawide:** `Ultrawide` (21:9 and 32:9: a wider 3D view, the HUD, menus and text at their true shape; needs RPCS3's GPU > Stretch To Display Area; the Ultimate Match quit dialog and some menu backdrops stay stretched).
+- **Save anywhere:** `Save from the pause menu` (Experimental; Triangle in the pause menu opens the save list; greyed out in six story stretches, story fights and Photo mode), `Retry on Legend` (Experimental).
+- **Substory tracking:** `Notebook tracker` (the Notebook's lists of Requests, Contracts and Wanted Men show every substory and what to do first; the row of Request 100 counts what you have done; English builds only), `Side mission markers`, `More map markers`, `Side missions at any hour` (Experimental).
+- **Picture, camera and sound:** `Photo mode`, `Hide HUD`, `Field of view`, `Camera distance`, `Camera speed`, `Camera vertical reach`, `Stage detail`, `Shadow map 2048`, `Shadow blur`, `Shadow range`, `Bloom intensity`, `Depth of field`, `Time of day`, `Weather`, `Volume balance`.
+- **Controls and comfort:** `Text speed`, `Fade speed`, `Skip hold`, `Short boot logos`, `Idle monologue`, `Stick dead zone`, `Sprint sooner`, `Run threshold`, `Lock-on toggle`, `Smart lock-on`, `Vibration`.
+- **Cheats:** `Items are not used up`, `Healing`, `Heat always full`, `Heat gain`, `Never die`, `Untouchable`, `Damage taken`, `Damage dealt`, `Enemy health`, `Enemies attacking at once`, `Enemies never block`, `Hold to mash`, `Forgiving prompts`, `Sprint from the start`, `Street weapon durability`, `Weapon wear`, `Experience multiplier`, `Experience penalty`, `Accessory effects`, `Encounter rate`, `Encounter refresh`, `Shop prices`, `Talk fees`, `Money multiplier` (Experimental), `Free spending` (Experimental), `Coliseum prize money`, `Coliseum prize item`, `Forging materials`, `Drunkenness`, `Turtle title races`.
+- **Minigame assists:** `Assist - Cee-lo`, `Assist - Cho-han`, `Assist - Iaigiri Spirit Tempering`, `Assist - Iroha Karuta`, `Assist - Kabuki Acting`, `Assist - Koi-koi`, `Assist - Konpira Fune Fune`, `Assist - Mahjong`, `Assist - Scarecrow Formations` (Experimental), `Assist - Shogi`, `Assist - Tokkuri Toppling`, `Assist - Tosenkyo`, `Assist - Waterfall Meditation`, `Assist - Yabusame`, `Jiraiya Training pass lines`.
+- **Bug fix:** `Turtle title race freeze` (full name `Bug fix: Turtle title race freeze`) ends a freeze of the original game. Entering a turtle of ability 59 or less in the Turtle Racing title races, the Adamantine Cup or the Strongest Undefeated GP, hung the game for good.
+
+### Known limits
+
+- Cheats change what is written to your save: keep a copy.
+
+
 ## 2.2 (2026-11-11)
 
 - **Clean camera cuts in cutscenes.** Every camera cut in the in-engine cutscenes showed one frame from a camera half way between the
