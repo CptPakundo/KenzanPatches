@@ -1,5 +1,33 @@
 # Changelog
 
+## 3.1 (2026-11-15)
+
+**KenzanPatches 3.1:** more aspect ratios (16:10, 3:2 and 4:3), and map markers for every collectible and side activity.
+
+### For users of 3.0
+
+- **Ultrawide is now `Aspect ratio`: tick it again.** RPCS3 keeps a tick under the entry's name, so the renamed entry starts unticked. Tick `Aspect ratio` and set the value that names your screen.
+- **Tick the new map marker entries.** `Map markers (core)` and one entry per kind of marker replace Side mission markers and More map markers, which are gone. Tick `Map markers (core)` and the kinds you want: Side mission markers is now `Request markers`, `Contract markers` and `Wanted Men markers`; More map markers is now `Revelation markers` and `Wanted Men markers` (its Icon value). Marker size is now a value of `Map markers (core)`. All other ticks stay.
+- **Coming from 2.2 or older?** Tick your entries again, once, under your version's title: see the 3.0 notes below.
+
+### New: more aspect ratios
+
+- Ultrawide is renamed `Aspect ratio`, as it now covers screens taller than 16:9 too. Three new values:
+  - `16:10 (1280x800, 1920x1200, 2560x1600)`, for the Steam Deck and 16:10 laptops;
+  - `3:2 (2160x1440, 2256x1504, 3000x2000)`, for 3:2 laptops and tablets;
+  - `4:3 (1024x768, 1600x1200, 2048x1536)`, for 4:3 monitors.
+- On these screens: a taller 3D view, the HUD and menus at their true shape, the HUD kept at its 16:9 distance from the top and bottom edges in play, menus letterboxed and centred, and movies with bars at the top and bottom. It needs RPCS3's GPU > Stretch To Display Area, as the 21:9 and 32:9 values do.
+
+### New: map markers for everything
+
+Markers on the minimap and the pause map, one entry per kind, each with the most fitting picture from the game itself. A NEW badge shows where there is something new. Every marker entry needs `Map markers (core)`, whose Marker size sets the size of every marker. In the pause map's List (Triangle) each marker gets its own named row with a category chip, and picking a row points the map's pointer at it.
+
+- **Side missions:** `Request markers`, `Contract markers` and `Wanted Men markers`. A green "?" where a Request or Contract can be started now and a blue "?" where the next step of one you have begun is ready. The Mission progress value can also show a red "?" where the next step cannot be done yet (hidden by default), or turn the blue "?" off. `Wanted Men markers` shows the man on offer at the Notice Board with his own poster face, and once you have taken him on, his face at his first place (Icon: Wanted poster, Pursuit or Item).
+- **Collectibles:** `Revelation markers` (each Revelation's sketch), `Locker key markers` (the key art), `Turtle markers` (each turtle's own picture), `Item markers`, `Oni's key markers`, `Mission item markers`.
+- **Places and people:** `Notice Board marker`, `Mahjong marker`, `Shogi marker`, `Koi-koi marker`, `Cee-lo marker`, `Turtle seller marker`, `Junk buyer marker`, `Antique salesman marker`, `Yujo date markers`, `Hozoin tournament marker`.
+
+The README lists what each kind marks, its icon and its values.
+
 ## 3.0 (2026-11-14)
 
 **KenzanPatches 3.0:** the 60 FPS and 120 FPS patches of 2.2, now with full ultrawide support, save anywhere from the pause menu (Experimental), easier substory tracking, and a wide variety of patches for visuals and game functionality, with optional cheats.

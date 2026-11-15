@@ -5,13 +5,13 @@
 ![FPS: 60 | 120](https://img.shields.io/badge/FPS-60%20%7C%20120-brightgreen)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
-**Patches for *Ryu ga Gotoku Kenzan!* on RPCS3: the whole game at 60 FPS or 120 FPS at its original speed, full ultrawide support, saving anywhere from the pause menu (Experimental), easier substory tracking, and a wide variety of patches for visuals and game functionality, with optional cheats.**
+**Patches for *Ryu ga Gotoku Kenzan!* on RPCS3: the whole game at 60 FPS or 120 FPS at its original speed, full ultrawide support (now also 16:10, 3:2 and 4:3), saving anywhere from the pause menu (Experimental), easier substory tracking with map markers for every collectible and side activity, and a wide variety of patches for visuals and game functionality, with optional cheats.**
 
-![Kiryu asleep on his side in a wide shot of the room: the game at 32:9 with the Ultrawide entry](docs/shots/readme_cutscene.jpg)
+![Kiryu asleep on his side in a wide shot of the room: the game at 32:9 with the Aspect ratio entry](docs/shots/readme_cutscene.jpg)
 
-![A fight in the Ultimate Match at 32:9 with the Ultrawide entry: the HUD keeps its true shape](docs/shots/readme_fight.jpg)
+![A fight in the Ultimate Match at 32:9 with the Aspect ratio entry: the HUD keeps its true shape](docs/shots/readme_fight.jpg)
 
-*The game at 3840x1080 with `Ultrawide` (32:9), `120 FPS`, `Clean picture` and the shadow and stage detail entries.*
+*The game at 3840x1080 with `Aspect ratio` at 32:9, `120 FPS`, `Clean picture` and the shadow and stage detail entries.*
 
 KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an entry that you tick in RPCS3's Game Patches window. No game file is changed, and the optional entries do nothing until you tick them.
 
@@ -19,20 +19,22 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 
 **[Drag the slider to see it for yourself](https://cptpakundo.github.io/KenzanPatches/compare/)**. Left: the original picture. Right: the `Clean picture` entry.
 
-**[Download 3.0](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Ultrawide setup](#ultrawide-setup) · [Supported versions](#supported-versions) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
+**[Download 3.1](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
 
 > [!IMPORTANT]
+> **Coming from 3.0? Tick the new map marker entries.** 3.1 replaces Side mission markers and More map markers with `Map markers (core)` and one entry per kind of marker. Ultrawide is now `Aspect ratio`: tick it again. Your other ticks stay. See [Coming from 3.0](#coming-from-30).
+>
 > **Coming from 2.2 or older? Tick your entries again, once.** 3.0 lists the game once per version and renames every entry, so RPCS3 no longer finds your old ticks. Also untick the old entries under the plain title `Ryu ga Gotoku Kenzan!`. See [Coming from 2.2 or older](#coming-from-22-or-older).
 
 ## What is in it
 
 1. **60 FPS and 120 FPS.** The whole game at the game's original speed: fights, Heat Actions, cutscenes, the open world and all 14 minigames. If your PC falls behind, the game draws fewer frames and keeps its pace.
-2. **Full ultrawide support.** `Ultrawide` gives 21:9 and 32:9 screens a wider 3D view, with the HUD, menus and text at their true shape, movies with black bars, and fades and backdrops across the whole screen. Two spots stay stretched (see [Ultrawide setup](#ultrawide-setup)).
+2. **Full ultrawide support, and more aspect ratios.** `Aspect ratio` gives 21:9 and 32:9 screens a wider 3D view and 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors) a taller one, with the HUD, menus and text at their true shape, movies with black bars, and fades and backdrops across the whole screen. Two spots stay stretched (see [Aspect ratio setup](#aspect-ratio-setup)).
 3. **Save anywhere (Experimental).** `Save from the pause menu` puts Save on Triangle in the pause menu, in free roam. It is greyed out where a save is not safe (see [Save from the pause menu](#save-from-the-pause-menu)).
-4. **Easier substory tracking.** `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. `Side mission markers` and `More map markers` mark the map where a substory can start now.
+4. **Easier substory tracking, now with map markers for everything.** Markers on the minimap and the pause map for every collectible and side activity: a green "?" where a Request or Contract can start now and a blue "?" where its next step is ready, each Wanted Man's poster face, Revelation sketches, locker keys, turtles, items, the minigames, shops and more, with a NEW badge where there is something new. In the pause map's List (Triangle) each marker gets its own named row, and picking a row points at it. Tick `Map markers (core)` and the kinds you want (see [Map markers](#map-markers)). `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. Each of these entries works on its own: tick only `Map markers (core)` and `Request markers` for the map marks without any hints in the Notebook.
 5. **A wide variety of patches for visuals and game functionality, with optional cheats.** `Clean picture` (the slider above), Photo mode, a hidden HUD, field of view, camera, shadows, bloom, depth of field, text speed, shorter fades, controls and comfort; cheats and fifteen minigame assists, all off until you tick them; and one fix for a freeze of the original game.
 
-In all: 96 entries for each English title (2 frame-rate entries, 14 minigame entries, `Clean picture`, 78 optional entries and the bug fix). The Japanese original has 95: `Notebook tracker` is for the English builds only.
+In all: 114 entries for each English title (2 frame-rate entries, 14 minigame entries, `Clean picture`, 96 optional entries and the bug fix). The Japanese original has 113: `Notebook tracker` is for the English builds only.
 
 ## Supported versions
 
@@ -80,11 +82,11 @@ Not sure which one you have? Boot the game once, close RPCS3, and search `log\RP
    |---|---|
    | `Framerate - Core` | **One** of `60 FPS` or `120 FPS` |
    | `Framerate - Minigames` | **All** of them |
-   | `Visuals and Functionality` | `Clean picture`; `Ultrawide` if you have an ultrawide screen; plus any extras you want |
+   | `Visuals and Functionality` | `Clean picture`; `Aspect ratio` if your screen is not 16:9; `Map markers (core)` with the marker entries you want; plus any extras you want |
    | `Gameplay cheats` | Nothing, unless you want them |
    | `Bug fix` | `Turtle title race freeze` (it does nothing until the freeze case comes up) |
 
-4. Click **Save**. **Chose 120 FPS?** Do the short [120 FPS setup](#120-fps-setup). **Using an ultrawide screen?** Do the short [Ultrawide setup](#ultrawide-setup). Otherwise you are done.
+4. Click **Save**. **Chose 120 FPS?** Do the short [120 FPS setup](#120-fps-setup). **Is your screen not 16:9?** Do the short [Aspect ratio setup](#aspect-ratio-setup). Otherwise you are done.
 5. Start the game. The first boot takes longer while RPCS3 recompiles the patched code.
 
 <details>
@@ -101,7 +103,7 @@ Not sure which one you have? Boot the game once, close RPCS3, and search `log\RP
 <summary><b>What the list looks like in Game Patches</b></summary>
 
 ```
-Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the default), 96 entries
+Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the default), 114 entries
 └─ BLJM60064 01.00
    ├─ Bug fix: Turtle title race freeze
    ├─ Framerate - Core: 120 FPS | 60 FPS                       pick one
@@ -122,20 +124,24 @@ Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the def
    │    Hold to mash, Items are not used up, Jiraiya Training pass lines, Money multiplier,
    │    Never die, Shop prices, Sprint from the start, Street weapon durability, Talk fees,
    │    Turtle title races, Untouchable, Weapon wear
-   └─ Visuals and Functionality: (34)
-        Bloom intensity, Camera distance, Camera speed, Camera vertical reach,
-        Clean picture, Depth of field, Fade speed, Field of view, Hide HUD, Idle monologue,
-        Lock-on toggle, More map markers, Notebook tracker, Photo mode, Retry on Legend,
-        Run threshold, Save from the pause menu, Shadow blur, Shadow map 2048, Shadow range,
-        Short boot logos, Side mission markers, Side missions at any hour, Skip hold,
-        Smart lock-on, Sprint sooner, Stage detail, Stick dead zone, Text speed,
-        Time of day, Ultrawide, Vibration, Volume balance, Weather
-Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)   the same 96 entries
-Ryu ga Gotoku Kenzan! (English translation, initial release)   the same 96 entries
-Ryu ga Gotoku Kenzan! (Japanese original)                      95: no Notebook tracker
+   └─ Visuals and Functionality: (52)
+        Antique salesman marker, Aspect ratio, Bloom intensity, Camera distance, Camera speed,
+        Camera vertical reach, Cee-lo marker, Clean picture, Contract markers, Depth of field,
+        Fade speed, Field of view, Hide HUD, Hozoin tournament marker, Idle monologue,
+        Item markers, Junk buyer marker, Koi-koi marker, Lock-on toggle, Locker key markers,
+        Mahjong marker, Map markers (core), Mission item markers, Notebook tracker,
+        Notice Board marker, Oni's key markers, Photo mode, Request markers, Retry on Legend,
+        Revelation markers, Run threshold, Save from the pause menu, Shadow blur,
+        Shadow map 2048, Shadow range, Shogi marker, Short boot logos,
+        Side missions at any hour, Skip hold, Smart lock-on, Sprint sooner, Stage detail,
+        Stick dead zone, Text speed, Time of day, Turtle markers, Turtle seller marker,
+        Vibration, Volume balance, Wanted Men markers, Weather, Yujo date markers
+Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)   the same 114 entries
+Ryu ga Gotoku Kenzan! (English translation, initial release)   the same 114 entries
+Ryu ga Gotoku Kenzan! (Japanese original)                      113: no Notebook tracker
 ```
 
-Each entry's full name is its group, a colon and its name, for example `Visuals and Functionality: Ultrawide`. The groups are sorted by name, and so are the entries inside each group. The minigame names are the English translation's own words, as in the game's Completion List.
+Each entry's full name is its group, a colon and its name, for example `Visuals and Functionality: Aspect ratio`. The groups are sorted by name, and so are the entries inside each group. The minigame names are the English translation's own words, as in the game's Completion List.
 
 </details>
 
@@ -156,7 +162,7 @@ One custom configuration for the game, with Vblank Rate 120.
    | VSync | On only with a 120 Hz+ display, otherwise Off |
 
 3. Click **Save**, then tick `120 FPS` (not `60 FPS`) under your version's title.
-4. Using an ultrawide screen too? Do the [Ultrawide setup](#ultrawide-setup) as well: both settings go in the same custom configuration.
+4. Is your screen not 16:9 either? Do the [Aspect ratio setup](#aspect-ratio-setup) as well: both settings go in the same custom configuration.
 
 > **Important**
 >
@@ -168,15 +174,21 @@ Menus, dialogue and the start of Heat Actions run at 60 FPS, exactly as in the o
 
 </details>
 
-### Ultrawide setup
+### Aspect ratio setup
 
-One setting in the game's custom configuration, and the `Ultrawide` entry with the value that names your screen.
+One setting in the game's custom configuration, and the `Aspect ratio` entry with the value that names your screen.
+
+![Yoshino and her attendants under a gate in a Prologue cutscene, at 4:3 with the Aspect ratio entry: the taller view shows the sky and lanterns](docs/shots/aspect43_cutscene.jpg)
+
+![A fight in the Ultimate Match at 4:3 with the Aspect ratio entry: the HUD sits at the top and bottom edges](docs/shots/aspect43_fight.jpg)
+
+*The game at 2880x2160 with `Aspect ratio` at 4:3, `120 FPS`, `Clean picture` and the shadow and stage detail entries.*
 
 <details>
-<summary><b>Show the Ultrawide setup</b></summary>
+<summary><b>Show the Aspect ratio setup</b></summary>
 
 1. Right-click the game → **Create Custom Configuration From Global Settings** (or **Change Custom Configuration** if the game already has one, for example from the 120 FPS setup). On the **GPU** tab, turn on **Stretch To Display Area** and click **Save**. RPCS3's own tooltip: it overrides the aspect ratio and stretches the image to the full display area.
-2. Tick `Ultrawide` under `Visuals and Functionality` and set **Aspect ratio** to the value that names your screen, then click **Save**:
+2. Tick `Aspect ratio` under `Visuals and Functionality` and set its **Aspect ratio** value to the one that names your screen, then click **Save**:
 
    | Your screen | Aspect ratio |
    |---|---|
@@ -184,12 +196,83 @@ One setting in the game's custom configuration, and the `Ultrawide` entry with t
    | 3440x1440 | 21:9 (3440x1440) (the default) |
    | 3840x1600 | 21:9 (3840x1600) |
    | 3840x1080, 5120x1440 or 7680x2160 | 32:9 (3840x1080, 5120x1440, 7680x2160) |
-   | 16:9 (1920x1080, 2560x1440, 3840x2160) | leave `Ultrawide` unticked |
+   | 1280x800 (Steam Deck), 1920x1200 or 2560x1600 | 16:10 (1280x800, 1920x1200, 2560x1600) |
+   | 2160x1440, 2256x1504 or 3000x2000 | 3:2 (2160x1440, 2256x1504, 3000x2000) |
+   | 1024x768, 1600x1200 or 2048x1536 | 4:3 (1024x768, 1600x1200, 2048x1536) |
+   | 16:9 (1920x1080, 2560x1440, 3840x2160) | leave `Aspect ratio` unticked |
 
 3. A value that does not name your screen gives the wrong shape: on a 16:9 screen a wide value squeezes the picture into the middle.
-4. Two spots stay stretched: the quit dialog of the Ultimate Match and some menu backdrops at the sides.
+4. At 16:10, 3:2 and 4:3 the 3D view is taller, the HUD keeps its 16:9 distance from the top and bottom edges in play, menus are letterboxed and centred, and movies have bars at the top and bottom.
+5. Two spots stay stretched: the quit dialog of the Ultimate Match and some menu backdrops at the sides.
 
 </details>
+
+### Map markers
+
+Tick `Map markers (core)` and the marker entries you want. Each kind is its own entry, and every marker shows on the minimap and on the pause map.
+
+<details>
+<summary><b>Every kind of marker, its icon and its values</b></summary>
+
+`Map markers (core)` draws the markers of all the marker entries: on its own it draws nothing, and a marker entry without it draws nothing. Its **Marker size** (Small / Medium / Large, default Medium) sets the size of every marker.
+
+**Side missions.** A green "?" marks where a Request or Contract can be started now; a Wanted Man on offer shows his own poster face at the Notice Board. **Mission progress** adds more:
+
+- Next step (the default): a blue "?" where the next step of a mission you have begun can be done now. For a step inside a building, the "?" shows at its door and inside.
+- Next step and blocked: also a red "?" where the next step is but cannot be done yet, for example at another time of day or later in the story.
+- Off: only the green "?".
+
+| Entry | What it marks | Values | Icon |
+|---|---|---|---|
+| `Request markers` | Where a Request can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
+| `Contract markers` | Where a Contract can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
+| `Wanted Men markers` | The man on offer at the Notice Board; once you have taken him on, his first place and the next step of his mission. Icon sets the mark at his first place. | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. | The man's poster face on the parchment; blue and red "?" |
+
+**Collectibles.**
+
+| Entry | What it marks | Values | Icon |
+|---|---|---|---|
+| `Revelation markers` | The places of the Revelations you can see now: you have the sketch and have not learned the technique. | Icon: Sketch / Item. Default: Sketch. | That Revelation's own sketch |
+| `Locker key markers` | The locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's marker goes once you pick it up. | Icon: Locker key / Locker. Default: Locker key. | The key's own picture |
+| `Turtle markers` | The overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles in the fields and streets from chapter 5 on (only while one is there), and the Eternal Turtle in Gion when he appears. | No values. | Each turtle's own picture |
+| `Item markers` | The items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3) until you pick them up. | No values. | Each item's own picture |
+| `Oni's key markers` | Each Oni's Key the Oni drop in chapter 12 until you pick it up. | No values. | The key's own picture |
+| `Mission item markers` | The things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), only while that step is on. | No values. | Each item's own picture |
+
+**Places and people.**
+
+| Entry | What it marks | Values | Icon |
+|---|---|---|---|
+| `Notice Board marker` | The notice board at the banya in Rakugai. With `Wanted Men markers` also ticked, the poster face of the man on offer takes the board's place. | No values. | The parchment; NEW while a new wanted poster is there |
+| `Mahjong marker` | The mahjong players in Gion. | No values. | Mahjong point sticks |
+| `Shogi marker` | The shogi challenge matches in Gion. | No values. | A shogi piece |
+| `Koi-koi marker` | The koi-koi player in Rakugai. | No values. | Gambling tags; NEW when a new opponent has been added |
+| `Cee-lo marker` | The cee-lo player in Rakugai. | No values. | Dice |
+| `Turtle seller marker` | The man in Rakugai who sells turtles, turtle food and turtle buckets. | No values. | A turtle bucket; NEW while his free turtle bucket is on offer |
+| `Junk buyer marker` | The man in Rakugai who buys your junk, from chapter 5 on. | No values. | A koban coin |
+| `Antique salesman marker` | The traveling salesman of antiques at the Sanjusangendo, from chapter 10 on. | No values. | The picture of his next item; NEW while a new item is waiting |
+| `Aspect ratio` | A picture for screens that are not 16:9. On 21:9 and 32:9 screens: a wider 3D view, the HUD, menus and text at their true shape, movies with black bars, fades and backdrops across the whole screen. On 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors): a taller 3D view, the HUD at its 16:9 distance from the top and bottom edges in play, menus letterboxed and centred, movies with bars at the top and bottom. Needs RPCS3's GPU > Stretch To Display Area: see [Aspect ratio setup](#aspect-ratio-setup). Two spots stay stretched: the Ultimate Match quit dialog and some menu backdrops at the sides. | Aspect ratio: 21:9 (2560x1080, 5120x2160) / 21:9 (3440x1440) / 21:9 (3840x1600) / 32:9 (3840x1080, 5120x1440, 7680x2160) / 16:10 (1280x800, 1920x1200, 2560x1600) / 3:2 (2160x1440, 2256x1504, 3000x2000) / 4:3 (1024x768, 1600x1200, 2048x1536). Default: 21:9 (3440x1440). |
+| `Yujo date markers` | The place where a yujo waits for her date with you. | No values. | A heart |
+| `Hozoin tournament marker` | The tournament reception at the Hozoin, from chapter 9 on. | No values. | A ticket |
+
+**The List.** On the pause map, Triangle opens the List. Each marker gets its own row there, with its name (the Request's title, the Wanted Man's name, the sketch, the turtle) and a category chip, beside the game's own places. Picking a row points the map's pointer at that marker.
+
+`Hide HUD` set to Only the minimap hides the minimap with its markers; the pause map keeps them.
+
+</details>
+
+## Coming from 3.0
+
+Replace `imported_patch.yml`. Your ticks stay, except for the map markers and Ultrawide: Side mission markers and More map markers are gone, and the new marker entries replace them. Tick `Map markers (core)` and the kinds you want:
+
+| You had (3.0) | Tick now (3.1), with `Map markers (core)` |
+|---|---|
+| Side mission markers | `Request markers`, `Contract markers` and `Wanted Men markers` |
+| More map markers, Revelations | `Revelation markers` |
+| More map markers, bounty targets | `Wanted Men markers` (its Icon value sets the mark) |
+| The Marker size of either | **Marker size** of `Map markers (core)` |
+
+Ultrawide is now `Aspect ratio`, with new 16:10, 3:2 and 4:3 values: tick `Aspect ratio` again and set its value (see [Aspect ratio setup](#aspect-ratio-setup)).
 
 ## Coming from 2.2 or older
 
@@ -241,7 +324,7 @@ Every entry, its values and its default. Each entry also carries notes in RPCS3.
 
 - **Framerate - Core** (2): `60 FPS` or `120 FPS`, the frame-rate patch of 2.2.
 - **Framerate - Minigames** (14): one entry per minigame that keeps it at the original speed. Tick all.
-- **Visuals and Functionality** (34): `Clean picture`, `Ultrawide`, `Save from the pause menu`, the substory tracker and map markers, Photo mode, the HUD, camera, shadows, bloom, depth of field, weather and time of day, text speed, fades, sticks, lock-on, vibration, sound.
+- **Visuals and Functionality** (52): `Clean picture`, `Aspect ratio`, `Save from the pause menu`, the substory tracker, `Map markers (core)` and its 19 marker entries, Photo mode, the HUD, camera, shadows, bloom, depth of field, weather and time of day, text speed, fades, sticks, lock-on, vibration, sound.
 - **Gameplay cheats** (45): health, damage, Heat, money, experience, items, weapons, prices, street thugs, the Coliseum, and fifteen minigame assists.
 - **Bug fix** (1): a freeze of the original game in two Turtle Racing title races.
 
@@ -293,32 +376,46 @@ Tick all 14. Each keeps its minigame at the original speed with the 60 or the 12
 </details>
 
 <details>
-<summary><b>Visuals and Functionality</b> (34)</summary>
+<summary><b>Visuals and Functionality</b> (52)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
+| `Antique salesman marker` | Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item and a NEW badge while a new item is waiting. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Bloom intensity` | Scales the glow the game adds around bright areas (lanterns, sky, sunlit walls). 0 removes the glow; 300 makes it three times as strong. | Bloom (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
 | `Camera distance` | Moves the gameplay camera further away or closer (Distance) and higher or lower (Height). Walls still pull it in. | Distance: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.2.<br>Height: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.0 (original). |
 | `Camera speed` | How fast the right stick turns the camera. Set both values to the same number. | Camera speed: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%.<br>Camera ramp: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%. |
 | `Camera vertical reach` | Lets the right stick move the camera further up and down than the original. | Vertical reach: x1.0 (original) / x1.25 / x1.5. Default: x1.5. |
+| `Cee-lo marker` | Marks the cee-lo player in Rakugai. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Clean picture` | Stops the game blurring every finished frame, removes the grid over blurred backgrounds and keeps edges clean at any Resolution Scale. No file to copy. See [Clean picture](#clean-picture). | No values: tick it to turn it on. |
+| `Contract markers` | A green "?" where a Contract can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
 | `Depth of field` | How strong the background blur of cutscenes and some talks is. 0 removes it. Use it with `Clean picture`. | Strength (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
 | `Fade speed` | Shortens the fades to and from black (doors, area changes and other screen fades). Instant fades stay instant. | Fade length: Original / x0.75 / x0.5 / x0.25. Default: x0.5. |
 | `Field of view` | Widens the view of the gameplay camera. Cutscene and talk cameras are not changed. | Field of view: x1.0 (original) / x1.1 / x1.2 / x1.3 / x1.4 / x1.5. Default: x1.2. |
 | `Hide HUD` | Hides the HUD while you walk the streets: the HUD, the minimap, the action prompt (such as Talk) and name labels, or only the minimap and its marks. Menus, talks, shops, minigames and fights keep their HUD. | Hide HUD: In free roam / Only the minimap. Default: In free roam. |
+| `Hozoin tournament marker` | Marks the tournament reception at the Hozoin, from chapter 9 on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Idle monologue` | How long you must stand still before Kiryu starts talking to himself in the street, or never. | Idle monologue after: 3.5 s / 7 s (original) / 15 s / 30 s / 60 s / Off. Default: 30 s. |
+| `Item markers` | Marks the items lying on the ground in the story, each with its own picture, until you pick them up. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Junk buyer marker` | Marks the man in Rakugai who buys your junk, from chapter 5 on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Koi-koi marker` | Marks the koi-koi player in Rakugai, with a NEW badge when a new opponent has been added. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Lock-on toggle` | Press R1 once to lock on and again to release, instead of holding it. | No values: tick it to turn it on. |
-| `More map markers` | Marks on the minimap and the pause map for Revelations you can see now (you have the item that inspires one and have not learned the technique) and for the first place of each wanted man you have taken and not finished. | Show: Revelations and bounty targets / Revelations / Bounty targets. Default: Revelations and bounty targets.<br>Revelation icon: Item / Pursuit / Green target. Default: Item.<br>Bounty icon: Pursuit / Item / Green target. Default: Pursuit.<br>Marker size: Small / Medium / Large. Default: Medium. |
+| `Locker key markers` | Marks the locker keys you have not picked up yet in the area you are in, with the key's own picture, once the Request Storage Locker Instructions has explained the lockers. Needs `Map markers (core)`. See [Map markers](#map-markers). | Icon: Locker key / Locker. Default: Locker key. |
+| `Mahjong marker` | Marks the mahjong players in Gion. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Map markers (core)` | Draws the markers of all the marker entries on the minimap and the pause map. Tick it with the marker entries you want: on its own it draws nothing. See [Map markers](#map-markers). | Marker size: Small / Medium / Large. Default: Medium. |
+| `Mission item markers` | Marks the things a mission step asks you to find, each with its own picture, while that step is on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Notebook tracker` | The Notebook's three lists (Requests, Contracts, Wanted Men) show every side mission as Locked (what to do first), Not now or Available (where to go). The row of Request 100 also counts what you have done. English builds only. See [Notebook tracker](#notebook-tracker). | No values: tick it to turn it on. |
+| `Notice Board marker` | Marks the notice board at the banya in Rakugai, with a NEW badge while a new wanted poster is there. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Oni's key markers` | Marks each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Photo mode` | Press L3 and R3 together in free roam: time stops, Kiryu stands still and the camera flies free, with the HUD hidden. Press them again to return. Opening the pause menu ends it. | Freeze time: On / Off (world keeps moving). Default: On.<br>Move speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game).<br>Look speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game). |
+| `Request markers` | A green "?" where a Request can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
 | `Retry on Legend` | Experimental. On Legend, losing a story fight shows the Retry menu instead of sending you to the title menu. | No values: tick it to turn it on. |
+| `Revelation markers` | Marks the places of the Revelations you can see now, with that Revelation's own sketch. Needs `Map markers (core)`. | Icon: Sketch / Item. Default: Sketch. |
 | `Run threshold` | How far you tilt the left stick before Kiryu runs instead of walking. | Run at: Full tilt (original) / 3/4 tilt / Half tilt / Any tilt. Default: Half tilt. |
 | `Save from the pause menu` | Experimental. Adds a Save prompt on Triangle to the pause menu. It opens the game's own save list. It is greyed out where a save is not safe. See [Save from the pause menu](#save-from-the-pause-menu) for where not to save. | No values: tick it to turn it on. |
 | `Shadow blur` | How far the soft edge of shadows spreads (Blur width) and how it fades (Blur shape). | Blur width: x1.5 (softer) / x1.25 / x1.0 (original) / x0.75 / x0.5 / x0.33 (sharpest). Default: x1.0 (original).<br>Blur shape: Even (original) / Tapered / Strongly tapered. Default: Even (original).<br>*At its defaults it changes nothing: pick a value.* |
 | `Shadow map 2048` | Doubles the size of the shadow map (1024 to 2048) for finer shadows. | No values: tick it to turn it on. |
 | `Shadow range` | Shadows reach further from the camera. Use it with `Shadow map 2048`. | Shadow range: 64 m (original) / 96 m / 128 m. Default: 128 m. |
+| `Shogi marker` | Marks the shogi challenge matches in Gion with a shogi piece. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Short boot logos` | The SEGA and HAVOK logos at boot pass quickly. The game still finishes loading behind them. | Logo time: Original / Short / Shortest. Default: Short. |
-| `Side mission markers` | Marks on the minimap and the pause map where a side mission (Request, Contract, Wanted Man) can be started now. A few missions with special conditions may be missing or marked early. | Marker icon: Green target / Item / Pursuit. Default: Green target.<br>Marker size: Small / Medium / Large. Default: Medium. |
 | `Side missions at any hour` | Experimental. Side missions and people that only appear at one time of day can be met at any hour. Talks lets the time conditions of talks pass; People keeps such people always there. The clock, the light and the story do not change. | Talks: Original / Any hour. Default: Original.<br>People: Original / Any hour. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
 | `Skip hold` | Shortens how long you must hold the skip button in story videos and cutscenes. | Videos: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s.<br>Cutscenes: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s. |
 | `Smart lock-on` | The automatic target prefers enemies that are standing over enemies lying on the ground. | Downed enemies: Targeted as before (original) / Only when no standing enemy is near / Never. Default: Only when no standing enemy is near. |
@@ -327,10 +424,13 @@ Tick all 14. Each keeps its minigame at the original speed with the 60 or the 12
 | `Stick dead zone` | Makes the game's own stick dead zone smaller, for both sticks. RPCS3's own dead zone setting still applies first. | Dead zone: 23% (original) / 16% / 10% / 5% / 2%. Default: 10%. |
 | `Text speed` | Dialogue text appears faster. | Text speed: x1 (original) / x1.5 / x2 / x3 / x4 / Instant. Default: x2. |
 | `Time of day` | Shows every area at the chosen time of day from the next area load, where the area has a look for it. People, shops and events still follow the real time. | Time of day: Original / Day / Evening / Night. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
-| `Ultrawide` | A picture for 21:9 and 32:9 screens: a wider 3D view, the HUD, menus and text at their true shape, movies with black bars, fades and backdrops across the whole screen. Needs RPCS3's GPU > Stretch To Display Area: see [Ultrawide setup](#ultrawide-setup). Two spots stay stretched: the Ultimate Match quit dialog and some menu backdrops at the sides. | Aspect ratio: 21:9 (2560x1080, 5120x2160) / 21:9 (3440x1440) / 21:9 (3840x1600) / 32:9 (3840x1080, 5120x1440, 7680x2160). Default: 21:9 (3440x1440). |
+| `Turtle markers` | Marks the turtles you can find, each with its own picture: story turtles, the turtles in your room at the Tatsuya, turtles in the fields and streets, and the Eternal Turtle. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Turtle seller marker` | Marks the man in Rakugai who sells turtles, turtle food and turtle buckets, with a NEW badge while his free turtle bucket is on offer. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 | `Vibration` | Controller vibration strength. Off stops both motors; the lower values weaken the strong motor only. | Strength: Off / 25 % / 50 % / 75 % / Original. Default: 50 %. |
 | `Volume balance` | Separate levels for spoken lines (Voice), for music and ambience, and for sound effects (Effects). | Voice: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Music and ambience: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Effects: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>*At its defaults it changes nothing: pick a value.* |
+| `Wanted Men markers` | Marks the Wanted Man on offer at the Notice Board with his own poster face; once you have taken him on, his face at his first place and a blue "?" where his next step is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
 | `Weather` | Forces the weather in every area from the next area load. With Clear, rain the story itself calls for may still show. | Weather: Rain / Storm / Clear. Default: Rain. |
+| `Yujo date markers` | Marks with a heart the place where a yujo waits for her date with you. Needs `Map markers (core)`. | No values: tick it to turn it on. |
 
 </details>
 
@@ -409,7 +509,6 @@ Cheats change the game's difficulty and economy, and what is written to your sav
 - Request 100 ("Justice For All") is the fight with the secret boss Amon. Before that fight the game asks for all 99 other Requests, all 20 Contracts, all 20 Wanted Men and all 50 Coliseum opponents. The row of Request 100 shows how far you are, for example "Requests 3/99, Contracts 2/20, Wanted Men 1/20, Coliseum 2/50" (Coliseum counts the opponents you have beaten in the tournaments at the Hozoin).
 - Until you start Request 100, the row also shows your Coliseum win rate as the game counts it, for example "Coliseum win rate 80% (80% needed for the last opponent)". The last of the 50 opponents appears only at 80 % or more. Once the request has started, the row shows the game's own text and the counts.
 - The Locked row of Wanted Man 1 names its Request by number ("Request 30") until the Requests list has been opened once since RPCS3 started; then it shows the Request's title.
-- `Hide HUD` hides the marks of `Side mission markers` and `More map markers` together with the minimap.
 - The tracker needs RPCS3 to reserve a block of memory at a fixed address. If it cannot, the entry is not applied and nothing else changes.
 
 </details>
@@ -532,6 +631,7 @@ The translation's initial release has its own folder. Any other folder means a b
 2. Check that it is ticked under your version's title, not under the plain title `Ryu ga Gotoku Kenzan!` of RPCS3's own list.
 3. Look for `PAT: Applied patch` with the entry's name in `RPCS3.log`. Entries for the minigames apply only when you enter that minigame.
 4. Some entries act only from the next area load (`Time of day`, `Weather`) or only in free roam (`Hide HUD`, `Photo mode`).
+5. A marker entry draws nothing without `Map markers (core)`, and most markers show only while there is something to find or do there.
 
 </details>
 
@@ -573,4 +673,4 @@ contains no game files. You need your own copy of the game.
 
 Project page: [github.com/CptPakundo/KenzanPatches](https://github.com/CptPakundo/KenzanPatches)
 
-<!-- readme-reviewed: 3.0 -->
+<!-- readme-reviewed: 3.1 -->
