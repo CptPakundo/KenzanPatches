@@ -12544,7 +12544,7 @@ Anchors:
     - [ be32, 0x1018b388, "Hide HUD" ]
     - [ load, *kzr14 ]
 
-  kzp_wanted_men_markers: &kzp_wanted_men_markers
+  kzp_wanted_men: &kzp_wanted_men
     - [ be32, 0x1056a208, "Mission progress" ]
     - [ be32, 0x1056a210, "Icon" ]
 
@@ -19302,7 +19302,7 @@ Anchors:
     - [ be32, 0x00bf6f58, 0xa917aa15 ]
     - [ be32, 0x00bf6f5c, 0xab15ffff ]
 
-  kzp_assist_cho_han: &kzp_assist_cho_han
+  kzp_cho_han: &kzp_cho_han
     - [ calloc, 0x0000506c, 5 ]
     - [ be32, 0x00000000, 0x801f008c ]
     - [ be32, 0x00000000, "Winnings" ]
@@ -19318,7 +19318,7 @@ Anchors:
     - [ be32, 0x00000000, 0x7ca561d6 ]
     - [ be32, 0x00000000, 0x7ca51670 ]
 
-  kzp_assist_koi_koi: &kzp_assist_koi_koi
+  kzp_koi_koi: &kzp_koi_koi
     - [ calloc, 0x0000e0b4, 6 ]
     - [ be32, 0x00000000, 0x39200000 ]
     - [ be32, 0x00000000, 0x2c850000 ]
@@ -19326,7 +19326,7 @@ Anchors:
     - [ load, *kzr596 ]
     - [ be32, 0x00000000, 0xf821ff91 ]
 
-  kzp_assist_iroha_karuta: &kzp_assist_iroha_karuta
+  kzp_iroha_karuta: &kzp_iroha_karuta
     - [ calloc, 0x00010cfc, 7 ]
     - [ be32, 0x00000000, 0x39290001 ]
     - [ be32, 0x00000000, 0x81830190 ]
@@ -19337,20 +19337,20 @@ Anchors:
     - [ be32, 0x00000000, 0x7d296214 ]
     - [ be32, 0x00000000, 0xf821ff91 ]
 
-  kzp_assist_mahjong: &kzp_assist_mahjong
+  kzp_mahjong: &kzp_mahjong
     - [ calloc, 0x0001025c, 3 ]
     - [ be32, 0x00000000, 0x39800000 ]
     - [ be32, 0x00000000, "Your starting points" ]
     - [ be32, 0x00000000, 0x91890108 ]
     - [ be32, 0x00000000, 0xf821ff91 ]
 
-  kzp_assist_yabusame: &kzp_assist_yabusame
+  kzp_yabusame: &kzp_yabusame
     - [ be32, 0x000b21c0, 0x00000014 ]
     - [ be32, 0x000b21c4, 0x00000028 ]
     - [ be32, 0x000b21c8, 0x0000003c ]
     - [ be32, 0x000b21cc, 0x00000050 ]
 
-  kzp_assist_cee_lo: &kzp_assist_cee_lo
+  kzp_cee_lo: &kzp_cee_lo
     - [ calloc, 0x00009d3c, 4 ]
     - [ be32, 0x00000000, 0x39200000 ]
     - [ load, *kzr596 ]
@@ -19361,7 +19361,7 @@ Anchors:
     - [ be32, 0x00000000, 0x7d6b1674 ]
     - [ be32, 0x00000000, 0xf821ff91 ]
 
-  kzp_assist_tosenkyo: &kzp_assist_tosenkyo
+  kzp_tosenkyo: &kzp_tosenkyo
     - [ calloc, 0x00002788, 5 ]
     - [ be32, 0x00000000, 0x815f00a8 ]
     - [ be32, 0x00000000, 0x2c8b0000 ]
@@ -19370,7 +19370,7 @@ Anchors:
     - [ be32, 0x00000000, 0x7d4a61d6 ]
     - [ be32, 0x00000000, 0xf821ff91 ]
 
-  kzp_assist_waterfall_meditation: &kzp_assist_waterfall_meditation
+  kzp_waterfall_meditation: &kzp_waterfall_meditation
     - [ calloc, 0x000046cc, 4 ]
     - [ be32, 0x00000000, "Pass line" ]
     - [ be32, 0x00000000, 0x7c0061d6 ]
@@ -19406,14 +19406,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_120_fps ]
-  "Visuals and Functionality: Clean picture":
+  "Visuals - Picture: Clean picture":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn3 "Removes the blur on every frame and the grid on blurred backgrounds, and keeps edges clean at any Resolution Scale. Replaces the old optional sh_iori_ps3.par file: nothing to copy."
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan60_image ]
-  "Visuals and Functionality: Camera speed":
+  "Gameplay - Controls: Camera speed":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn4 "Changes how fast the right stick turns the camera. 100% is the original speed. Set Camera speed and Camera ramp to the same value. Tested on street turns at 120, 60 and the original 30 FPS."
@@ -19443,7 +19443,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "300%": 0x398000c0
     Patch:
       - [ load, *kzp_camera_speed ]
-  "Visuals and Functionality: Field of view":
+  "Visuals - Camera: Field of view":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn5 "Widens the view of the gameplay camera. x1.0 is the original. Cutscene and talk cameras are unchanged. Shadows and the drawing of distant scenery follow the wider view."
@@ -19461,7 +19461,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x1.5": 0x3d803fc0
     Patch:
       - [ load, *kzp_field_of_view ]
-  "Visuals and Functionality: Aspect ratio":
+  "Visuals - Picture: Aspect ratio":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn6 "Picture for screens that are not 16:9. On 21:9 and 32:9 screens: a wider 3D view, the HUD, menus and text at their true shape, movies with black bars, fades and backdrops across the whole screen. On 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors): a taller 3D view, the HUD and menus at their true shape, movies with bars at the top and bottom. Pick the Aspect ratio that matches your screen and set RPCS3 GPU > Stretch To Display Area on. Known: the Ultimate Match quit dialog is stretched; some menu backdrops are stretched at the sides. Checked by the author in play at 21:9 (3840x1600) and 32:9 (3840x1080) with the 120 FPS entry."
@@ -19480,7 +19480,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "4:3 (1024x768, 1600x1200, 2048x1536)": 0x3faaaaab
     Patch:
       - [ load, *kzp_aspect_ratio ]
-  "Visuals and Functionality: Volume balance":
+  "Sound: Volume balance":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn7 "Separate levels for spoken lines (Voice), for music and ambience (Music and ambience) and for sound effects (Effects); 100% is the original. The author heard music and effects change as set (Music and ambience 25%, Effects 55% and 25%) in a cutscene and in play. Voice below 100% was not tried."
@@ -19521,7 +19521,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Off": 0x3d800000
     Patch:
       - [ load, *kzp_volume_balance ]
-  "Visuals and Functionality: Weather":
+  "Visuals - World: Weather":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn8 "Forces the weather in every area from the next area load. Rain and Clear were seen working. Storm was told apart from rain in game memory in two areas (the game set its thunder on); it was not seen on screen. Clear may still show rain the story itself calls for."
@@ -19536,7 +19536,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Clear": 0x3b400000
     Patch:
       - [ be32, 0x00443c20, "Weather" ]
-  "Visuals and Functionality: Text speed":
+  "Visuals - Interface: Text speed":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn9 "Dialogue text appears faster. x1 is the original. x2 was measured at 120, 60 and the original 30 FPS. Instant and talk scenes were not tried."
@@ -19554,7 +19554,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Instant": 0x3d804200
     Patch:
       - [ load, *kzp_text_speed ]
-  "Visuals and Functionality: Skip hold":
+  "Gameplay - Convenience: Skip hold":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn10 "Shortens how long the skip button must be held in story videos and cutscenes. 3 s is the original. The default 1 s was timed in a video and a cutscene at 120 and 60 FPS. Reminisce scenes skip at once anyway."
@@ -19580,14 +19580,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "0.3 s": 0x38090009
     Patch:
       - [ load, *kzp_skip_hold ]
-  "Visuals and Functionality: Shadow map 2048":
+  "Visuals - Picture: Shadow map 2048":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn11 "Doubles the size of the shadow map (1024 to 2048). Checked by numbers, not judged by eye."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_shadow_map_2048 ]
-  "Visuals and Functionality: Shadow blur":
+  "Visuals - Picture: Shadow blur":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn12 "Blur width sets how far the soft edge of shadows spreads (below x1.0 sharper, above softer). Blur shape Even is the original, Tapered fades the edge. Does nothing until you change a value. Checked by numbers for x0.5 and Tapered, not judged by eye."
@@ -19612,7 +19612,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Strongly tapered": 0x40000000
     Patch:
       - [ load, *kzp_shadow_blur ]
-  "Visuals and Functionality: Shadow range":
+  "Visuals - Picture: Shadow range":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn13 "Shadows reach further from the camera. 64 m is the original. The same shadow map covers more ground, so use it with Shadow map 2048. Checked by numbers at 128 m, not judged by eye."
@@ -19627,7 +19627,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "128 m": 0x43000000
     Patch:
       - [ be32, 0x00b39bf0, "Shadow range" ]
-  "Gameplay cheats: Money multiplier":
+  "Gameplay cheats - Money and items: Money multiplier":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn14 "Experimental. Multiplies the money you gain. A shop sale and a Coliseum prize were checked: at x2 the sale paid twice the shown price and a 10,000 Coliseum prize paid 20,000. Money from street fights was not checked. Spending is unchanged."
@@ -19643,21 +19643,21 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x5": 0x1ca5000a
     Patch:
       - [ load, *kzp_money_multiplier ]
-  "Visuals and Functionality: Save from the pause menu":
+  "Gameplay - Convenience: Save from the pause menu":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn15 "Experimental. Adds a Save prompt on Triangle to the pause menu. It opens the game's save list in free roam. It is greyed out in six scripted story stretches, in story fights and in Photo mode. Save stays enabled during the Oyo chase and on the walk to a yujo date (seen in a test), so do not save there; loading a save made there was not tested. The injured walk in the Kyoto Adventure and the date itself after ordering showed no free moment in a test. A full save and load was tested with the 120 FPS entry."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_save_from_the_pause_menu ]
-  "Visuals and Functionality: Retry on Legend":
+  "Gameplay - Convenience: Retry on Legend":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn16 "Experimental. On Legend, losing a story fight shows the Retry menu in place of going straight to the title menu. Retry and Quit Game were tested. Load and retry and street fights were not."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_retry_on_legend ]
-  "Gameplay cheats: Experience multiplier":
+  "Gameplay cheats - Growth: Experience multiplier":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn17 "All experience multiplies every experience gain. Battle experience multiplies only the experience for defeated enemies, on top of the first. x1 is the original. Battle doubled the experience for a defeated enemy and All doubled the experience for a broken weapon in tests. Side mission rewards were not checked."
@@ -19683,14 +19683,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x10": 0x1c84000a
     Patch:
       - [ load, *kzp_experience_multiplier ]
-  "Gameplay cheats: Heat always full":
+  "Gameplay cheats - Combat: Heat always full":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn18 "Your Heat gauge stays full, as with the War God Amulet."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0478, 0x38600001 ]
-  "Gameplay cheats: Damage taken":
+  "Gameplay cheats - Combat: Damage taken":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn19 "Scales the damage you take. x1 is the original. x0 gave no damage in a test. The other values were not measured."
@@ -19709,7 +19709,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x4": 0x1c000010
     Patch:
       - [ load, *kzp_damage_taken ]
-  "Gameplay cheats: Damage dealt":
+  "Gameplay cheats - Combat: Damage dealt":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn20 "Scales the damage your attacks deal. x1 is the original. Boss difficulty scaling still applies on top. Measured at x5."
@@ -19727,14 +19727,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x10": 0x1d770028
     Patch:
       - [ load, *kzp_damage_dealt ]
-  "Gameplay cheats: Sprint from the start":
+  "Gameplay cheats - Growth: Sprint from the start":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn21 "You can sprint outside Gion without the Skanda Sandals, as if you wore them. Gion has no sprint, with or without them."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0c5c, 0x60000000 ]
-  "Visuals and Functionality: Short boot logos":
+  "Gameplay - Convenience: Short boot logos":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn22 "The SEGA and HAVOK logos at boot pass quickly (13.2 s to 8.3 s with Short). The game still finishes loading behind them."
@@ -19749,7 +19749,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Shortest": 0x00000001
     Patch:
       - [ load, *kzp_short_boot_logos ]
-  "Visuals and Functionality: Camera distance":
+  "Gameplay - Controls: Camera distance":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn23 "Moves the gameplay camera further from or closer to the player (Distance) and raises or lowers it (Height). x1.0 is the original. Walls still pull it in. Tested in the hideout and in a Gion street."
@@ -19777,21 +19777,21 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x2.0": 0x3d804000
     Patch:
       - [ load, *kzp_camera_distance ]
-  "Gameplay cheats: Never die":
+  "Gameplay cheats - Combat: Never die":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn24 "You still take damage, but a hit cannot take your last point of health. Grabs were not tested on their own."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0458, 0x38600001 ]
-  "Gameplay cheats: Untouchable":
+  "Gameplay cheats - Combat: Untouchable":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn25 "Enemy attacks do no damage to you. Stagger, knock-down and grabs were not checked."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0460, 0x38600001 ]
-  "Gameplay cheats: Encounter rate":
+  "Gameplay cheats - Street: Encounter rate":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn26 "How many groups of street thugs wait in each area. Off means none, as with the Lucky Beads. Always fills every spot. Groups already placed stay until the game draws them again (every fifth area change, or sooner with Encounter refresh). Seen only in game memory. In Rakugai: Off placed no groups, Fewer 2, Original 4, More and Always 6 of 6 spots. In the Kyoto Adventure, More filled every spot on all eight street stages, as Always does. More and Always differ where an area's encounter level is low: with Rakugai's level set to 1 by hand, Original placed 2 groups, More 4 and Always 6. No group was seen on screen or fought."
@@ -19808,7 +19808,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Always": 0x38600064
     Patch:
       - [ be32, 0x00328d8c, "Encounters" ]
-  "Gameplay cheats: Heat gain":
+  "Gameplay cheats - Combat: Heat gain":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn27 "Multiplies the Heat you gain from hits and taunts. x1 is the original. Heat lost when you are hit and the slow drain are unchanged. x2 and x0.5 were measured at 120, 60 and the original 30 FPS; x1.5, x3 and x5 at 120."
@@ -19826,7 +19826,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x5": 0x3d8040a0
     Patch:
       - [ load, *kzp_heat_gain ]
-  "Gameplay cheats: Enemy health":
+  "Gameplay cheats - Combat: Enemy health":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn28 "Scales the health of enemies (Enemies) and of bosses (Bosses) when they appear. x1 is the original and does nothing. Bosses at x3 and enemies at x2 were measured."
@@ -19858,14 +19858,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x3d804040
     Patch:
       - [ load, *kzp_enemy_health ]
-  "Gameplay cheats: Free spending":
+  "Gameplay cheats - Money and items: Free spending":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn29 "Experimental. Your money does not go down when you pay. A shop purchase and a talk fee (the Hozoin broker) were checked: the money stayed the same. Forging and gambling were not checked. You still need the money in hand to buy."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_free_spending ]
-  "Gameplay cheats: Weapon wear":
+  "Gameplay cheats - Combat: Weapon wear":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn30 "How fast weapons lose durability. Off makes them unbreakable. Half slows the wear (swords wore at 0.5 to 0.6 of the original speed in a test). Double and street weapons were not tested."
@@ -19881,7 +19881,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Double": 0x39800003
     Patch:
       - [ load, *kzp_weapon_wear ]
-  "Gameplay cheats: Accessory effects":
+  "Gameplay cheats - Combat: Accessory effects":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn31 "Gives you the effect of up to two accessories without wearing them. All eight items were seen working; Lucky Beads, Coveted Shunga and Silent Sandals in game memory only. Silent Sandals: on a walk the footstep sounds dropped to the standing level (36 sounds without, 7 with); whether street thugs notice you later was not checked."
@@ -19915,7 +19915,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Silent Sandals": 0x2c840133
     Patch:
       - [ load, *kzp_accessory_effects ]
-  "Visuals and Functionality: Idle monologue":
+  "Gameplay - Convenience: Idle monologue":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn32 "How long you must stand still before Kiryu starts talking to himself in the street. Off never starts it. Tested at 120, 60 and the original 30 FPS."
@@ -19933,7 +19933,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Off": 0x3d807f00
     Patch:
       - [ load, *kzp_idle_monologue ]
-  "Visuals and Functionality: Time of day":
+  "Visuals - World: Time of day":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn33 "Shows every area at the chosen time of day from the next area load, where the area has a look for it. People, shops and events still follow the real time. Does nothing until you pick a time."
@@ -19949,7 +19949,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Night": 0x39800000
     Patch:
       - [ load, *kzp_time_of_day ]
-  "Visuals and Functionality: Hide HUD":
+  "Visuals - Interface: Hide HUD":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn34 "Hides the HUD while you walk the streets. In free roam (the default) hides the HUD, the minimap, the action prompt (such as Talk) and name labels. Only the minimap hides just the minimap and its markers. Menus, talks, shops, minigames and fights are meant to keep their HUD. Photo mode hides the HUD by itself, so you do not need this entry for that."
@@ -19963,10 +19963,10 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Only the minimap": 0x39800002
     Patch:
       - [ load, *kzp_hide_hud ]
-  "Visuals and Functionality: Map markers (core)":
+  "Map markers - Base: Core (required)":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn35 "Draws the map markers of the marker entries (Request markers, Contract markers, Wanted Men markers, Revelation markers, Locker key markers, Turtle markers, Item markers, Oni's key markers, Mission item markers, Notice Board marker, Mahjong marker, Shogi marker, Koi-koi marker, Cee-lo marker, Turtle seller marker, Junk buyer marker, Antique salesman marker, Yujo date markers, Hozoin tournament marker) on the minimap and the pause map. Tick it with the marker entries you want; on its own it draws nothing. Marker size sets the size of every marker."
+    Notes: &kzn35 "Draws the map markers of the marker entries (Requests, Contracts, Wanted Men, Revelations, Locker keys, Turtles, Items, Oni's keys, Mission items, Notice Board, Mahjong, Shogi, Koi-koi, Cee-lo, Turtle seller, Junk buyer, Antique salesman, Yujo dates, Hozoin tournament) on the minimap and the pause map. Tick it with the marker entries you want; on its own it draws nothing. Marker size sets the size of every marker."
     Patch Version: 3.1
     Configurable Values: &kzc24
       "Marker size":
@@ -19978,10 +19978,10 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Large": 0x3c004170
     Patch:
       - [ load, *markers_core ]
-  "Visuals and Functionality: Request markers":
+  "Map markers - Missions: Requests":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn36 "Marks with a green \"?\" on the minimap and the pause map where a Request can be started now. Mission progress: Next step adds a blue \"?\" where the next step of a Request you have begun can be done now (for a step inside a building, at its door and inside); Next step and blocked also shows a red \"?\" where the next step is but cannot be done yet (for example at another time of day or later in the story); Off shows only the green \"?\". Needs Map markers (core)."
+    Notes: &kzn36 "Marks with a green \"?\" on the minimap and the pause map where a Request can be started now. Mission progress: Next step adds a blue \"?\" where the next step of a Request you have begun can be done now (for a step inside a building, at its door and inside); Next step and blocked also shows a red \"?\" where the next step is but cannot be done yet (for example at another time of day or later in the story); Off shows only the green \"?\". Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Configurable Values: &kzc25
       "Mission progress":
@@ -19993,18 +19993,18 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Off": 0x01000001
     Patch:
       - [ be32, 0x1056a200, "Mission progress" ]
-  "Visuals and Functionality: Contract markers":
+  "Map markers - Missions: Contracts":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn37 "Marks with a green \"?\" on the minimap and the pause map where a Contract can be started now. Mission progress: Next step adds a blue \"?\" where the next step of a Contract you have begun can be done now (for a step inside a building, at its door and inside); Next step and blocked also shows a red \"?\" where the next step is but cannot be done yet; Off shows only the green \"?\". Needs Map markers (core)."
+    Notes: &kzn37 "Marks with a green \"?\" on the minimap and the pause map where a Contract can be started now. Mission progress: Next step adds a blue \"?\" where the next step of a Contract you have begun can be done now (for a step inside a building, at its door and inside); Next step and blocked also shows a red \"?\" where the next step is but cannot be done yet; Off shows only the green \"?\". Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a204, "Mission progress" ]
-  "Visuals and Functionality: Wanted Men markers":
+  "Map markers - Missions: Wanted Men":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn38 "Marks the Wanted Men on the minimap and the pause map: the man on offer at the Notice Board, with his own poster face on the parchment; once you have taken him on, his face at his first place; and a blue \"?\" where his next step can be done now. Icon sets the mark at his first place: Wanted poster shows his own poster face on the parchment, Pursuit and Item the map's own icons. Mission progress: Next step shows the blue \"?\"; Next step and blocked also shows a red \"?\" where his next step is but cannot be done yet; Off shows no \"?\". Needs Map markers (core)."
+    Notes: &kzn38 "Marks the Wanted Men on the minimap and the pause map: the man on offer at the Notice Board, with his own poster face on the parchment; once you have taken him on, his face at his first place; and a blue \"?\" where his next step can be done now. Icon sets the mark at his first place: Wanted poster shows his own poster face on the parchment, Pursuit and Item the map's own icons. Mission progress: Next step shows the blue \"?\"; Next step and blocked also shows a red \"?\" where his next step is but cannot be done yet; Off shows no \"?\". Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Configurable Values: &kzc26
       "Icon":
@@ -20022,11 +20022,11 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Next step and blocked": 0x02000001
           "Off": 0x01000001
     Patch:
-      - [ load, *kzp_wanted_men_markers ]
-  "Visuals and Functionality: Revelation markers":
+      - [ load, *kzp_wanted_men ]
+  "Map markers - Collectibles: Revelations":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn39 "Marks on the minimap and the pause map the places of Revelations you can see now (you have the sketch and have not learned the technique). Icon: Sketch shows that Revelation's own sketch, Item the map's item icon. Needs Map markers (core)."
+    Notes: &kzn39 "Marks on the minimap and the pause map the places of Revelations you can see now (you have the sketch and have not learned the technique). Icon: Sketch shows that Revelation's own sketch, Item the map's item icon. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Configurable Values: &kzc27
       "Icon":
@@ -20037,10 +20037,10 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Item": 0x00000101
     Patch:
       - [ be32, 0x1056a20c, "Icon" ]
-  "Visuals and Functionality: Locker key markers":
+  "Map markers - Collectibles: Locker keys":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn40 "Marks on the minimap and the pause map the locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's mark goes once you pick it up. J-1 and J-2 are not marked. Icon: Locker key shows the key's own picture, Locker the map's locker icon. Needs Map markers (core)."
+    Notes: &kzn40 "Marks on the minimap and the pause map the locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's mark goes once you pick it up. J-1 and J-2 are not marked. Icon: Locker key shows the key's own picture, Locker the map's locker icon. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Configurable Values: &kzc28
       "Icon":
@@ -20051,105 +20051,105 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Locker": 0x00000101
     Patch:
       - [ be32, 0x1056a214, "Icon" ]
-  "Visuals and Functionality: Turtle markers":
+  "Map markers - Collectibles: Turtles":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn41 "Marks on the minimap and the pause map the turtles you can find, each with its own picture: the four overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles lying around in the fields and streets from chapter 5 on (shown only while one is actually there), and the Eternal Turtle in Gion when he appears. Needs Map markers (core)."
+    Notes: &kzn41 "Marks on the minimap and the pause map the turtles you can find, each with its own picture: the four overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles lying around in the fields and streets from chapter 5 on (shown only while one is actually there), and the Eternal Turtle in Gion when he appears. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a218, 0x00000001 ]
-  "Visuals and Functionality: Item markers":
+  "Map markers - Collectibles: Items":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn42 "Marks on the minimap and the pause map the items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3), each with its own picture, until you pick them up. Needs Map markers (core)."
+    Notes: &kzn42 "Marks on the minimap and the pause map the items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3), each with its own picture, until you pick them up. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a21c, 0x00000001 ]
-  "Visuals and Functionality: Oni's key markers":
+  "Map markers - Collectibles: Oni's keys":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn43 "Marks on the minimap and the pause map each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs Map markers (core)."
+    Notes: &kzn43 "Marks on the minimap and the pause map each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a220, 0x00000001 ]
-  "Visuals and Functionality: Mission item markers":
+  "Map markers - Collectibles: Mission items":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn44 "Marks on the minimap and the pause map the things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), each with its own picture, only while that step is on. Needs Map markers (core)."
+    Notes: &kzn44 "Marks on the minimap and the pause map the things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), each with its own picture, only while that step is on. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a224, 0x00000001 ]
-  "Visuals and Functionality: Notice Board marker":
+  "Map markers - Places: Notice Board":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn45 "Marks the notice board at the banya in Rakugai on the minimap and the pause map. A NEW badge shows while a new wanted poster is there; with Wanted Men markers also ticked, the poster face of the man on offer takes the board's place instead. Needs Map markers (core)."
+    Notes: &kzn45 "Marks the notice board at the banya in Rakugai on the minimap and the pause map. A NEW badge shows while a new wanted poster is there; with Map markers - Missions: Wanted Men also ticked, the poster face of the man on offer takes the board's place instead. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a228, 0x00000001 ]
-  "Visuals and Functionality: Mahjong marker":
+  "Map markers - Places: Mahjong":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn46 "Marks the mahjong players in Gion on the minimap and the pause map (not during the story scenes where they do not play). Needs Map markers (core)."
+    Notes: &kzn46 "Marks the mahjong players in Gion on the minimap and the pause map (not during the story scenes where they do not play). Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a22c, 0x00000001 ]
-  "Visuals and Functionality: Shogi marker":
+  "Map markers - Places: Shogi":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn47 "Marks the shogi challenge matches in Gion on the minimap and the pause map with a shogi piece (not during the story scenes where they do not play). Needs Map markers (core)."
+    Notes: &kzn47 "Marks the shogi challenge matches in Gion on the minimap and the pause map with a shogi piece (not during the story scenes where they do not play). Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a230, 0x00000001 ]
-  "Visuals and Functionality: Koi-koi marker":
+  "Map markers - Places: Koi-koi":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn48 "Marks the koi-koi player in Rakugai on the minimap and the pause map. A NEW badge shows when a new opponent has been added. Needs Map markers (core)."
+    Notes: &kzn48 "Marks the koi-koi player in Rakugai on the minimap and the pause map. A NEW badge shows when a new opponent has been added. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a234, 0x00000001 ]
-  "Visuals and Functionality: Cee-lo marker":
+  "Map markers - Places: Cee-lo":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn49 "Marks the cee-lo player in Rakugai on the minimap and the pause map. Needs Map markers (core)."
+    Notes: &kzn49 "Marks the cee-lo player in Rakugai on the minimap and the pause map. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a238, 0x00000001 ]
-  "Visuals and Functionality: Turtle seller marker":
+  "Map markers - Places: Turtle seller":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn50 "Marks the man in Rakugai who sells turtles, turtle food and turtle buckets on the minimap and the pause map. A NEW badge shows while his free turtle bucket is still on offer. Needs Map markers (core)."
+    Notes: &kzn50 "Marks the man in Rakugai who sells turtles, turtle food and turtle buckets on the minimap and the pause map. A NEW badge shows while his free turtle bucket is still on offer. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a23c, 0x00000001 ]
-  "Visuals and Functionality: Junk buyer marker":
+  "Map markers - Places: Junk buyer":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn51 "Marks the man in Rakugai who buys your junk on the minimap and the pause map, from chapter 5 on. Needs Map markers (core)."
+    Notes: &kzn51 "Marks the man in Rakugai who buys your junk on the minimap and the pause map, from chapter 5 on. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a240, 0x00000001 ]
-  "Visuals and Functionality: Antique salesman marker":
+  "Map markers - Places: Antique salesman":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn52 "Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item, on the minimap and the pause map. A NEW badge shows while a new item is waiting for you. Needs Map markers (core)."
+    Notes: &kzn52 "Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item, on the minimap and the pause map. A NEW badge shows while a new item is waiting for you. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a244, 0x00000001 ]
-  "Visuals and Functionality: Yujo date markers":
+  "Map markers - Places: Yujo dates":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn53 "Marks with a heart on the minimap and the pause map the place where a yujo waits for her date with you. Needs Map markers (core)."
+    Notes: &kzn53 "Marks with a heart on the minimap and the pause map the place where a yujo waits for her date with you. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a248, 0x00000001 ]
-  "Visuals and Functionality: Hozoin tournament marker":
+  "Map markers - Places: Hozoin tournament":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn54 "Marks the tournament reception at the Hozoin on the minimap and the pause map, from chapter 9 on. Needs Map markers (core)."
+    Notes: &kzn54 "Marks the tournament reception at the Hozoin on the minimap and the pause map, from chapter 9 on. Needs Map markers - Base: Core (required)."
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a24c, 0x00000001 ]
-  "Visuals and Functionality: Photo mode":
+  "Visuals - Interface: Photo mode":
     Games: *kzg1
     Author: "Pakundo"
     Group: "Free camera"
@@ -20184,7 +20184,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x3d804040
     Patch:
       - [ load, *kzp_photo_mode ]
-  "Visuals and Functionality: Smart lock-on":
+  "Gameplay - Controls: Smart lock-on":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn56 "The automatic target prefers enemies that are standing over enemies lying on the ground. \"Only when no standing enemy is near\" still targets a downed enemy when he is the only one. \"Never\" ignores downed enemies. Tested with the default value and the 120 FPS entry."
@@ -20199,7 +20199,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Never": 0x3d804a00
     Patch:
       - [ load, *kzp_smart_lock_on ]
-  "Gameplay cheats: Experience penalty":
+  "Gameplay cheats - Growth: Experience penalty":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn57 "Street fights cut your experience when you are at or above the level the chapter expects. Strength sets the cut (1/20 is the original). Starts sets how far above that level it begins (Never removes it). Strength was measured with the over-level state set by hand. Starts and a real street fight were not tested."
@@ -20226,7 +20226,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Never": 0x394a7fff
     Patch:
       - [ load, *kzp_experience_penalty ]
-  "Gameplay cheats: Forgiving prompts":
+  "Gameplay cheats - Combat: Forgiving prompts":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn58 "Wrong button set to Ignored: a wrong press at a single-button prompt is ignored, so you can still press the right one, but it must still come before time runs out; no press still fails. Covers boss button prompts and the prompt sequences of Heat Actions. Checked by the author in play with the 120 FPS entry (a boss button prompt and a dual-sword Heat Action) and with the 60 FPS entry. Mash prompts are not covered."
@@ -20240,7 +20240,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Ignored": 0x2f837fff
     Patch:
       - [ load, *kzp_forgiving_prompts ]
-  "Visuals and Functionality: Sprint sooner":
+  "Gameplay - Controls: Sprint sooner":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn59 "How long you must run in free roam before Kiryu breaks into a sprint. 0.5 s was timed with the 120 and the 60 FPS entry. The In fights value was not tested (no fight was found that allows a sprint). In free roam the sprint still needs the Skanda Sandals or the Sprint from the start entry, and Gion still has none."
@@ -20263,7 +20263,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "0.5 s": 0x2b80000f
     Patch:
       - [ load, *kzp_sprint_sooner ]
-  "Gameplay cheats: Enemies attacking at once":
+  "Gameplay cheats - Combat: Enemies attacking at once":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn60 "How many enemies of a group may attack you at the same time, as on the chosen difficulty. Damage and health still follow your real difficulty. As Easy set the game's attacker limit to 2 (3 in the original) in game memory, with the 120 and the 60 FPS entry. The other values and the look on screen were not checked."
@@ -20280,14 +20280,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "As Legend (two more)": 0x39000002
     Patch:
       - [ be32, 0x0008b7f8, "Attackers" ]
-  "Gameplay cheats: Enemies never block":
+  "Gameplay cheats - Combat: Enemies never block":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn61 "Enemies and bosses do not guard (checked in play). Untick it for the normal game. By the code, fighting allies are affected too."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_enemies_never_block ]
-  "Gameplay cheats: Street weapon durability":
+  "Gameplay cheats - Combat: Street weapon durability":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn62 "Weapons you pick up in street fights last longer before they break. Your own swords are not changed. At x2 the enemies' swords and the items lying in a fight started with twice their durability."
@@ -20303,7 +20303,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x1c00000c
     Patch:
       - [ load, *kzp_street_weapon_durability ]
-  "Gameplay cheats: Shop prices":
+  "Gameplay cheats - Money and items: Shop prices":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn63 "Changes what you pay in shops (Buying) and what shops pay you for items (Selling). x1 is the original. Tested at a pharmacy (x0.5 paid half) and at the junk dealer (x2 doubled the sale price). Restaurants, the blacksmith and other counters were not checked. Exchanges for wooden tags or prizes are not changed. Selling stacks with Money multiplier."
@@ -20329,7 +20329,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x3980000c
     Patch:
       - [ load, *kzp_shop_prices ]
-  "Gameplay cheats: Talk fees":
+  "Gameplay cheats - Money and items: Talk fees":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn64 "Lowers the fee a few people ask you to pay in talks. x1 is the original. Tested on the Hozoin broker: his fee of 10 became 7 at x0.75, 5 at x0.5, 2 at x0.25 and 0 with Free. Other people were not checked. Palanquin rides pay another way and are not changed. Shops are set in Shop prices."
@@ -20346,14 +20346,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x1 (original)": 0x39800004
     Patch:
       - [ load, *kzp_talk_fees ]
-  "Gameplay cheats: Items are not used up":
+  "Gameplay cheats - Money and items: Items are not used up":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn65 "Items you use from the pause menu stay in your bag. Tested with a pill. Meals and drinks were not tried. Items bought, sold, given away or taken in a talk work as before."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_items_are_not_used_up ]
-  "Gameplay cheats: Healing":
+  "Gameplay cheats - Combat: Healing":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn66 "Medicine heals more (x2 healed 602 against 301). Meals and restaurant food were not tested. x1 is the original."
@@ -20369,7 +20369,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x3980000c
     Patch:
       - [ load, *kzp_healing ]
-  "Gameplay cheats: Drunkenness":
+  "Gameplay cheats - Street: Drunkenness":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn67 "Sobering sets how fast you sober up (x5 dropped 5 per step against 1). Drinks sets how drunk drinks make you: a sake bottle drunk from the bag gave 60 at Half against 120 originally. Drinks ordered at a bar were not tested. Drinks in the yujo parlor games may not follow it. Original is the game's behaviour."
@@ -20393,7 +20393,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "At once": 0x3929fc18
     Patch:
       - [ load, *kzp_drunkenness ]
-  "Gameplay cheats: Coliseum prize money":
+  "Gameplay cheats - Money and items: Coliseum prize money":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn68 "Multiplies the money prizes of the Coliseum tournaments at the Hozoin. x2 and x5 paid two and five times a 10,000 first-win prize. Item prizes are unchanged. The amount shown on screen was not read."
@@ -20410,7 +20410,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x10": 0x39800028
     Patch:
       - [ load, *kzp_coliseum_prize_money ]
-  "Visuals and Functionality: Vibration":
+  "Gameplay - Controls: Vibration":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn69 "Controller vibration strength. Original is the game's own. Off stops both motors; the lower values weaken the strong motor only. Read from the values the game sends to the pad, with the 120 FPS entry: Off sent 0, 50 % sent half (rounded down), Original was unchanged. The author felt Off (no rumble) and 50 % (weaker) on a real pad. 25 % and 75 % were not measured."
@@ -20427,14 +20427,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Original": 0x39800004
     Patch:
       - [ load, *kzp_vibration ]
-  "Gameplay cheats: Hold to mash":
+  "Gameplay cheats - Combat: Hold to mash":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn70 "Hold the button instead of mashing; a held button counts as about 10 presses a second. Checked by the author in play with the 120 FPS entry, and again with the 60 FPS entry: the Circle mash in a Heat Action (start holding after the prompt shows), getting up with Cross held after a knock-down, escaping a grab with Cross held or countering it with a Circle throw, and the boss Heat charge with R2 held. In a scripted test with the 120 and 60 FPS entries a held Cross brought the get-up timer down 10 steps a second (without the entry a hold counts once), and a grab ended in about 0.5 s with Cross held. Holding does not help against a stun. Recovering from a throw is not confirmed. Single-press prompts are not changed."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_hold_to_mash ]
-  "Visuals and Functionality: Fade speed":
+  "Visuals - Interface: Fade speed":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn71 "Shortens the fades to and from black (doors, area changes and other screen fades). Original is the game's length. x0.5 halved a door fade at 120, 60 and the original 30 FPS. Instant fades stay instant."
@@ -20450,7 +20450,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x0.25": 0x39800001
     Patch:
       - [ load, *kzp_fade_speed ]
-  "Gameplay cheats: Assist - Scarecrow Formations":
+  "Gameplay cheats - Minigames: Scarecrow Formations":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn72 "Experimental. Scarecrow Formations at Koetsu's mansion: adds extra seconds (Extra time, +20 s by default) to the time limit and to every rank's target time. Changes the difficulty. It applies, but a round was never played to the end in a test, so its effect is not confirmed."
@@ -20467,10 +20467,10 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "+60 s": 0x38600708
     Patch:
       - [ be32, 0x001350f0, "Extra time" ]
-  "Gameplay cheats: Turtle title races":
+  "Gameplay cheats - Minigames: Turtle title races":
     Games: *kzg1
     Author: "Pakundo"
-    Notes: &kzn73 "Turtle Racing. The two title races with the strongest rivals (the Adamantine Cup and the Strongest Undefeated GP) accept weaker rival turtles, whichever turtle you enter. Easier and Much easier both ended the freeze of the original game for a turtle of ability 54 in the Adamantine Cup. To end only the freeze and keep the races as they are, use Bug fix: Turtle title race freeze. Original is the game's rule. A race running to its end was not watched."
+    Notes: &kzn73 "Turtle Racing. The two title races with the strongest rivals (the Adamantine Cup and the Strongest Undefeated GP) accept weaker rival turtles, whichever turtle you enter. Easier and Much easier both ended the freeze of the original game for a turtle of ability 54 in the Adamantine Cup. To end only the freeze and keep the races as they are, use Gameplay - Bug fix: Turtle title race freeze. Original is the game's rule. A race running to its end was not watched."
     Patch Version: 3.1
     Configurable Values: &kzc44
       "Rival strength needed":
@@ -20482,7 +20482,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Much easier (59)": 0x2f83003b
     Patch:
       - [ be32, 0x002aa4d0, "Rival strength needed" ]
-  "Bug fix: Turtle title race freeze":
+  "Gameplay - Bug fix: Turtle title race freeze":
     Games: *kzg1
     Author: "Pakundo"
     Group: "Turtle title race freeze"
@@ -20490,7 +20490,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_turtle_title_race_freeze ]
-  "Gameplay cheats: Assist - Kabuki Acting":
+  "Gameplay cheats - Minigames: Kabuki Acting":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn75 "Kabuki Acting: multiplies the coins the audience throws at each payment during the act (x2 and x3 tested with the 120 FPS entry, x3 with the 60 FPS entry). This should also make the stage's completion goal easier (not checked). A few other coin sources of the stage may not be multiplied. Changes the difficulty."
@@ -20505,7 +20505,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x3": 0x1c800003
     Patch:
       - [ be32, 0x001c1adc, "Coins" ]
-  "Visuals and Functionality: Stick dead zone":
+  "Gameplay - Controls: Stick dead zone":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn76 "Makes the game's own stick dead zone smaller, for both sticks, so a small tilt already moves you or the camera. 23% is the original. RPCS3's own dead zone setting still applies first. Measured against the formula. The feel is yours to judge."
@@ -20522,7 +20522,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "2%": 0x39800003
     Patch:
       - [ load, *kzp_stick_dead_zone ]
-  "Visuals and Functionality: Camera vertical reach":
+  "Gameplay - Controls: Camera vertical reach":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn77 "Lets the right stick move the camera further up and down than the original. x1.0 is the original. Seen outdoors on a Gion street with the 60 and 120 FPS entries: at x1.5 the camera goes clearly lower and higher at full stick. The author checked x1.5 in play with the 60 and 120 FPS entries. Indoors, slopes and other streets were not checked. Camera speed sets the left-right turn."
@@ -20537,7 +20537,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "x1.5": 0xc01e8070
     Patch:
       - [ load, *kzp_camera_vertical_reach ]
-  "Visuals and Functionality: Run threshold":
+  "Gameplay - Controls: Run threshold":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn78 "How far you tilt the left stick before Kiryu runs instead of walking. Full tilt is the original. At a 0.6 tilt Kiryu walked at 1.9 m/s without the entry and ran at 4.5 m/s with Half tilt."
@@ -20553,14 +20553,14 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Any tilt": 0xc1be8050
     Patch:
       - [ be32, 0x001b9450, "Run at" ]
-  "Visuals and Functionality: Lock-on toggle":
+  "Gameplay - Controls: Lock-on toggle":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn79 "Press R1 once to lock on and again to release, instead of holding it. Every tap toggled once with the 120 and the 60 FPS entry. What R1 does outside fights was not checked."
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_lock_on_toggle ]
-  "Gameplay cheats: Coliseum prize item":
+  "Gameplay cheats - Money and items: Coliseum prize item":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn80 "Chooses which of the four item prizes of a Coliseum tournament you get when you win. Original is a random pick (60, 30, 7 and 3 percent; the 3rd and 4th prizes are the rare materials, accessories and armour). Prize 2 and prize 4 were each won as chosen in a test. The money prize is unchanged (see Coliseum prize money)."
@@ -20577,7 +20577,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Always prize 4 (rarest)": 0x48000378
     Patch:
       - [ load, *kzp_coliseum_prize_item ]
-  "Gameplay cheats: Forging materials":
+  "Gameplay cheats - Money and items: Forging materials":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn81 "Blacksmith forging. Materials needed No lets you temper without the materials of the recipe. Materials used up No keeps the materials you have. Manuals needed No also drops the need for the crafting book. The weapon you temper and the fee are still needed. Each value was tested with one forge."
@@ -20603,7 +20603,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "No": 0x60000000
     Patch:
       - [ load, *kzp_forging_materials ]
-  "Visuals and Functionality: Side missions at any hour":
+  "Gameplay - Convenience: Side missions at any hour":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn82 "Experimental. Side missions and people that only appear at a certain time of day (day, evening or night) can be met at any hour. Talks lets the time conditions of talks pass. People keeps people limited to a time of day always there, so some streets may show day and night people together. The clock, the light and the story are not changed. Tested with one giver who normally comes by day and evening (there at night with People, not without it) and with one shop talk that opened and sold with Talks. Other talks and shops were not checked."
@@ -20623,7 +20623,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Any hour": 0x38000003
     Patch:
       - [ load, *kzr419 ]
-  "Gameplay cheats: Encounter refresh":
+  "Gameplay cheats - Street: Encounter refresh":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn83 "How often the groups of street thugs are drawn again. The original game draws them on every fifth area change. By the game's records, beaten groups stay away until then (a group was marked beaten by hand in the test). Use with Encounter rate to see its effect at once. Seen only in game memory, in Rakugai: Every area change drew new groups at each change, Every 2nd area change at every second one. No group was seen on screen or fought."
@@ -20638,7 +20638,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Every 2nd area change": 0x38600002
     Patch:
       - [ be32, 0x00328f7c, "Refresh" ]
-  "Visuals and Functionality: Stage detail":
+  "Visuals - Picture: Stage detail":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn84 "Draws the full stage models where the game swaps in simplified far versions (for example the festival tower and the far part of the Gion street), using the developers' own \"force high detail\" switch. Only a few areas have far versions. In a test the simplified versions in use at the festival dropped from 2 to 0, with no frame-rate cost there. Memory use over a long walk was not checked."
@@ -20652,7 +20652,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
           "Always full detail": 0x38000002
     Patch:
       - [ be32, 0x004df104, "Far areas" ]
-  "Visuals and Functionality: Bloom intensity":
+  "Visuals - Picture: Bloom intensity":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn85 "Scales the glow the game adds around bright areas (lanterns, sky, sunlit walls). Bloom: 100 is the original, 0 removes the glow, up to 300 makes it three times as strong."
@@ -20665,7 +20665,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
         Max: 300
     Patch:
       - [ load, *kzp_bloom_intensity ]
-  "Visuals and Functionality: Depth of field":
+  "Visuals - Picture: Depth of field":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn86 "The background blur of cutscenes and some talks. Strength: how much blur is blended in (100 is the original, 0 removes it). Use it with Clean picture."
@@ -20678,7 +20678,7 @@ PPU-5d3cde094c0be606290c4716da497bced59c1256:
         Max: 300
     Patch:
       - [ load, *kzp_depth_of_field ]
-  "Visuals and Functionality: Notebook tracker":
+  "Gameplay - Convenience: Notebook tracker":
     Games: *kzg1
     Author: "Pakundo"
     Notes: &kzn87 "English builds only. The Notebook lists (Requests, Contracts, Wanted Men) show every side mission as Locked (what to do first), Not now or Available (where to go). Started and finished missions show as before. The row of Request 100 (\"Justice For All\") also shows how many requests, contracts, wanted men and Coliseum opponents are done, and, until you start that request, your Coliseum win rate: by the game's code the last Coliseum opponent appears only at 80% or more. No game file is changed. In a test the lists matched the expected lists row by row. A giver offering a listed mission was not checked. Titles are in English only."
@@ -20705,14 +20705,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_120_fps ]
-  "Visuals and Functionality: Clean picture":
+  "Visuals - Picture: Clean picture":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn3
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan60_image ]
-  "Visuals and Functionality: Camera speed":
+  "Gameplay - Controls: Camera speed":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn4
@@ -20720,7 +20720,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc1
     Patch:
       - [ load, *kzp_camera_speed ]
-  "Visuals and Functionality: Field of view":
+  "Visuals - Camera: Field of view":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn5
@@ -20728,7 +20728,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc2
     Patch:
       - [ load, *kzp_field_of_view ]
-  "Visuals and Functionality: Aspect ratio":
+  "Visuals - Picture: Aspect ratio":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn6
@@ -20736,7 +20736,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc3
     Patch:
       - [ load, *kzp_aspect_ratio ]
-  "Visuals and Functionality: Volume balance":
+  "Sound: Volume balance":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn7
@@ -20744,7 +20744,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc4
     Patch:
       - [ load, *kzp_volume_balance ]
-  "Visuals and Functionality: Weather":
+  "Visuals - World: Weather":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn8
@@ -20752,7 +20752,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc5
     Patch:
       - [ be32, 0x00443c20, "Weather" ]
-  "Visuals and Functionality: Text speed":
+  "Visuals - Interface: Text speed":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn9
@@ -20760,7 +20760,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc6
     Patch:
       - [ load, *kzp_text_speed ]
-  "Visuals and Functionality: Skip hold":
+  "Gameplay - Convenience: Skip hold":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn10
@@ -20768,14 +20768,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc7
     Patch:
       - [ load, *kzp_skip_hold ]
-  "Visuals and Functionality: Shadow map 2048":
+  "Visuals - Picture: Shadow map 2048":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn11
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_shadow_map_2048 ]
-  "Visuals and Functionality: Shadow blur":
+  "Visuals - Picture: Shadow blur":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn12
@@ -20783,7 +20783,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc8
     Patch:
       - [ load, *kzp_shadow_blur ]
-  "Visuals and Functionality: Shadow range":
+  "Visuals - Picture: Shadow range":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn13
@@ -20791,7 +20791,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc9
     Patch:
       - [ be32, 0x00b39bf0, "Shadow range" ]
-  "Gameplay cheats: Money multiplier":
+  "Gameplay cheats - Money and items: Money multiplier":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn14
@@ -20799,21 +20799,21 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc10
     Patch:
       - [ load, *kzp_money_multiplier ]
-  "Visuals and Functionality: Save from the pause menu":
+  "Gameplay - Convenience: Save from the pause menu":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn15
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_save_from_the_pause_menu ]
-  "Visuals and Functionality: Retry on Legend":
+  "Gameplay - Convenience: Retry on Legend":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn16
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_retry_on_legend ]
-  "Gameplay cheats: Experience multiplier":
+  "Gameplay cheats - Growth: Experience multiplier":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn17
@@ -20821,14 +20821,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc11
     Patch:
       - [ load, *kzp_experience_multiplier ]
-  "Gameplay cheats: Heat always full":
+  "Gameplay cheats - Combat: Heat always full":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn18
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0478, 0x38600001 ]
-  "Gameplay cheats: Damage taken":
+  "Gameplay cheats - Combat: Damage taken":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn19
@@ -20836,7 +20836,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc12
     Patch:
       - [ load, *kzp_damage_taken ]
-  "Gameplay cheats: Damage dealt":
+  "Gameplay cheats - Combat: Damage dealt":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn20
@@ -20844,14 +20844,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc13
     Patch:
       - [ load, *kzp_damage_dealt ]
-  "Gameplay cheats: Sprint from the start":
+  "Gameplay cheats - Growth: Sprint from the start":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn21
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0c5c, 0x60000000 ]
-  "Visuals and Functionality: Short boot logos":
+  "Gameplay - Convenience: Short boot logos":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn22
@@ -20859,7 +20859,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc14
     Patch:
       - [ load, *kzp_short_boot_logos ]
-  "Visuals and Functionality: Camera distance":
+  "Gameplay - Controls: Camera distance":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn23
@@ -20867,21 +20867,21 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc15
     Patch:
       - [ load, *kzp_camera_distance ]
-  "Gameplay cheats: Never die":
+  "Gameplay cheats - Combat: Never die":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn24
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0458, 0x38600001 ]
-  "Gameplay cheats: Untouchable":
+  "Gameplay cheats - Combat: Untouchable":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn25
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0460, 0x38600001 ]
-  "Gameplay cheats: Encounter rate":
+  "Gameplay cheats - Street: Encounter rate":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn26
@@ -20889,7 +20889,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc16
     Patch:
       - [ be32, 0x00328d8c, "Encounters" ]
-  "Gameplay cheats: Heat gain":
+  "Gameplay cheats - Combat: Heat gain":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn27
@@ -20897,7 +20897,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc17
     Patch:
       - [ load, *kzp_heat_gain ]
-  "Gameplay cheats: Enemy health":
+  "Gameplay cheats - Combat: Enemy health":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn28
@@ -20905,14 +20905,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc18
     Patch:
       - [ load, *kzp_enemy_health ]
-  "Gameplay cheats: Free spending":
+  "Gameplay cheats - Money and items: Free spending":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn29
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_free_spending ]
-  "Gameplay cheats: Weapon wear":
+  "Gameplay cheats - Combat: Weapon wear":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn30
@@ -20920,7 +20920,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc19
     Patch:
       - [ load, *kzp_weapon_wear ]
-  "Gameplay cheats: Accessory effects":
+  "Gameplay cheats - Combat: Accessory effects":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn31
@@ -20928,7 +20928,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc20
     Patch:
       - [ load, *kzp_accessory_effects ]
-  "Visuals and Functionality: Idle monologue":
+  "Gameplay - Convenience: Idle monologue":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn32
@@ -20936,7 +20936,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc21
     Patch:
       - [ load, *kzp_idle_monologue ]
-  "Visuals and Functionality: Time of day":
+  "Visuals - World: Time of day":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn33
@@ -20944,7 +20944,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc22
     Patch:
       - [ load, *kzp_time_of_day ]
-  "Visuals and Functionality: Hide HUD":
+  "Visuals - Interface: Hide HUD":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn34
@@ -20952,7 +20952,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc23
     Patch:
       - [ load, *kzp_hide_hud ]
-  "Visuals and Functionality: Map markers (core)":
+  "Map markers - Base: Core (required)":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn35
@@ -20960,7 +20960,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc24
     Patch:
       - [ load, *markers_core ]
-  "Visuals and Functionality: Request markers":
+  "Map markers - Missions: Requests":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn36
@@ -20968,7 +20968,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a200, "Mission progress" ]
-  "Visuals and Functionality: Contract markers":
+  "Map markers - Missions: Contracts":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn37
@@ -20976,15 +20976,15 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a204, "Mission progress" ]
-  "Visuals and Functionality: Wanted Men markers":
+  "Map markers - Missions: Wanted Men":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn38
     Patch Version: 3.1
     Configurable Values: *kzc26
     Patch:
-      - [ load, *kzp_wanted_men_markers ]
-  "Visuals and Functionality: Revelation markers":
+      - [ load, *kzp_wanted_men ]
+  "Map markers - Collectibles: Revelations":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn39
@@ -20992,7 +20992,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc27
     Patch:
       - [ be32, 0x1056a20c, "Icon" ]
-  "Visuals and Functionality: Locker key markers":
+  "Map markers - Collectibles: Locker keys":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn40
@@ -21000,105 +21000,105 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc28
     Patch:
       - [ be32, 0x1056a214, "Icon" ]
-  "Visuals and Functionality: Turtle markers":
+  "Map markers - Collectibles: Turtles":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn41
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a218, 0x00000001 ]
-  "Visuals and Functionality: Item markers":
+  "Map markers - Collectibles: Items":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn42
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a21c, 0x00000001 ]
-  "Visuals and Functionality: Oni's key markers":
+  "Map markers - Collectibles: Oni's keys":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn43
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a220, 0x00000001 ]
-  "Visuals and Functionality: Mission item markers":
+  "Map markers - Collectibles: Mission items":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn44
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a224, 0x00000001 ]
-  "Visuals and Functionality: Notice Board marker":
+  "Map markers - Places: Notice Board":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn45
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a228, 0x00000001 ]
-  "Visuals and Functionality: Mahjong marker":
+  "Map markers - Places: Mahjong":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn46
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a22c, 0x00000001 ]
-  "Visuals and Functionality: Shogi marker":
+  "Map markers - Places: Shogi":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn47
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a230, 0x00000001 ]
-  "Visuals and Functionality: Koi-koi marker":
+  "Map markers - Places: Koi-koi":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn48
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a234, 0x00000001 ]
-  "Visuals and Functionality: Cee-lo marker":
+  "Map markers - Places: Cee-lo":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn49
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a238, 0x00000001 ]
-  "Visuals and Functionality: Turtle seller marker":
+  "Map markers - Places: Turtle seller":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn50
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a23c, 0x00000001 ]
-  "Visuals and Functionality: Junk buyer marker":
+  "Map markers - Places: Junk buyer":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn51
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a240, 0x00000001 ]
-  "Visuals and Functionality: Antique salesman marker":
+  "Map markers - Places: Antique salesman":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn52
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a244, 0x00000001 ]
-  "Visuals and Functionality: Yujo date markers":
+  "Map markers - Places: Yujo dates":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn53
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a248, 0x00000001 ]
-  "Visuals and Functionality: Hozoin tournament marker":
+  "Map markers - Places: Hozoin tournament":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn54
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a24c, 0x00000001 ]
-  "Visuals and Functionality: Photo mode":
+  "Visuals - Interface: Photo mode":
     Games: *kzg2
     Author: "Pakundo"
     Group: "Free camera"
@@ -21107,7 +21107,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc29
     Patch:
       - [ load, *kzp_photo_mode ]
-  "Visuals and Functionality: Smart lock-on":
+  "Gameplay - Controls: Smart lock-on":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn56
@@ -21115,7 +21115,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc30
     Patch:
       - [ load, *kzp_smart_lock_on ]
-  "Gameplay cheats: Experience penalty":
+  "Gameplay cheats - Growth: Experience penalty":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn57
@@ -21123,7 +21123,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc31
     Patch:
       - [ load, *kzp_experience_penalty ]
-  "Gameplay cheats: Forgiving prompts":
+  "Gameplay cheats - Combat: Forgiving prompts":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn58
@@ -21131,7 +21131,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc32
     Patch:
       - [ load, *kzp_forgiving_prompts ]
-  "Visuals and Functionality: Sprint sooner":
+  "Gameplay - Controls: Sprint sooner":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn59
@@ -21139,7 +21139,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc33
     Patch:
       - [ load, *kzp_sprint_sooner ]
-  "Gameplay cheats: Enemies attacking at once":
+  "Gameplay cheats - Combat: Enemies attacking at once":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn60
@@ -21147,14 +21147,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc34
     Patch:
       - [ be32, 0x0008b7f8, "Attackers" ]
-  "Gameplay cheats: Enemies never block":
+  "Gameplay cheats - Combat: Enemies never block":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn61
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_enemies_never_block ]
-  "Gameplay cheats: Street weapon durability":
+  "Gameplay cheats - Combat: Street weapon durability":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn62
@@ -21162,7 +21162,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc35
     Patch:
       - [ load, *kzp_street_weapon_durability ]
-  "Gameplay cheats: Shop prices":
+  "Gameplay cheats - Money and items: Shop prices":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn63
@@ -21170,7 +21170,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc36
     Patch:
       - [ load, *kzp_shop_prices ]
-  "Gameplay cheats: Talk fees":
+  "Gameplay cheats - Money and items: Talk fees":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn64
@@ -21178,14 +21178,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc37
     Patch:
       - [ load, *kzp_talk_fees ]
-  "Gameplay cheats: Items are not used up":
+  "Gameplay cheats - Money and items: Items are not used up":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn65
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_items_are_not_used_up ]
-  "Gameplay cheats: Healing":
+  "Gameplay cheats - Combat: Healing":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn66
@@ -21193,7 +21193,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc38
     Patch:
       - [ load, *kzp_healing ]
-  "Gameplay cheats: Drunkenness":
+  "Gameplay cheats - Street: Drunkenness":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn67
@@ -21201,7 +21201,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc39
     Patch:
       - [ load, *kzp_drunkenness ]
-  "Gameplay cheats: Coliseum prize money":
+  "Gameplay cheats - Money and items: Coliseum prize money":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn68
@@ -21209,7 +21209,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc40
     Patch:
       - [ load, *kzp_coliseum_prize_money ]
-  "Visuals and Functionality: Vibration":
+  "Gameplay - Controls: Vibration":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn69
@@ -21217,14 +21217,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc41
     Patch:
       - [ load, *kzp_vibration ]
-  "Gameplay cheats: Hold to mash":
+  "Gameplay cheats - Combat: Hold to mash":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn70
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_hold_to_mash ]
-  "Visuals and Functionality: Fade speed":
+  "Visuals - Interface: Fade speed":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn71
@@ -21232,7 +21232,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc42
     Patch:
       - [ load, *kzp_fade_speed ]
-  "Gameplay cheats: Assist - Scarecrow Formations":
+  "Gameplay cheats - Minigames: Scarecrow Formations":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn72
@@ -21240,7 +21240,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc43
     Patch:
       - [ be32, 0x001350f0, "Extra time" ]
-  "Gameplay cheats: Turtle title races":
+  "Gameplay cheats - Minigames: Turtle title races":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn73
@@ -21248,7 +21248,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc44
     Patch:
       - [ be32, 0x002aa4d0, "Rival strength needed" ]
-  "Bug fix: Turtle title race freeze":
+  "Gameplay - Bug fix: Turtle title race freeze":
     Games: *kzg2
     Author: "Pakundo"
     Group: "Turtle title race freeze"
@@ -21256,7 +21256,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_turtle_title_race_freeze ]
-  "Gameplay cheats: Assist - Kabuki Acting":
+  "Gameplay cheats - Minigames: Kabuki Acting":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn75
@@ -21264,7 +21264,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc45
     Patch:
       - [ be32, 0x001c1adc, "Coins" ]
-  "Visuals and Functionality: Stick dead zone":
+  "Gameplay - Controls: Stick dead zone":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn76
@@ -21272,7 +21272,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc46
     Patch:
       - [ load, *kzp_stick_dead_zone ]
-  "Visuals and Functionality: Camera vertical reach":
+  "Gameplay - Controls: Camera vertical reach":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn77
@@ -21280,7 +21280,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc47
     Patch:
       - [ load, *kzp_camera_vertical_reach ]
-  "Visuals and Functionality: Run threshold":
+  "Gameplay - Controls: Run threshold":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn78
@@ -21288,14 +21288,14 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc48
     Patch:
       - [ be32, 0x001b9450, "Run at" ]
-  "Visuals and Functionality: Lock-on toggle":
+  "Gameplay - Controls: Lock-on toggle":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn79
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_lock_on_toggle ]
-  "Gameplay cheats: Coliseum prize item":
+  "Gameplay cheats - Money and items: Coliseum prize item":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn80
@@ -21303,7 +21303,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc49
     Patch:
       - [ load, *kzp_coliseum_prize_item ]
-  "Gameplay cheats: Forging materials":
+  "Gameplay cheats - Money and items: Forging materials":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn81
@@ -21311,7 +21311,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc50
     Patch:
       - [ load, *kzp_forging_materials ]
-  "Visuals and Functionality: Side missions at any hour":
+  "Gameplay - Convenience: Side missions at any hour":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn82
@@ -21319,7 +21319,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc51
     Patch:
       - [ load, *kzr419 ]
-  "Gameplay cheats: Encounter refresh":
+  "Gameplay cheats - Street: Encounter refresh":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn83
@@ -21327,7 +21327,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc52
     Patch:
       - [ be32, 0x00328f7c, "Refresh" ]
-  "Visuals and Functionality: Stage detail":
+  "Visuals - Picture: Stage detail":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn84
@@ -21335,7 +21335,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc53
     Patch:
       - [ be32, 0x004df104, "Far areas" ]
-  "Visuals and Functionality: Bloom intensity":
+  "Visuals - Picture: Bloom intensity":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn85
@@ -21343,7 +21343,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc54
     Patch:
       - [ load, *kzp_bloom_intensity ]
-  "Visuals and Functionality: Depth of field":
+  "Visuals - Picture: Depth of field":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn86
@@ -21351,7 +21351,7 @@ PPU-0f7ee1f50561dd854f48d4a74fbcb7b30f0307d6:
     Configurable Values: *kzc55
     Patch:
       - [ load, *kzp_depth_of_field ]
-  "Visuals and Functionality: Notebook tracker":
+  "Gameplay - Convenience: Notebook tracker":
     Games: *kzg2
     Author: "Pakundo"
     Notes: *kzn87
@@ -21378,14 +21378,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_120_fps ]
-  "Visuals and Functionality: Clean picture":
+  "Visuals - Picture: Clean picture":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn3
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan60_image ]
-  "Visuals and Functionality: Camera speed":
+  "Gameplay - Controls: Camera speed":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn4
@@ -21393,7 +21393,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc1
     Patch:
       - [ load, *kzp_camera_speed ]
-  "Visuals and Functionality: Field of view":
+  "Visuals - Camera: Field of view":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn5
@@ -21401,7 +21401,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc2
     Patch:
       - [ load, *kzp_field_of_view ]
-  "Visuals and Functionality: Aspect ratio":
+  "Visuals - Picture: Aspect ratio":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn6
@@ -21409,7 +21409,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc3
     Patch:
       - [ load, *kzp_aspect_ratio ]
-  "Visuals and Functionality: Volume balance":
+  "Sound: Volume balance":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn7
@@ -21417,7 +21417,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc4
     Patch:
       - [ load, *kzp_volume_balance ]
-  "Visuals and Functionality: Weather":
+  "Visuals - World: Weather":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn8
@@ -21425,7 +21425,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc5
     Patch:
       - [ be32, 0x00443c20, "Weather" ]
-  "Visuals and Functionality: Text speed":
+  "Visuals - Interface: Text speed":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn9
@@ -21433,7 +21433,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc6
     Patch:
       - [ load, *kzp_text_speed ]
-  "Visuals and Functionality: Skip hold":
+  "Gameplay - Convenience: Skip hold":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn10
@@ -21441,14 +21441,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc7
     Patch:
       - [ load, *kzp_skip_hold ]
-  "Visuals and Functionality: Shadow map 2048":
+  "Visuals - Picture: Shadow map 2048":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn11
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_shadow_map_2048 ]
-  "Visuals and Functionality: Shadow blur":
+  "Visuals - Picture: Shadow blur":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn12
@@ -21456,7 +21456,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc8
     Patch:
       - [ load, *kzp_shadow_blur ]
-  "Visuals and Functionality: Shadow range":
+  "Visuals - Picture: Shadow range":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn13
@@ -21464,7 +21464,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc9
     Patch:
       - [ be32, 0x00b39bf0, "Shadow range" ]
-  "Gameplay cheats: Money multiplier":
+  "Gameplay cheats - Money and items: Money multiplier":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn14
@@ -21472,21 +21472,21 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc10
     Patch:
       - [ load, *kzp_money_multiplier ]
-  "Visuals and Functionality: Save from the pause menu":
+  "Gameplay - Convenience: Save from the pause menu":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn15
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_save_from_the_pause_menu ]
-  "Visuals and Functionality: Retry on Legend":
+  "Gameplay - Convenience: Retry on Legend":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn16
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_retry_on_legend ]
-  "Gameplay cheats: Experience multiplier":
+  "Gameplay cheats - Growth: Experience multiplier":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn17
@@ -21494,14 +21494,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc11
     Patch:
       - [ load, *kzp_experience_multiplier ]
-  "Gameplay cheats: Heat always full":
+  "Gameplay cheats - Combat: Heat always full":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn18
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0478, 0x38600001 ]
-  "Gameplay cheats: Damage taken":
+  "Gameplay cheats - Combat: Damage taken":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn19
@@ -21509,7 +21509,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc12
     Patch:
       - [ load, *kzp_damage_taken ]
-  "Gameplay cheats: Damage dealt":
+  "Gameplay cheats - Combat: Damage dealt":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn20
@@ -21517,14 +21517,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc13
     Patch:
       - [ load, *kzp_damage_dealt ]
-  "Gameplay cheats: Sprint from the start":
+  "Gameplay cheats - Growth: Sprint from the start":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn21
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0c5c, 0x60000000 ]
-  "Visuals and Functionality: Short boot logos":
+  "Gameplay - Convenience: Short boot logos":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn22
@@ -21532,7 +21532,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc14
     Patch:
       - [ load, *kzp_short_boot_logos ]
-  "Visuals and Functionality: Camera distance":
+  "Gameplay - Controls: Camera distance":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn23
@@ -21540,21 +21540,21 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc15
     Patch:
       - [ load, *kzp_camera_distance ]
-  "Gameplay cheats: Never die":
+  "Gameplay cheats - Combat: Never die":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn24
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0458, 0x38600001 ]
-  "Gameplay cheats: Untouchable":
+  "Gameplay cheats - Combat: Untouchable":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn25
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0460, 0x38600001 ]
-  "Gameplay cheats: Encounter rate":
+  "Gameplay cheats - Street: Encounter rate":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn26
@@ -21562,7 +21562,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc16
     Patch:
       - [ be32, 0x00328d8c, "Encounters" ]
-  "Gameplay cheats: Heat gain":
+  "Gameplay cheats - Combat: Heat gain":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn27
@@ -21570,7 +21570,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc17
     Patch:
       - [ load, *kzp_heat_gain ]
-  "Gameplay cheats: Enemy health":
+  "Gameplay cheats - Combat: Enemy health":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn28
@@ -21578,14 +21578,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc18
     Patch:
       - [ load, *kzp_enemy_health ]
-  "Gameplay cheats: Free spending":
+  "Gameplay cheats - Money and items: Free spending":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn29
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_free_spending ]
-  "Gameplay cheats: Weapon wear":
+  "Gameplay cheats - Combat: Weapon wear":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn30
@@ -21593,7 +21593,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc19
     Patch:
       - [ load, *kzp_weapon_wear ]
-  "Gameplay cheats: Accessory effects":
+  "Gameplay cheats - Combat: Accessory effects":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn31
@@ -21601,7 +21601,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc20
     Patch:
       - [ load, *kzp_accessory_effects ]
-  "Visuals and Functionality: Idle monologue":
+  "Gameplay - Convenience: Idle monologue":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn32
@@ -21609,7 +21609,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc21
     Patch:
       - [ load, *kzp_idle_monologue ]
-  "Visuals and Functionality: Time of day":
+  "Visuals - World: Time of day":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn33
@@ -21617,7 +21617,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc22
     Patch:
       - [ load, *kzp_time_of_day ]
-  "Visuals and Functionality: Hide HUD":
+  "Visuals - Interface: Hide HUD":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn34
@@ -21625,7 +21625,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc23
     Patch:
       - [ load, *kzp_hide_hud ]
-  "Visuals and Functionality: Map markers (core)":
+  "Map markers - Base: Core (required)":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn35
@@ -21633,7 +21633,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc24
     Patch:
       - [ load, *markers_core ]
-  "Visuals and Functionality: Request markers":
+  "Map markers - Missions: Requests":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn36
@@ -21641,7 +21641,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a200, "Mission progress" ]
-  "Visuals and Functionality: Contract markers":
+  "Map markers - Missions: Contracts":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn37
@@ -21649,15 +21649,15 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a204, "Mission progress" ]
-  "Visuals and Functionality: Wanted Men markers":
+  "Map markers - Missions: Wanted Men":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn38
     Patch Version: 3.1
     Configurable Values: *kzc26
     Patch:
-      - [ load, *kzp_wanted_men_markers ]
-  "Visuals and Functionality: Revelation markers":
+      - [ load, *kzp_wanted_men ]
+  "Map markers - Collectibles: Revelations":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn39
@@ -21665,7 +21665,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc27
     Patch:
       - [ be32, 0x1056a20c, "Icon" ]
-  "Visuals and Functionality: Locker key markers":
+  "Map markers - Collectibles: Locker keys":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn40
@@ -21673,105 +21673,105 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc28
     Patch:
       - [ be32, 0x1056a214, "Icon" ]
-  "Visuals and Functionality: Turtle markers":
+  "Map markers - Collectibles: Turtles":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn41
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a218, 0x00000001 ]
-  "Visuals and Functionality: Item markers":
+  "Map markers - Collectibles: Items":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn42
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a21c, 0x00000001 ]
-  "Visuals and Functionality: Oni's key markers":
+  "Map markers - Collectibles: Oni's keys":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn43
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a220, 0x00000001 ]
-  "Visuals and Functionality: Mission item markers":
+  "Map markers - Collectibles: Mission items":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn44
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a224, 0x00000001 ]
-  "Visuals and Functionality: Notice Board marker":
+  "Map markers - Places: Notice Board":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn45
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a228, 0x00000001 ]
-  "Visuals and Functionality: Mahjong marker":
+  "Map markers - Places: Mahjong":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn46
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a22c, 0x00000001 ]
-  "Visuals and Functionality: Shogi marker":
+  "Map markers - Places: Shogi":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn47
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a230, 0x00000001 ]
-  "Visuals and Functionality: Koi-koi marker":
+  "Map markers - Places: Koi-koi":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn48
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a234, 0x00000001 ]
-  "Visuals and Functionality: Cee-lo marker":
+  "Map markers - Places: Cee-lo":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn49
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a238, 0x00000001 ]
-  "Visuals and Functionality: Turtle seller marker":
+  "Map markers - Places: Turtle seller":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn50
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a23c, 0x00000001 ]
-  "Visuals and Functionality: Junk buyer marker":
+  "Map markers - Places: Junk buyer":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn51
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a240, 0x00000001 ]
-  "Visuals and Functionality: Antique salesman marker":
+  "Map markers - Places: Antique salesman":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn52
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a244, 0x00000001 ]
-  "Visuals and Functionality: Yujo date markers":
+  "Map markers - Places: Yujo dates":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn53
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a248, 0x00000001 ]
-  "Visuals and Functionality: Hozoin tournament marker":
+  "Map markers - Places: Hozoin tournament":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn54
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a24c, 0x00000001 ]
-  "Visuals and Functionality: Photo mode":
+  "Visuals - Interface: Photo mode":
     Games: *kzg3
     Author: "Pakundo"
     Group: "Free camera"
@@ -21780,7 +21780,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc29
     Patch:
       - [ load, *kzp_photo_mode ]
-  "Visuals and Functionality: Smart lock-on":
+  "Gameplay - Controls: Smart lock-on":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn56
@@ -21788,7 +21788,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc30
     Patch:
       - [ load, *kzp_smart_lock_on ]
-  "Gameplay cheats: Experience penalty":
+  "Gameplay cheats - Growth: Experience penalty":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn57
@@ -21796,7 +21796,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc31
     Patch:
       - [ load, *kzp_experience_penalty ]
-  "Gameplay cheats: Forgiving prompts":
+  "Gameplay cheats - Combat: Forgiving prompts":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn58
@@ -21804,7 +21804,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc32
     Patch:
       - [ load, *kzp_forgiving_prompts ]
-  "Visuals and Functionality: Sprint sooner":
+  "Gameplay - Controls: Sprint sooner":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn59
@@ -21812,7 +21812,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc33
     Patch:
       - [ load, *kzp_sprint_sooner ]
-  "Gameplay cheats: Enemies attacking at once":
+  "Gameplay cheats - Combat: Enemies attacking at once":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn60
@@ -21820,14 +21820,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc34
     Patch:
       - [ be32, 0x0008b7f8, "Attackers" ]
-  "Gameplay cheats: Enemies never block":
+  "Gameplay cheats - Combat: Enemies never block":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn61
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_enemies_never_block ]
-  "Gameplay cheats: Street weapon durability":
+  "Gameplay cheats - Combat: Street weapon durability":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn62
@@ -21835,7 +21835,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc35
     Patch:
       - [ load, *kzp_street_weapon_durability ]
-  "Gameplay cheats: Shop prices":
+  "Gameplay cheats - Money and items: Shop prices":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn63
@@ -21843,7 +21843,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc36
     Patch:
       - [ load, *kzp_shop_prices ]
-  "Gameplay cheats: Talk fees":
+  "Gameplay cheats - Money and items: Talk fees":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn64
@@ -21851,14 +21851,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc37
     Patch:
       - [ load, *kzp_talk_fees ]
-  "Gameplay cheats: Items are not used up":
+  "Gameplay cheats - Money and items: Items are not used up":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn65
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_items_are_not_used_up ]
-  "Gameplay cheats: Healing":
+  "Gameplay cheats - Combat: Healing":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn66
@@ -21866,7 +21866,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc38
     Patch:
       - [ load, *kzp_healing ]
-  "Gameplay cheats: Drunkenness":
+  "Gameplay cheats - Street: Drunkenness":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn67
@@ -21874,7 +21874,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc39
     Patch:
       - [ load, *kzp_drunkenness ]
-  "Gameplay cheats: Coliseum prize money":
+  "Gameplay cheats - Money and items: Coliseum prize money":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn68
@@ -21882,7 +21882,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc40
     Patch:
       - [ load, *kzp_coliseum_prize_money ]
-  "Visuals and Functionality: Vibration":
+  "Gameplay - Controls: Vibration":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn69
@@ -21890,14 +21890,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc41
     Patch:
       - [ load, *kzp_vibration ]
-  "Gameplay cheats: Hold to mash":
+  "Gameplay cheats - Combat: Hold to mash":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn70
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_hold_to_mash ]
-  "Visuals and Functionality: Fade speed":
+  "Visuals - Interface: Fade speed":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn71
@@ -21905,7 +21905,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc42
     Patch:
       - [ load, *kzp_fade_speed ]
-  "Gameplay cheats: Assist - Scarecrow Formations":
+  "Gameplay cheats - Minigames: Scarecrow Formations":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn72
@@ -21913,7 +21913,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc43
     Patch:
       - [ be32, 0x001350f0, "Extra time" ]
-  "Gameplay cheats: Turtle title races":
+  "Gameplay cheats - Minigames: Turtle title races":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn73
@@ -21921,7 +21921,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc44
     Patch:
       - [ be32, 0x002aa4d0, "Rival strength needed" ]
-  "Bug fix: Turtle title race freeze":
+  "Gameplay - Bug fix: Turtle title race freeze":
     Games: *kzg3
     Author: "Pakundo"
     Group: "Turtle title race freeze"
@@ -21929,7 +21929,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_turtle_title_race_freeze ]
-  "Gameplay cheats: Assist - Kabuki Acting":
+  "Gameplay cheats - Minigames: Kabuki Acting":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn75
@@ -21937,7 +21937,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc45
     Patch:
       - [ be32, 0x001c1adc, "Coins" ]
-  "Visuals and Functionality: Stick dead zone":
+  "Gameplay - Controls: Stick dead zone":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn76
@@ -21945,7 +21945,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc46
     Patch:
       - [ load, *kzp_stick_dead_zone ]
-  "Visuals and Functionality: Camera vertical reach":
+  "Gameplay - Controls: Camera vertical reach":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn77
@@ -21953,7 +21953,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc47
     Patch:
       - [ load, *kzp_camera_vertical_reach ]
-  "Visuals and Functionality: Run threshold":
+  "Gameplay - Controls: Run threshold":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn78
@@ -21961,14 +21961,14 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc48
     Patch:
       - [ be32, 0x001b9450, "Run at" ]
-  "Visuals and Functionality: Lock-on toggle":
+  "Gameplay - Controls: Lock-on toggle":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn79
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_lock_on_toggle ]
-  "Gameplay cheats: Coliseum prize item":
+  "Gameplay cheats - Money and items: Coliseum prize item":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn80
@@ -21976,7 +21976,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc49
     Patch:
       - [ load, *kzp_coliseum_prize_item ]
-  "Gameplay cheats: Forging materials":
+  "Gameplay cheats - Money and items: Forging materials":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn81
@@ -21984,7 +21984,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc50
     Patch:
       - [ load, *kzp_forging_materials ]
-  "Visuals and Functionality: Side missions at any hour":
+  "Gameplay - Convenience: Side missions at any hour":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn82
@@ -21992,7 +21992,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc51
     Patch:
       - [ load, *kzr419 ]
-  "Gameplay cheats: Encounter refresh":
+  "Gameplay cheats - Street: Encounter refresh":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn83
@@ -22000,7 +22000,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc52
     Patch:
       - [ be32, 0x00328f7c, "Refresh" ]
-  "Visuals and Functionality: Stage detail":
+  "Visuals - Picture: Stage detail":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn84
@@ -22008,7 +22008,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc53
     Patch:
       - [ be32, 0x004df104, "Far areas" ]
-  "Visuals and Functionality: Bloom intensity":
+  "Visuals - Picture: Bloom intensity":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn85
@@ -22016,7 +22016,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc54
     Patch:
       - [ load, *kzp_bloom_intensity ]
-  "Visuals and Functionality: Depth of field":
+  "Visuals - Picture: Depth of field":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn86
@@ -22024,7 +22024,7 @@ PPU-8ebf5df2793c2a38c8ac4a2538d003c326d554a1:
     Configurable Values: *kzc55
     Patch:
       - [ load, *kzp_depth_of_field ]
-  "Visuals and Functionality: Notebook tracker":
+  "Gameplay - Convenience: Notebook tracker":
     Games: *kzg3
     Author: "Pakundo"
     Notes: *kzn87
@@ -22051,14 +22051,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_120_fps ]
-  "Visuals and Functionality: Clean picture":
+  "Visuals - Picture: Clean picture":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn3
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan60_image ]
-  "Visuals and Functionality: Camera speed":
+  "Gameplay - Controls: Camera speed":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn4
@@ -22066,7 +22066,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc1
     Patch:
       - [ load, *kzp_camera_speed ]
-  "Visuals and Functionality: Field of view":
+  "Visuals - Camera: Field of view":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn5
@@ -22074,7 +22074,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc2
     Patch:
       - [ load, *kzp_field_of_view ]
-  "Visuals and Functionality: Aspect ratio":
+  "Visuals - Picture: Aspect ratio":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn6
@@ -22082,7 +22082,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc3
     Patch:
       - [ load, *kzp_aspect_ratio ]
-  "Visuals and Functionality: Volume balance":
+  "Sound: Volume balance":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn7
@@ -22090,7 +22090,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc4
     Patch:
       - [ load, *kzp_volume_balance ]
-  "Visuals and Functionality: Weather":
+  "Visuals - World: Weather":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn8
@@ -22098,7 +22098,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc5
     Patch:
       - [ be32, 0x00443c20, "Weather" ]
-  "Visuals and Functionality: Text speed":
+  "Visuals - Interface: Text speed":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn9
@@ -22106,7 +22106,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc6
     Patch:
       - [ load, *kzp_text_speed ]
-  "Visuals and Functionality: Skip hold":
+  "Gameplay - Convenience: Skip hold":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn10
@@ -22114,14 +22114,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc7
     Patch:
       - [ load, *kzp_skip_hold ]
-  "Visuals and Functionality: Shadow map 2048":
+  "Visuals - Picture: Shadow map 2048":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn11
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_shadow_map_2048 ]
-  "Visuals and Functionality: Shadow blur":
+  "Visuals - Picture: Shadow blur":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn12
@@ -22129,7 +22129,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc8
     Patch:
       - [ load, *kzp_shadow_blur ]
-  "Visuals and Functionality: Shadow range":
+  "Visuals - Picture: Shadow range":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn13
@@ -22137,7 +22137,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc9
     Patch:
       - [ be32, 0x00b39bf0, "Shadow range" ]
-  "Gameplay cheats: Money multiplier":
+  "Gameplay cheats - Money and items: Money multiplier":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn14
@@ -22145,21 +22145,21 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc10
     Patch:
       - [ load, *kzp_money_multiplier ]
-  "Visuals and Functionality: Save from the pause menu":
+  "Gameplay - Convenience: Save from the pause menu":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn15
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_save_from_the_pause_menu ]
-  "Visuals and Functionality: Retry on Legend":
+  "Gameplay - Convenience: Retry on Legend":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn16
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_retry_on_legend ]
-  "Gameplay cheats: Experience multiplier":
+  "Gameplay cheats - Growth: Experience multiplier":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn17
@@ -22167,14 +22167,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc11
     Patch:
       - [ load, *kzp_experience_multiplier ]
-  "Gameplay cheats: Heat always full":
+  "Gameplay cheats - Combat: Heat always full":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn18
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0478, 0x38600001 ]
-  "Gameplay cheats: Damage taken":
+  "Gameplay cheats - Combat: Damage taken":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn19
@@ -22182,7 +22182,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc12
     Patch:
       - [ load, *kzp_damage_taken ]
-  "Gameplay cheats: Damage dealt":
+  "Gameplay cheats - Combat: Damage dealt":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn20
@@ -22190,14 +22190,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc13
     Patch:
       - [ load, *kzp_damage_dealt ]
-  "Gameplay cheats: Sprint from the start":
+  "Gameplay cheats - Growth: Sprint from the start":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn21
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0c5c, 0x60000000 ]
-  "Visuals and Functionality: Short boot logos":
+  "Gameplay - Convenience: Short boot logos":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn22
@@ -22205,7 +22205,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc14
     Patch:
       - [ load, *kzp_short_boot_logos ]
-  "Visuals and Functionality: Camera distance":
+  "Gameplay - Controls: Camera distance":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn23
@@ -22213,21 +22213,21 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc15
     Patch:
       - [ load, *kzp_camera_distance ]
-  "Gameplay cheats: Never die":
+  "Gameplay cheats - Combat: Never die":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn24
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0458, 0x38600001 ]
-  "Gameplay cheats: Untouchable":
+  "Gameplay cheats - Combat: Untouchable":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn25
     Patch Version: 3.1
     Patch:
       - [ be32, 0x001c0460, 0x38600001 ]
-  "Gameplay cheats: Encounter rate":
+  "Gameplay cheats - Street: Encounter rate":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn26
@@ -22235,7 +22235,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc16
     Patch:
       - [ be32, 0x00328d8c, "Encounters" ]
-  "Gameplay cheats: Heat gain":
+  "Gameplay cheats - Combat: Heat gain":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn27
@@ -22243,7 +22243,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc17
     Patch:
       - [ load, *kzp_heat_gain ]
-  "Gameplay cheats: Enemy health":
+  "Gameplay cheats - Combat: Enemy health":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn28
@@ -22251,14 +22251,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc18
     Patch:
       - [ load, *kzp_enemy_health ]
-  "Gameplay cheats: Free spending":
+  "Gameplay cheats - Money and items: Free spending":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn29
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_free_spending ]
-  "Gameplay cheats: Weapon wear":
+  "Gameplay cheats - Combat: Weapon wear":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn30
@@ -22266,7 +22266,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc19
     Patch:
       - [ load, *kzp_weapon_wear ]
-  "Gameplay cheats: Accessory effects":
+  "Gameplay cheats - Combat: Accessory effects":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn31
@@ -22274,7 +22274,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc20
     Patch:
       - [ load, *kzp_accessory_effects ]
-  "Visuals and Functionality: Idle monologue":
+  "Gameplay - Convenience: Idle monologue":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn32
@@ -22282,7 +22282,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc21
     Patch:
       - [ load, *kzp_idle_monologue ]
-  "Visuals and Functionality: Time of day":
+  "Visuals - World: Time of day":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn33
@@ -22290,7 +22290,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc22
     Patch:
       - [ load, *kzp_time_of_day ]
-  "Visuals and Functionality: Hide HUD":
+  "Visuals - Interface: Hide HUD":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn34
@@ -22298,7 +22298,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc23
     Patch:
       - [ load, *kzp_hide_hud ]
-  "Visuals and Functionality: Map markers (core)":
+  "Map markers - Base: Core (required)":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn35
@@ -22306,7 +22306,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc24
     Patch:
       - [ load, *markers_core ]
-  "Visuals and Functionality: Request markers":
+  "Map markers - Missions: Requests":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn36
@@ -22314,7 +22314,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a200, "Mission progress" ]
-  "Visuals and Functionality: Contract markers":
+  "Map markers - Missions: Contracts":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn37
@@ -22322,15 +22322,15 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc25
     Patch:
       - [ be32, 0x1056a204, "Mission progress" ]
-  "Visuals and Functionality: Wanted Men markers":
+  "Map markers - Missions: Wanted Men":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn38
     Patch Version: 3.1
     Configurable Values: *kzc26
     Patch:
-      - [ load, *kzp_wanted_men_markers ]
-  "Visuals and Functionality: Revelation markers":
+      - [ load, *kzp_wanted_men ]
+  "Map markers - Collectibles: Revelations":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn39
@@ -22338,7 +22338,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc27
     Patch:
       - [ be32, 0x1056a20c, "Icon" ]
-  "Visuals and Functionality: Locker key markers":
+  "Map markers - Collectibles: Locker keys":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn40
@@ -22346,105 +22346,105 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc28
     Patch:
       - [ be32, 0x1056a214, "Icon" ]
-  "Visuals and Functionality: Turtle markers":
+  "Map markers - Collectibles: Turtles":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn41
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a218, 0x00000001 ]
-  "Visuals and Functionality: Item markers":
+  "Map markers - Collectibles: Items":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn42
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a21c, 0x00000001 ]
-  "Visuals and Functionality: Oni's key markers":
+  "Map markers - Collectibles: Oni's keys":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn43
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a220, 0x00000001 ]
-  "Visuals and Functionality: Mission item markers":
+  "Map markers - Collectibles: Mission items":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn44
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a224, 0x00000001 ]
-  "Visuals and Functionality: Notice Board marker":
+  "Map markers - Places: Notice Board":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn45
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a228, 0x00000001 ]
-  "Visuals and Functionality: Mahjong marker":
+  "Map markers - Places: Mahjong":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn46
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a22c, 0x00000001 ]
-  "Visuals and Functionality: Shogi marker":
+  "Map markers - Places: Shogi":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn47
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a230, 0x00000001 ]
-  "Visuals and Functionality: Koi-koi marker":
+  "Map markers - Places: Koi-koi":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn48
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a234, 0x00000001 ]
-  "Visuals and Functionality: Cee-lo marker":
+  "Map markers - Places: Cee-lo":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn49
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a238, 0x00000001 ]
-  "Visuals and Functionality: Turtle seller marker":
+  "Map markers - Places: Turtle seller":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn50
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a23c, 0x00000001 ]
-  "Visuals and Functionality: Junk buyer marker":
+  "Map markers - Places: Junk buyer":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn51
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a240, 0x00000001 ]
-  "Visuals and Functionality: Antique salesman marker":
+  "Map markers - Places: Antique salesman":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn52
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a244, 0x00000001 ]
-  "Visuals and Functionality: Yujo date markers":
+  "Map markers - Places: Yujo dates":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn53
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a248, 0x00000001 ]
-  "Visuals and Functionality: Hozoin tournament marker":
+  "Map markers - Places: Hozoin tournament":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn54
     Patch Version: 3.1
     Patch:
       - [ be32, 0x1056a24c, 0x00000001 ]
-  "Visuals and Functionality: Photo mode":
+  "Visuals - Interface: Photo mode":
     Games: *kzg4
     Author: "Pakundo"
     Group: "Free camera"
@@ -22453,7 +22453,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc29
     Patch:
       - [ load, *kzp_photo_mode ]
-  "Visuals and Functionality: Smart lock-on":
+  "Gameplay - Controls: Smart lock-on":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn56
@@ -22461,7 +22461,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc30
     Patch:
       - [ load, *kzp_smart_lock_on ]
-  "Gameplay cheats: Experience penalty":
+  "Gameplay cheats - Growth: Experience penalty":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn57
@@ -22469,7 +22469,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc31
     Patch:
       - [ load, *kzp_experience_penalty ]
-  "Gameplay cheats: Forgiving prompts":
+  "Gameplay cheats - Combat: Forgiving prompts":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn58
@@ -22477,7 +22477,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc32
     Patch:
       - [ load, *kzp_forgiving_prompts ]
-  "Visuals and Functionality: Sprint sooner":
+  "Gameplay - Controls: Sprint sooner":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn59
@@ -22485,7 +22485,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc33
     Patch:
       - [ load, *kzp_sprint_sooner ]
-  "Gameplay cheats: Enemies attacking at once":
+  "Gameplay cheats - Combat: Enemies attacking at once":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn60
@@ -22493,14 +22493,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc34
     Patch:
       - [ be32, 0x0008b7f8, "Attackers" ]
-  "Gameplay cheats: Enemies never block":
+  "Gameplay cheats - Combat: Enemies never block":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn61
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_enemies_never_block ]
-  "Gameplay cheats: Street weapon durability":
+  "Gameplay cheats - Combat: Street weapon durability":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn62
@@ -22508,7 +22508,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc35
     Patch:
       - [ load, *kzp_street_weapon_durability ]
-  "Gameplay cheats: Shop prices":
+  "Gameplay cheats - Money and items: Shop prices":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn63
@@ -22516,7 +22516,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc36
     Patch:
       - [ load, *kzp_shop_prices ]
-  "Gameplay cheats: Talk fees":
+  "Gameplay cheats - Money and items: Talk fees":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn64
@@ -22524,14 +22524,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc37
     Patch:
       - [ load, *kzp_talk_fees ]
-  "Gameplay cheats: Items are not used up":
+  "Gameplay cheats - Money and items: Items are not used up":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn65
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_items_are_not_used_up ]
-  "Gameplay cheats: Healing":
+  "Gameplay cheats - Combat: Healing":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn66
@@ -22539,7 +22539,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc38
     Patch:
       - [ load, *kzp_healing ]
-  "Gameplay cheats: Drunkenness":
+  "Gameplay cheats - Street: Drunkenness":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn67
@@ -22547,7 +22547,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc39
     Patch:
       - [ load, *kzp_drunkenness ]
-  "Gameplay cheats: Coliseum prize money":
+  "Gameplay cheats - Money and items: Coliseum prize money":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn68
@@ -22555,7 +22555,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc40
     Patch:
       - [ load, *kzp_coliseum_prize_money ]
-  "Visuals and Functionality: Vibration":
+  "Gameplay - Controls: Vibration":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn69
@@ -22563,14 +22563,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc41
     Patch:
       - [ load, *kzp_vibration ]
-  "Gameplay cheats: Hold to mash":
+  "Gameplay cheats - Combat: Hold to mash":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn70
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_hold_to_mash ]
-  "Visuals and Functionality: Fade speed":
+  "Visuals - Interface: Fade speed":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn71
@@ -22578,7 +22578,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc42
     Patch:
       - [ load, *kzp_fade_speed ]
-  "Gameplay cheats: Assist - Scarecrow Formations":
+  "Gameplay cheats - Minigames: Scarecrow Formations":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn72
@@ -22586,7 +22586,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc43
     Patch:
       - [ be32, 0x001350f0, "Extra time" ]
-  "Gameplay cheats: Turtle title races":
+  "Gameplay cheats - Minigames: Turtle title races":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn73
@@ -22594,7 +22594,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc44
     Patch:
       - [ be32, 0x002aa4d0, "Rival strength needed" ]
-  "Bug fix: Turtle title race freeze":
+  "Gameplay - Bug fix: Turtle title race freeze":
     Games: *kzg4
     Author: "Pakundo"
     Group: "Turtle title race freeze"
@@ -22602,7 +22602,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_turtle_title_race_freeze ]
-  "Gameplay cheats: Assist - Kabuki Acting":
+  "Gameplay cheats - Minigames: Kabuki Acting":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn75
@@ -22610,7 +22610,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc45
     Patch:
       - [ be32, 0x001c1adc, "Coins" ]
-  "Visuals and Functionality: Stick dead zone":
+  "Gameplay - Controls: Stick dead zone":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn76
@@ -22618,7 +22618,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc46
     Patch:
       - [ load, *kzp_stick_dead_zone ]
-  "Visuals and Functionality: Camera vertical reach":
+  "Gameplay - Controls: Camera vertical reach":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn77
@@ -22626,7 +22626,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc47
     Patch:
       - [ load, *kzp_camera_vertical_reach ]
-  "Visuals and Functionality: Run threshold":
+  "Gameplay - Controls: Run threshold":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn78
@@ -22634,14 +22634,14 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc48
     Patch:
       - [ be32, 0x001b9450, "Run at" ]
-  "Visuals and Functionality: Lock-on toggle":
+  "Gameplay - Controls: Lock-on toggle":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn79
     Patch Version: 3.1
     Patch:
       - [ load, *kzp_lock_on_toggle ]
-  "Gameplay cheats: Coliseum prize item":
+  "Gameplay cheats - Money and items: Coliseum prize item":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn80
@@ -22649,7 +22649,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc49
     Patch:
       - [ load, *kzp_coliseum_prize_item ]
-  "Gameplay cheats: Forging materials":
+  "Gameplay cheats - Money and items: Forging materials":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn81
@@ -22657,7 +22657,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc50
     Patch:
       - [ load, *kzp_forging_materials ]
-  "Visuals and Functionality: Side missions at any hour":
+  "Gameplay - Convenience: Side missions at any hour":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn82
@@ -22665,7 +22665,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc51
     Patch:
       - [ load, *kzr419 ]
-  "Gameplay cheats: Encounter refresh":
+  "Gameplay cheats - Street: Encounter refresh":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn83
@@ -22673,7 +22673,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc52
     Patch:
       - [ be32, 0x00328f7c, "Refresh" ]
-  "Visuals and Functionality: Stage detail":
+  "Visuals - Picture: Stage detail":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn84
@@ -22681,7 +22681,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc53
     Patch:
       - [ be32, 0x004df104, "Far areas" ]
-  "Visuals and Functionality: Bloom intensity":
+  "Visuals - Picture: Bloom intensity":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn85
@@ -22689,7 +22689,7 @@ PPU-fc24101547eff0f4307d4f70a0cb76329f11a525:
     Configurable Values: *kzc54
     Patch:
       - [ load, *kzp_bloom_intensity ]
-  "Visuals and Functionality: Depth of field":
+  "Visuals - Picture: Depth of field":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn86
@@ -22714,7 +22714,7 @@ PRX-XNsmitgPz606vtCkLvNb8vRvX9AF-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_bowling ]
-  "Gameplay cheats: Assist - Tokkuri Toppling":
+  "Gameplay cheats - Minigames: Tokkuri Toppling":
     Games: *kzg5
     Author: "Pakundo"
     Notes: "Tokkuri Toppling (the bottle game): the opponent makes mistakes more often. The original chances are 10 percent for position, 40 for power, 25 for aim and 5 for hook; this sets all four to one value. With Always, all four mistakes hit every opponent throw in a test (7 of 7 with the 120 FPS entry, 6 of 6 with the 60 FPS entry; none of 6 throws without the entry). 40%, 60% and 80% were not measured. By the code it acts on opponents of the game's skill level 1, as the test opponent was; other levels keep their own play. Changes the difficulty."
@@ -22753,7 +22753,7 @@ PRX-57ReVTFerxWmSMgFHwTLYK4rjE1N-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_chohan ]
-  "Gameplay cheats: Assist - Cho-han":
+  "Gameplay cheats - Minigames: Cho-han":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn89 "Cho-han dice. Winnings multiplies what a won bet pays (x5 paid 5 on a stake of 1). Your call Always wins makes every even/odd call on the house bet win (a wrong call won in a test). The dice shown may still say otherwise. Changes the difficulty."
@@ -22775,7 +22775,7 @@ PRX-57ReVTFerxWmSMgFHwTLYK4rjE1N-0:
           "Original": 0x7f805800
           "Always wins": 0x7f800000
     Patch:
-      - [ load, *kzp_assist_cho_han ]
+      - [ load, *kzp_cho_han ]
 
 PRX-pP9Zham087p826Hk70sKYJNoWxNT-0:
   "Framerate - Minigames: Cho-han":
@@ -22785,14 +22785,14 @@ PRX-pP9Zham087p826Hk70sKYJNoWxNT-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_chohan ]
-  "Gameplay cheats: Assist - Cho-han":
+  "Gameplay cheats - Minigames: Cho-han":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn89
     Patch Version: 3.1
     Configurable Values: *kzc56
     Patch:
-      - [ load, *kzp_assist_cho_han ]
+      - [ load, *kzp_cho_han ]
 
 PRX-Zq84zhToR1cemAoszdAdkosWHzT3-0:
   "Framerate - Minigames: Koi-koi":
@@ -22802,7 +22802,7 @@ PRX-Zq84zhToR1cemAoszdAdkosWHzT3-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_hanafuda ]
-  "Gameplay cheats: Assist - Koi-koi":
+  "Gameplay cheats - Minigames: Koi-koi":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn91 "Koi-koi (hanafuda cards): Winnings multiplies the wooden tags a won match pays (x2 doubled a win in a test). Stakes and the match score are unchanged. Changes the difficulty."
@@ -22818,7 +22818,7 @@ PRX-Zq84zhToR1cemAoszdAdkosWHzT3-0:
           "x3": 0x3980000c
           "x5": 0x39800014
     Patch:
-      - [ load, *kzp_assist_koi_koi ]
+      - [ load, *kzp_koi_koi ]
 
 PRX-7MHf08G4xrd3gmrCasguaj2kNcv5-0:
   "Framerate - Minigames: Koi-koi":
@@ -22828,14 +22828,14 @@ PRX-7MHf08G4xrd3gmrCasguaj2kNcv5-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_hanafuda ]
-  "Gameplay cheats: Assist - Koi-koi":
+  "Gameplay cheats - Minigames: Koi-koi":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn91
     Patch Version: 3.1
     Configurable Values: *kzc57
     Patch:
-      - [ load, *kzp_assist_koi_koi ]
+      - [ load, *kzp_koi_koi ]
 
 PRX-Fb3bdNkcwgfGuYmvGYiF3TWA6fEY-0:
   "Framerate - Minigames: Jiraiya Training":
@@ -22845,7 +22845,7 @@ PRX-Fb3bdNkcwgfGuYmvGYiF3TWA6fEY-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_k_yabusame ]
-  "Gameplay cheats: Jiraiya Training pass lines":
+  "Gameplay cheats - Minigames: Jiraiya Training":
     Games: *kzg5
     Author: "Pakundo"
     Notes: "Jiraiya Training (shuriken on the wooden frog; Jiraiya Chambers in the Completion List): lowers the score needed for each rank, the pass line and the top rank alike (a score one rank short ranked one higher in a test). Your shown score is unchanged. Changes the difficulty."
@@ -22892,7 +22892,7 @@ PRX-1r1tJahTswJr9SPAkSsSUFhNnkht-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_karuta ]
-  "Gameplay cheats: Assist - Iroha Karuta":
+  "Gameplay cheats - Minigames: Iroha Karuta":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn94 "Iroha Karuta. Each card you take counts 2 or 3 points (one take counted 2 in a test). The yujo's takes and the fault rule are unchanged. Changes the difficulty."
@@ -22906,7 +22906,7 @@ PRX-1r1tJahTswJr9SPAkSsSUFhNnkht-0:
           "2 points": 0x39800001
           "3 points": 0x39800002
     Patch:
-      - [ load, *kzp_assist_iroha_karuta ]
+      - [ load, *kzp_iroha_karuta ]
 
 PRX-P6pH1m5azsvnJupM17sCJmtkkcpc-0:
   "Framerate - Minigames: Iroha Karuta":
@@ -22916,14 +22916,14 @@ PRX-P6pH1m5azsvnJupM17sCJmtkkcpc-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_karuta ]
-  "Gameplay cheats: Assist - Iroha Karuta":
+  "Gameplay cheats - Minigames: Iroha Karuta":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn94
     Patch Version: 3.1
     Configurable Values: *kzc58
     Patch:
-      - [ load, *kzp_assist_iroha_karuta ]
+      - [ load, *kzp_iroha_karuta ]
 
 PRX-4v6vfey8tm0ryYnm9b7gzn4Q87Sw-0:
   "Framerate - Minigames: Konpira Fune Fune":
@@ -22933,7 +22933,7 @@ PRX-4v6vfey8tm0ryYnm9b7gzn4Q87Sw-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_konpira ]
-  "Gameplay cheats: Assist - Konpira Fune Fune":
+  "Gameplay cheats - Minigames: Konpira Fune Fune":
     Games: *kzg5
     Author: "Pakundo"
     Notes: "Konpira Fune Fune: the yujo makes wrong moves more often. Original keeps her own play. Changes the difficulty."
@@ -22964,7 +22964,7 @@ PRX-En8J3J0VsXy9TvwcM1jGqctFMkCt-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_mahjong ]
-  "Gameplay cheats: Assist - Mahjong":
+  "Gameplay cheats - Minigames: Mahjong":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn96 "Mahjong. Your starting points sets the points you start a game with (seat 0 held 35,000 in a test). The other three players keep 25,000. That seat 0 is you comes from the code. The completion entry asks for 50,000 at the end of a game. Changes the difficulty."
@@ -22979,7 +22979,7 @@ PRX-En8J3J0VsXy9TvwcM1jGqctFMkCt-0:
           "45,000": 0x618cafc8
           "50,000": 0x618cc350
     Patch:
-      - [ load, *kzp_assist_mahjong ]
+      - [ load, *kzp_mahjong ]
 
 PRX-LvLdxikYP1gQX8TTqVvKaE2tVcQi-0:
   "Framerate - Minigames: Mahjong":
@@ -22989,14 +22989,14 @@ PRX-LvLdxikYP1gQX8TTqVvKaE2tVcQi-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_mahjong ]
-  "Gameplay cheats: Assist - Mahjong":
+  "Gameplay cheats - Minigames: Mahjong":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn96
     Patch Version: 3.1
     Configurable Values: *kzc59
     Patch:
-      - [ load, *kzp_assist_mahjong ]
+      - [ load, *kzp_mahjong ]
 
 PRX-NoNkQEKqhGXQmXQ7wKsPv3Udbex4-0:
   "Framerate - Minigames: Yabusame":
@@ -23006,13 +23006,13 @@ PRX-NoNkQEKqhGXQmXQ7wKsPv3Udbex4-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_r_yabusame ]
-  "Gameplay cheats: Assist - Yabusame":
+  "Gameplay cheats - Minigames: Yabusame":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn98 "Yabusame (archery on horseback): lowers the hit rate needed for each rank, so a round earns a better rank (one rank higher in a test). Changes the difficulty."
     Patch Version: 3.1
     Patch:
-      - [ load, *kzp_assist_yabusame ]
+      - [ load, *kzp_yabusame ]
 
 PRX-3yKqt7eQKhq2WZVdcXj8YE88MVqC-0:
   "Framerate - Minigames: Yabusame":
@@ -23022,13 +23022,13 @@ PRX-3yKqt7eQKhq2WZVdcXj8YE88MVqC-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_r_yabusame ]
-  "Gameplay cheats: Assist - Yabusame":
+  "Gameplay cheats - Minigames: Yabusame":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn98
     Patch Version: 3.1
     Patch:
-      - [ load, *kzp_assist_yabusame ]
+      - [ load, *kzp_yabusame ]
 
 PRX-hcwkop8vL1Hgbu1xbrkGggHY6gUh-0:
   "Framerate - Minigames: Shogi":
@@ -23038,7 +23038,7 @@ PRX-hcwkop8vL1Hgbu1xbrkGggHY6gUh-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_shogi ]
-  "Gameplay cheats: Assist - Shogi":
+  "Gameplay cheats - Minigames: Shogi":
     Games: *kzg5
     Author: "Pakundo"
     Notes: "Shogi: you win once the move count of the match (both sides together) reaches this number after one of your moves. Original is 500. An opponent's record may already count some moves, so the win can come sooner. Changes the difficulty."
@@ -23065,7 +23065,7 @@ PRX-6GfRq3LKHpxje21A6KHe3CR7SgCV-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_suika ]
-  "Gameplay cheats: Assist - Iaigiri Spirit Tempering":
+  "Gameplay cheats - Minigames: Iaigiri Spirit Tempering":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn100 "Iaigiri Spirit Tempering (cutting watermelons). Cut window Wide makes the window for a cut wider. Grading Always best gives every cut that lands the top grade. In a scripted round the score went from 400 to 800. Changes the difficulty."
@@ -23095,7 +23095,7 @@ PRX-QtVvdP5YjaG64gjKoS7dFRAVKv0o-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_suika ]
-  "Gameplay cheats: Assist - Iaigiri Spirit Tempering":
+  "Gameplay cheats - Minigames: Iaigiri Spirit Tempering":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn100
@@ -23113,14 +23113,14 @@ PRX-cEj0e7sMFHxSVQ2f5xUPAS7ggdNs-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_tintiro ]
-  "Gameplay cheats: Assist - Cee-lo":
+  "Gameplay cheats - Minigames: Cee-lo":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn102 "Cee-lo dice: Winnings multiplies what you win in a round (x2 doubled a win in a test). The amount shown on screen stays the original; your money gets the multiplied amount. The multiplied win is also what counts toward the 200,000 completion total (read from the code). Losses are unchanged. Changes the difficulty."
     Patch Version: 3.1
     Configurable Values: *kzc57
     Patch:
-      - [ load, *kzp_assist_cee_lo ]
+      - [ load, *kzp_cee_lo ]
 
 PRX-0yAWALGFWLRjJ9buNpAjfagrFP67-0:
   "Framerate - Minigames: Cee-lo":
@@ -23130,14 +23130,14 @@ PRX-0yAWALGFWLRjJ9buNpAjfagrFP67-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_tintiro ]
-  "Gameplay cheats: Assist - Cee-lo":
+  "Gameplay cheats - Minigames: Cee-lo":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn102
     Patch Version: 3.1
     Configurable Values: *kzc57
     Patch:
-      - [ load, *kzp_assist_cee_lo ]
+      - [ load, *kzp_cee_lo ]
 
 PRX-EHCcuPoQZxcMdSpUNZt9GKq371uf-0:
   "Framerate - Minigames: Tosenkyo":
@@ -23147,7 +23147,7 @@ PRX-EHCcuPoQZxcMdSpUNZt9GKq371uf-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_tousenkyo ]
-  "Gameplay cheats: Assist - Tosenkyo":
+  "Gameplay cheats - Minigames: Tosenkyo":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn104 "Tosenkyo (the fan toss). Multiplies the points of your throws (doubled in a seeded round with the 120 FPS entry). The yujo's throws are unchanged. By the code, the score display stops at 19. Works with the frame-rate fix of this minigame. Changes the difficulty."
@@ -23161,7 +23161,7 @@ PRX-EHCcuPoQZxcMdSpUNZt9GKq371uf-0:
           "x2": 0x39800002
           "x3": 0x39800003
     Patch:
-      - [ load, *kzp_assist_tosenkyo ]
+      - [ load, *kzp_tosenkyo ]
 
 PRX-Jf80yvVjKj88TgYSZkQCUHfoikfY-0:
   "Framerate - Minigames: Tosenkyo":
@@ -23171,14 +23171,14 @@ PRX-Jf80yvVjKj88TgYSZkQCUHfoikfY-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_tousenkyo ]
-  "Gameplay cheats: Assist - Tosenkyo":
+  "Gameplay cheats - Minigames: Tosenkyo":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn104
     Patch Version: 3.1
     Configurable Values: *kzc61
     Patch:
-      - [ load, *kzp_assist_tosenkyo ]
+      - [ load, *kzp_tosenkyo ]
 
 PRX-Lv45WFxmsAjTCrVkMM2P41jSYRkM-0:
   "Framerate - Minigames: Waterfall Meditation":
@@ -23188,7 +23188,7 @@ PRX-Lv45WFxmsAjTCrVkMM2P41jSYRkM-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_waterfall ]
-  "Gameplay cheats: Assist - Waterfall Meditation":
+  "Gameplay cheats - Minigames: Waterfall Meditation":
     Games: *kzg6
     Author: "Pakundo"
     Notes: &kzn106 "Waterfall Meditation. Pass line lowers the gauge level you must keep at the end of a course (487 against 650 at the default). Starting gauge starts the gauge higher. The rank comes from your score against the course's own score lines, which this entry does not change, so the rank does not get easier. A full round was not played. Changes the difficulty."
@@ -23210,7 +23210,7 @@ PRX-Lv45WFxmsAjTCrVkMM2P41jSYRkM-0:
           "25% higher": 0x3980000a
           "50% higher": 0x3980000c
     Patch:
-      - [ load, *kzp_assist_waterfall_meditation ]
+      - [ load, *kzp_waterfall_meditation ]
 
 PRX-foe287TiG5SLPPJqJCntzuVYUo94-0:
   "Framerate - Minigames: Waterfall Meditation":
@@ -23220,11 +23220,11 @@ PRX-foe287TiG5SLPPJqJCntzuVYUo94-0:
     Patch Version: 3.1
     Patch:
       - [ load, *kenzan_umod_waterfall ]
-  "Gameplay cheats: Assist - Waterfall Meditation":
+  "Gameplay cheats - Minigames: Waterfall Meditation":
     Games: *kzg4
     Author: "Pakundo"
     Notes: *kzn106
     Patch Version: 3.1
     Configurable Values: *kzc62
     Patch:
-      - [ load, *kzp_assist_waterfall_meditation ]
+      - [ load, *kzp_waterfall_meditation ]

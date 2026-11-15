@@ -4,10 +4,18 @@
 
 **KenzanPatches 3.1:** more aspect ratios (16:10, 3:2 and 4:3), and map markers for every collectible and side activity.
 
+### Update 2026-11-15: entries grouped by type
+
+- The entry names are regrouped so entries of one type sit together in Game Patches, for example `Gameplay - Controls`, `Gameplay cheats - Combat`, `Map markers - Places` and `Visuals - Picture`. The frame-rate entries keep their names.
+- A few names became shorter in their new group: the minigame assists are named by the minigame alone (Assist - Mahjong is now `Gameplay cheats - Minigames: Mahjong`), Jiraiya Training pass lines is now `Jiraiya Training`, Map markers (core) is now `Core (required)`, and each marker entry is named by what it marks (Request markers is now `Requests`).
+- RPCS3 keeps a tick under the entry name, so tick your entries again, once (all but the frame-rate entries).
+- The file is otherwise the same: every patch, value and default is unchanged.
+
 ### For users of 3.0
 
-- **Ultrawide is now `Aspect ratio`: tick it again.** RPCS3 keeps a tick under the entry's name, so the renamed entry starts unticked. Tick `Aspect ratio` and set the value that names your screen.
-- **Tick the new map marker entries.** `Map markers (core)` and one entry per kind of marker replace Side mission markers and More map markers, which are gone. Tick `Map markers (core)` and the kinds you want: Side mission markers is now `Request markers`, `Contract markers` and `Wanted Men markers`; More map markers is now `Revelation markers` and `Wanted Men markers` (its Icon value). Marker size is now a value of `Map markers (core)`. All other ticks stay.
+- **Tick your entries again.** With the grouped names, every entry except the frame-rate entries has a new name, so RPCS3 no longer finds its 3.0 tick.
+- **Ultrawide is now `Aspect ratio`: tick it again.** RPCS3 keeps a tick under the entry's name, so the renamed entry starts unticked. Tick `Aspect ratio` under `Visuals - Picture` and set the value that names your screen.
+- **The new map marker entries.** `Core (required)` (`Map markers - Base`) and one entry per kind of marker replace Side mission markers and More map markers, which are gone. Tick `Core (required)` and the kinds you want: Side mission markers is now `Requests`, `Contracts` and `Wanted Men`; More map markers is now `Revelations` and `Wanted Men` (its Icon value). Marker size is now a value of `Core (required)`.
 - **Coming from 2.2 or older?** Tick your entries again, once, under your version's title: see the 3.0 notes below.
 
 ### New: more aspect ratios
@@ -20,11 +28,11 @@
 
 ### New: map markers for everything
 
-Markers on the minimap and the pause map, one entry per kind, each with the most fitting picture from the game itself. A NEW badge shows where there is something new. Every marker entry needs `Map markers (core)`, whose Marker size sets the size of every marker. In the pause map's List (Triangle) each marker gets its own named row with a category chip, and picking a row points the map's pointer at it.
+Markers on the minimap and the pause map, one entry per kind, each with the most fitting picture from the game itself. A NEW badge shows where there is something new. Every marker entry needs `Core (required)`, whose Marker size sets the size of every marker. In the pause map's List (Triangle) each marker gets its own named row with a category chip, and picking a row points the map's pointer at it.
 
-- **Side missions:** `Request markers`, `Contract markers` and `Wanted Men markers`. A green "?" where a Request or Contract can be started now and a blue "?" where the next step of one you have begun is ready. The Mission progress value can also show a red "?" where the next step cannot be done yet (hidden by default), or turn the blue "?" off. `Wanted Men markers` shows the man on offer at the Notice Board with his own poster face, and once you have taken him on, his face at his first place (Icon: Wanted poster, Pursuit or Item).
-- **Collectibles:** `Revelation markers` (each Revelation's sketch), `Locker key markers` (the key art), `Turtle markers` (each turtle's own picture), `Item markers`, `Oni's key markers`, `Mission item markers`.
-- **Places and people:** `Notice Board marker`, `Mahjong marker`, `Shogi marker`, `Koi-koi marker`, `Cee-lo marker`, `Turtle seller marker`, `Junk buyer marker`, `Antique salesman marker`, `Yujo date markers`, `Hozoin tournament marker`.
+- **Side missions** (`Map markers - Missions`): `Requests`, `Contracts` and `Wanted Men`. A green "?" where a Request or Contract can be started now and a blue "?" where the next step of one you have begun is ready. The Mission progress value can also show a red "?" where the next step cannot be done yet (hidden by default), or turn the blue "?" off. `Wanted Men` shows the man on offer at the Notice Board with his own poster face, and once you have taken him on, his face at his first place (Icon: Wanted poster, Pursuit or Item).
+- **Collectibles** (`Map markers - Collectibles`): `Revelations` (each Revelation's sketch), `Locker keys` (the key art), `Turtles` (each turtle's own picture), `Items`, `Oni's keys`, `Mission items`.
+- **Places and people** (`Map markers - Places`): `Notice Board`, `Mahjong`, `Shogi`, `Koi-koi`, `Cee-lo`, `Turtle seller`, `Junk buyer`, `Antique salesman`, `Yujo dates`, `Hozoin tournament`.
 
 The README lists what each kind marks, its icon and its values.
 

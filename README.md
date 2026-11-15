@@ -22,7 +22,9 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 **[Download 3.1](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
 
 > [!IMPORTANT]
-> **Coming from 3.0? Tick the new map marker entries.** 3.1 replaces Side mission markers and More map markers with `Map markers (core)` and one entry per kind of marker. Ultrawide is now `Aspect ratio`: tick it again. Your other ticks stay. See [Coming from 3.0](#coming-from-30).
+> **The entries are now grouped by type: tick your entries again.** The 3.1 file was updated on 2026-11-15. Every entry except the frame-rate entries has a new group in front of its name, so entries of one type sit together in Game Patches (`Gameplay - Controls`, `Map markers - Places`, `Visuals - Picture`, ...). RPCS3 keeps a tick under the entry name, so the old ticks no longer count. The frame-rate entries keep their names and their ticks. Nothing else changed.
+>
+> **Coming from 3.0?** Tick your entries again too. The map marker entries replace Side mission markers and More map markers, and Ultrawide is now `Aspect ratio`. See [Coming from 3.0](#coming-from-30).
 >
 > **Coming from 2.2 or older? Tick your entries again, once.** 3.0 lists the game once per version and renames every entry, so RPCS3 no longer finds your old ticks. Also untick the old entries under the plain title `Ryu ga Gotoku Kenzan!`. See [Coming from 2.2 or older](#coming-from-22-or-older).
 
@@ -31,7 +33,7 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 1. **60 FPS and 120 FPS.** The whole game at the game's original speed: fights, Heat Actions, cutscenes, the open world and all 14 minigames. If your PC falls behind, the game draws fewer frames and keeps its pace.
 2. **Full ultrawide support, and more aspect ratios.** `Aspect ratio` gives 21:9 and 32:9 screens a wider 3D view and 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors) a taller one, with the HUD, menus and text at their true shape, movies with black bars, and fades and backdrops across the whole screen. Two spots stay stretched (see [Aspect ratio setup](#aspect-ratio-setup)).
 3. **Save anywhere (Experimental).** `Save from the pause menu` puts Save on Triangle in the pause menu, in free roam. It is greyed out where a save is not safe (see [Save from the pause menu](#save-from-the-pause-menu)).
-4. **Easier substory tracking, now with map markers for everything.** Markers on the minimap and the pause map for every collectible and side activity: a green "?" where a Request or Contract can start now and a blue "?" where its next step is ready, each Wanted Man's poster face, Revelation sketches, locker keys, turtles, items, the minigames, shops and more, with a NEW badge where there is something new. In the pause map's List (Triangle) each marker gets its own named row, and picking a row points at it. Tick `Map markers (core)` and the kinds you want (see [Map markers](#map-markers)). `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. Each of these entries works on its own: tick only `Map markers (core)` and `Request markers` for the map marks without any hints in the Notebook.
+4. **Easier substory tracking, now with map markers for everything.** Markers on the minimap and the pause map for every collectible and side activity: a green "?" where a Request or Contract can start now and a blue "?" where its next step is ready, each Wanted Man's poster face, Revelation sketches, locker keys, turtles, items, the minigames, shops and more, with a NEW badge where there is something new. In the pause map's List (Triangle) each marker gets its own named row, and picking a row points at it. Tick `Core (required)` under `Map markers - Base` and the kinds you want (see [Map markers](#map-markers)). `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. Each of these entries works on its own: tick only `Core (required)` and `Requests` for the map marks without any hints in the Notebook.
 5. **A wide variety of patches for visuals and game functionality, with optional cheats.** `Clean picture` (the slider above), Photo mode, a hidden HUD, field of view, camera, shadows, bloom, depth of field, text speed, shorter fades, controls and comfort; cheats and fifteen minigame assists, all off until you tick them; and one fix for a freeze of the original game.
 
 In all: 114 entries for each English title (2 frame-rate entries, 14 minigame entries, `Clean picture`, 96 optional entries and the bug fix). The Japanese original has 113: `Notebook tracker` is for the English builds only.
@@ -82,9 +84,11 @@ Not sure which one you have? Boot the game once, close RPCS3, and search `log\RP
    |---|---|
    | `Framerate - Core` | **One** of `60 FPS` or `120 FPS` |
    | `Framerate - Minigames` | **All** of them |
-   | `Visuals and Functionality` | `Clean picture`; `Aspect ratio` if your screen is not 16:9; `Map markers (core)` with the marker entries you want; plus any extras you want |
-   | `Gameplay cheats` | Nothing, unless you want them |
-   | `Bug fix` | `Turtle title race freeze` (it does nothing until the freeze case comes up) |
+   | `Gameplay - Bug fix` | `Turtle title race freeze` (it does nothing until the freeze case comes up) |
+   | `Visuals - Picture` | `Clean picture`; `Aspect ratio` if your screen is not 16:9 |
+   | `Map markers - Base` | `Core (required)`, with the marker entries you want under `Map markers - Collectibles`, `Map markers - Missions` and `Map markers - Places` |
+   | `Gameplay - Controls`, `Gameplay - Convenience`, `Sound` and the other `Visuals` groups | Any extras you want |
+   | The `Gameplay cheats` groups | Nothing, unless you want them |
 
 4. Click **Save**. **Chose 120 FPS?** Do the short [120 FPS setup](#120-fps-setup). **Is your screen not 16:9?** Do the short [Aspect ratio setup](#aspect-ratio-setup). Otherwise you are done.
 5. Start the game. The first boot takes longer while RPCS3 recompiles the patched code.
@@ -105,43 +109,56 @@ Not sure which one you have? Boot the game once, close RPCS3, and search `log\RP
 ```
 Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the default), 114 entries
 └─ BLJM60064 01.00
-   ├─ Bug fix: Turtle title race freeze
    ├─ Framerate - Core: 120 FPS | 60 FPS                       pick one
    ├─ Framerate - Minigames: (14, tick all)
    │    Cee-lo, Cho-han, Iaigiri Spirit Tempering, Iroha Karuta, Jiraiya Training, Koi-koi,
    │    Konpira Fune Fune, Mahjong, Shogi, Tokkuri Toppling, Tosenkyo, Turtle Racing,
    │    Waterfall Meditation, Yabusame
-   ├─ Gameplay cheats: (45)
-   │    Accessory effects, Assist - Cee-lo, Assist - Cho-han,
-   │    Assist - Iaigiri Spirit Tempering, Assist - Iroha Karuta, Assist - Kabuki Acting,
-   │    Assist - Koi-koi, Assist - Konpira Fune Fune, Assist - Mahjong,
-   │    Assist - Scarecrow Formations, Assist - Shogi, Assist - Tokkuri Toppling,
-   │    Assist - Tosenkyo, Assist - Waterfall Meditation, Assist - Yabusame,
-   │    Coliseum prize item, Coliseum prize money, Damage dealt, Damage taken, Drunkenness,
-   │    Encounter rate, Encounter refresh, Enemies attacking at once, Enemies never block,
-   │    Enemy health, Experience multiplier, Experience penalty, Forging materials,
-   │    Forgiving prompts, Free spending, Healing, Heat always full, Heat gain,
-   │    Hold to mash, Items are not used up, Jiraiya Training pass lines, Money multiplier,
-   │    Never die, Shop prices, Sprint from the start, Street weapon durability, Talk fees,
-   │    Turtle title races, Untouchable, Weapon wear
-   └─ Visuals and Functionality: (52)
-        Antique salesman marker, Aspect ratio, Bloom intensity, Camera distance, Camera speed,
-        Camera vertical reach, Cee-lo marker, Clean picture, Contract markers, Depth of field,
-        Fade speed, Field of view, Hide HUD, Hozoin tournament marker, Idle monologue,
-        Item markers, Junk buyer marker, Koi-koi marker, Lock-on toggle, Locker key markers,
-        Mahjong marker, Map markers (core), Mission item markers, Notebook tracker,
-        Notice Board marker, Oni's key markers, Photo mode, Request markers, Retry on Legend,
-        Revelation markers, Run threshold, Save from the pause menu, Shadow blur,
-        Shadow map 2048, Shadow range, Shogi marker, Short boot logos,
-        Side missions at any hour, Skip hold, Smart lock-on, Sprint sooner, Stage detail,
-        Stick dead zone, Text speed, Time of day, Turtle markers, Turtle seller marker,
-        Vibration, Volume balance, Wanted Men markers, Weather, Yujo date markers
+   ├─ Gameplay - Bug fix: Turtle title race freeze
+   ├─ Gameplay - Controls: (9)
+   │    Camera distance, Camera speed, Camera vertical reach, Lock-on toggle, Run threshold,
+   │    Smart lock-on, Sprint sooner, Stick dead zone, Vibration
+   ├─ Gameplay - Convenience: (7)
+   │    Idle monologue, Notebook tracker, Retry on Legend, Save from the pause menu,
+   │    Short boot logos, Side missions at any hour, Skip hold
+   ├─ Gameplay cheats - Combat: (15)
+   │    Accessory effects, Damage dealt, Damage taken, Enemies attacking at once,
+   │    Enemies never block, Enemy health, Forgiving prompts, Healing, Heat always full, Heat gain,
+   │    Hold to mash, Never die, Street weapon durability, Untouchable, Weapon wear
+   ├─ Gameplay cheats - Growth: (3)
+   │    Experience multiplier, Experience penalty, Sprint from the start
+   ├─ Gameplay cheats - Minigames: (16)
+   │    Cee-lo, Cho-han, Iaigiri Spirit Tempering, Iroha Karuta, Jiraiya Training, Kabuki Acting,
+   │    Koi-koi, Konpira Fune Fune, Mahjong, Scarecrow Formations, Shogi, Tokkuri Toppling,
+   │    Tosenkyo, Turtle title races, Waterfall Meditation, Yabusame
+   ├─ Gameplay cheats - Money and items: (8)
+   │    Coliseum prize item, Coliseum prize money, Forging materials, Free spending,
+   │    Items are not used up, Money multiplier, Shop prices, Talk fees
+   ├─ Gameplay cheats - Street: (3)
+   │    Drunkenness, Encounter rate, Encounter refresh
+   ├─ Map markers - Base: Core (required)
+   ├─ Map markers - Collectibles: (6)
+   │    Items, Locker keys, Mission items, Oni's keys, Revelations, Turtles
+   ├─ Map markers - Missions: (3)
+   │    Contracts, Requests, Wanted Men
+   ├─ Map markers - Places: (10)
+   │    Antique salesman, Cee-lo, Hozoin tournament, Junk buyer, Koi-koi, Mahjong, Notice Board,
+   │    Shogi, Turtle seller, Yujo dates
+   ├─ Sound: Volume balance
+   ├─ Visuals - Camera: Field of view
+   ├─ Visuals - Interface: (4)
+   │    Fade speed, Hide HUD, Photo mode, Text speed
+   ├─ Visuals - Picture: (8)
+   │    Aspect ratio, Bloom intensity, Clean picture, Depth of field, Shadow blur, Shadow map 2048,
+   │    Shadow range, Stage detail
+   └─ Visuals - World: (2)
+        Time of day, Weather
 Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)   the same 114 entries
 Ryu ga Gotoku Kenzan! (English translation, initial release)   the same 114 entries
 Ryu ga Gotoku Kenzan! (Japanese original)                      113: no Notebook tracker
 ```
 
-Each entry's full name is its group, a colon and its name, for example `Visuals and Functionality: Aspect ratio`. The groups are sorted by name, and so are the entries inside each group. The minigame names are the English translation's own words, as in the game's Completion List.
+Each entry's full name is its group, a colon and its name, for example `Visuals - Picture: Aspect ratio`. RPCS3 sorts the entries by full name, so the entries of one group sit together, the groups are sorted by name, and so are the entries inside each group. The minigame names are the English translation's own words, as in the game's Completion List.
 
 </details>
 
@@ -188,7 +205,7 @@ One setting in the game's custom configuration, and the `Aspect ratio` entry wit
 <summary><b>Show the Aspect ratio setup</b></summary>
 
 1. Right-click the game → **Create Custom Configuration From Global Settings** (or **Change Custom Configuration** if the game already has one, for example from the 120 FPS setup). On the **GPU** tab, turn on **Stretch To Display Area** and click **Save**. RPCS3's own tooltip: it overrides the aspect ratio and stretches the image to the full display area.
-2. Tick `Aspect ratio` under `Visuals and Functionality` and set its **Aspect ratio** value to the one that names your screen, then click **Save**:
+2. Tick `Aspect ratio` under `Visuals - Picture` and set its **Aspect ratio** value to the one that names your screen, then click **Save**:
 
    | Your screen | Aspect ratio |
    |---|---|
@@ -209,14 +226,14 @@ One setting in the game's custom configuration, and the `Aspect ratio` entry wit
 
 ### Map markers
 
-Tick `Map markers (core)` and the marker entries you want. Each kind is its own entry, and every marker shows on the minimap and on the pause map.
+Tick `Core (required)` under `Map markers - Base` and the marker entries you want. Each kind is its own entry, and every marker shows on the minimap and on the pause map.
 
 <details>
 <summary><b>Every kind of marker, its icon and its values</b></summary>
 
-`Map markers (core)` draws the markers of all the marker entries: on its own it draws nothing, and a marker entry without it draws nothing. Its **Marker size** (Small / Medium / Large, default Medium) sets the size of every marker.
+`Core (required)` draws the markers of all the marker entries: on its own it draws nothing, and a marker entry without it draws nothing. Its **Marker size** (Small / Medium / Large, default Medium) sets the size of every marker.
 
-**Side missions.** A green "?" marks where a Request or Contract can be started now; a Wanted Man on offer shows his own poster face at the Notice Board. **Mission progress** adds more:
+**Side missions** (`Map markers - Missions`). A green "?" marks where a Request or Contract can be started now; a Wanted Man on offer shows his own poster face at the Notice Board. **Mission progress** adds more:
 
 - Next step (the default): a blue "?" where the next step of a mission you have begun can be done now. For a step inside a building, the "?" shows at its door and inside.
 - Next step and blocked: also a red "?" where the next step is but cannot be done yet, for example at another time of day or later in the story.
@@ -224,36 +241,35 @@ Tick `Map markers (core)` and the marker entries you want. Each kind is its own 
 
 | Entry | What it marks | Values | Icon |
 |---|---|---|---|
-| `Request markers` | Where a Request can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
-| `Contract markers` | Where a Contract can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
-| `Wanted Men markers` | The man on offer at the Notice Board; once you have taken him on, his first place and the next step of his mission. Icon sets the mark at his first place. | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. | The man's poster face on the parchment; blue and red "?" |
+| `Requests` | Where a Request can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
+| `Contracts` | Where a Contract can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
+| `Wanted Men` | The man on offer at the Notice Board; once you have taken him on, his first place and the next step of his mission. Icon sets the mark at his first place. | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. | The man's poster face on the parchment; blue and red "?" |
 
-**Collectibles.**
-
-| Entry | What it marks | Values | Icon |
-|---|---|---|---|
-| `Revelation markers` | The places of the Revelations you can see now: you have the sketch and have not learned the technique. | Icon: Sketch / Item. Default: Sketch. | That Revelation's own sketch |
-| `Locker key markers` | The locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's marker goes once you pick it up. | Icon: Locker key / Locker. Default: Locker key. | The key's own picture |
-| `Turtle markers` | The overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles in the fields and streets from chapter 5 on (only while one is there), and the Eternal Turtle in Gion when he appears. | No values. | Each turtle's own picture |
-| `Item markers` | The items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3) until you pick them up. | No values. | Each item's own picture |
-| `Oni's key markers` | Each Oni's Key the Oni drop in chapter 12 until you pick it up. | No values. | The key's own picture |
-| `Mission item markers` | The things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), only while that step is on. | No values. | Each item's own picture |
-
-**Places and people.**
+**Collectibles** (`Map markers - Collectibles`).
 
 | Entry | What it marks | Values | Icon |
 |---|---|---|---|
-| `Notice Board marker` | The notice board at the banya in Rakugai. With `Wanted Men markers` also ticked, the poster face of the man on offer takes the board's place. | No values. | The parchment; NEW while a new wanted poster is there |
-| `Mahjong marker` | The mahjong players in Gion. | No values. | Mahjong point sticks |
-| `Shogi marker` | The shogi challenge matches in Gion. | No values. | A shogi piece |
-| `Koi-koi marker` | The koi-koi player in Rakugai. | No values. | Gambling tags; NEW when a new opponent has been added |
-| `Cee-lo marker` | The cee-lo player in Rakugai. | No values. | Dice |
-| `Turtle seller marker` | The man in Rakugai who sells turtles, turtle food and turtle buckets. | No values. | A turtle bucket; NEW while his free turtle bucket is on offer |
-| `Junk buyer marker` | The man in Rakugai who buys your junk, from chapter 5 on. | No values. | A koban coin |
-| `Antique salesman marker` | The traveling salesman of antiques at the Sanjusangendo, from chapter 10 on. | No values. | The picture of his next item; NEW while a new item is waiting |
-| `Aspect ratio` | A picture for screens that are not 16:9. On 21:9 and 32:9 screens: a wider 3D view, the HUD, menus and text at their true shape, movies with black bars, fades and backdrops across the whole screen. On 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors): a taller 3D view, the HUD at its 16:9 distance from the top and bottom edges in play, menus letterboxed and centred, movies with bars at the top and bottom. Needs RPCS3's GPU > Stretch To Display Area: see [Aspect ratio setup](#aspect-ratio-setup). Two spots stay stretched: the Ultimate Match quit dialog and some menu backdrops at the sides. | Aspect ratio: 21:9 (2560x1080, 5120x2160) / 21:9 (3440x1440) / 21:9 (3840x1600) / 32:9 (3840x1080, 5120x1440, 7680x2160) / 16:10 (1280x800, 1920x1200, 2560x1600) / 3:2 (2160x1440, 2256x1504, 3000x2000) / 4:3 (1024x768, 1600x1200, 2048x1536). Default: 21:9 (3440x1440). |
-| `Yujo date markers` | The place where a yujo waits for her date with you. | No values. | A heart |
-| `Hozoin tournament marker` | The tournament reception at the Hozoin, from chapter 9 on. | No values. | A ticket |
+| `Revelations` | The places of the Revelations you can see now: you have the sketch and have not learned the technique. | Icon: Sketch / Item. Default: Sketch. | That Revelation's own sketch |
+| `Locker keys` | The locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's marker goes once you pick it up. | Icon: Locker key / Locker. Default: Locker key. | The key's own picture |
+| `Turtles` | The overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles in the fields and streets from chapter 5 on (only while one is there), and the Eternal Turtle in Gion when he appears. | No values. | Each turtle's own picture |
+| `Items` | The items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3) until you pick them up. | No values. | Each item's own picture |
+| `Oni's keys` | Each Oni's Key the Oni drop in chapter 12 until you pick it up. | No values. | The key's own picture |
+| `Mission items` | The things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), only while that step is on. | No values. | Each item's own picture |
+
+**Places and people** (`Map markers - Places`).
+
+| Entry | What it marks | Values | Icon |
+|---|---|---|---|
+| `Notice Board` | The notice board at the banya in Rakugai. With `Wanted Men` also ticked, the poster face of the man on offer takes the board's place. | No values. | The parchment; NEW while a new wanted poster is there |
+| `Mahjong` | The mahjong players in Gion. | No values. | Mahjong point sticks |
+| `Shogi` | The shogi challenge matches in Gion. | No values. | A shogi piece |
+| `Koi-koi` | The koi-koi player in Rakugai. | No values. | Gambling tags; NEW when a new opponent has been added |
+| `Cee-lo` | The cee-lo player in Rakugai. | No values. | Dice |
+| `Turtle seller` | The man in Rakugai who sells turtles, turtle food and turtle buckets. | No values. | A turtle bucket; NEW while his free turtle bucket is on offer |
+| `Junk buyer` | The man in Rakugai who buys your junk, from chapter 5 on. | No values. | A koban coin |
+| `Antique salesman` | The traveling salesman of antiques at the Sanjusangendo, from chapter 10 on. | No values. | The picture of his next item; NEW while a new item is waiting |
+| `Yujo dates` | The place where a yujo waits for her date with you. | No values. | A heart |
+| `Hozoin tournament` | The tournament reception at the Hozoin, from chapter 9 on. | No values. | A ticket |
 
 **The List.** On the pause map, Triangle opens the List. Each marker gets its own row there, with its name (the Request's title, the Wanted Man's name, the sketch, the turtle) and a category chip, beside the game's own places. Picking a row points the map's pointer at that marker.
 
@@ -263,16 +279,45 @@ Tick `Map markers (core)` and the marker entries you want. Each kind is its own 
 
 ## Coming from 3.0
 
-Replace `imported_patch.yml`. Your ticks stay, except for the map markers and Ultrawide: Side mission markers and More map markers are gone, and the new marker entries replace them. Tick `Map markers (core)` and the kinds you want:
+Replace `imported_patch.yml`, open Game Patches and **tick your entries again**, once, under your version's title. The entries are now grouped by type: every entry except the frame-rate entries has a new group in front of its name, for example Visuals and Functionality: Camera speed is now `Gameplay - Controls: Camera speed`. RPCS3 keeps each tick under the executable hash, the entry name and the title, so it no longer finds those ticks. The `Framerate - Core` and `Framerate - Minigames` entries keep their names and their ticks.
 
-| You had (3.0) | Tick now (3.1), with `Map markers (core)` |
+The same applies if you downloaded 3.1 before the update of 2026-11-15, when its entries were still under Visuals and Functionality, Gameplay cheats and Bug fix: replace the file and tick your entries again. Only the names changed.
+
+From 3.0, the map markers and Ultrawide also changed. Side mission markers and More map markers are gone, and the marker entries replace them. Tick `Core (required)` under `Map markers - Base` and the kinds you want:
+
+| You had (3.0) | Tick now (3.1), with `Core (required)` |
 |---|---|
-| Side mission markers | `Request markers`, `Contract markers` and `Wanted Men markers` |
-| More map markers, Revelations | `Revelation markers` |
-| More map markers, bounty targets | `Wanted Men markers` (its Icon value sets the mark) |
-| The Marker size of either | **Marker size** of `Map markers (core)` |
+| Side mission markers | `Requests`, `Contracts` and `Wanted Men` (`Map markers - Missions`) |
+| More map markers, Revelations | `Revelations` (`Map markers - Collectibles`) |
+| More map markers, bounty targets | `Wanted Men` (its Icon value sets the mark) |
+| The Marker size of either | **Marker size** of `Core (required)` |
 
-Ultrawide is now `Aspect ratio`, with new 16:10, 3:2 and 4:3 values: tick `Aspect ratio` again and set its value (see [Aspect ratio setup](#aspect-ratio-setup)).
+Ultrawide is now `Aspect ratio` (`Visuals - Picture`), with new 16:10, 3:2 and 4:3 values: tick `Aspect ratio` again and set its value (see [Aspect ratio setup](#aspect-ratio-setup)).
+
+<details>
+<summary><b>Where each entry went</b></summary>
+
+| Group before | Entries | Group now |
+|---|---|---|
+| Bug fix | Turtle title race freeze | `Gameplay - Bug fix` |
+| Visuals and Functionality | Camera distance, Camera speed, Camera vertical reach, Lock-on toggle, Run threshold, Smart lock-on, Sprint sooner, Stick dead zone, Vibration | `Gameplay - Controls` |
+| Visuals and Functionality | Idle monologue, Notebook tracker, Retry on Legend, Save from the pause menu, Short boot logos, Side missions at any hour, Skip hold | `Gameplay - Convenience` |
+| Visuals and Functionality | Map markers (core), now `Core (required)` | `Map markers - Base` |
+| Visuals and Functionality | Item, Locker key, Mission item, Oni's key, Revelation and Turtle markers, now `Items`, `Locker keys`, `Mission items`, `Oni's keys`, `Revelations` and `Turtles` | `Map markers - Collectibles` |
+| Visuals and Functionality | Contract, Request and Wanted Men markers, now `Contracts`, `Requests` and `Wanted Men` | `Map markers - Missions` |
+| Visuals and Functionality | The Antique salesman, Cee-lo, Hozoin tournament, Junk buyer, Koi-koi, Mahjong, Notice Board, Shogi, Turtle seller and Yujo date markers, now named by the place alone (`Yujo dates`) | `Map markers - Places` |
+| Visuals and Functionality | Volume balance | `Sound` |
+| Visuals and Functionality | Field of view | `Visuals - Camera` |
+| Visuals and Functionality | Fade speed, Hide HUD, Photo mode, Text speed | `Visuals - Interface` |
+| Visuals and Functionality | Aspect ratio, Bloom intensity, Clean picture, Depth of field, Shadow blur, Shadow map 2048, Shadow range, Stage detail | `Visuals - Picture` |
+| Visuals and Functionality | Time of day, Weather | `Visuals - World` |
+| Gameplay cheats | Accessory effects, Damage dealt, Damage taken, Enemies attacking at once, Enemies never block, Enemy health, Forgiving prompts, Healing, Heat always full, Heat gain, Hold to mash, Never die, Street weapon durability, Untouchable, Weapon wear | `Gameplay cheats - Combat` |
+| Gameplay cheats | Experience multiplier, Experience penalty, Sprint from the start | `Gameplay cheats - Growth` |
+| Gameplay cheats | The minigame assists, now named by the minigame alone (Assist - Mahjong is now `Mahjong`); Jiraiya Training pass lines, now `Jiraiya Training`; Turtle title races | `Gameplay cheats - Minigames` |
+| Gameplay cheats | Coliseum prize item, Coliseum prize money, Forging materials, Free spending, Items are not used up, Money multiplier, Shop prices, Talk fees | `Gameplay cheats - Money and items` |
+| Gameplay cheats | Drunkenness, Encounter rate, Encounter refresh | `Gameplay cheats - Street` |
+
+</details>
 
 ## Coming from 2.2 or older
 
@@ -290,11 +335,11 @@ Up to 2.2 every entry sat under one title, with the game version at the end of i
 
 The minigame entries now carry the English translation's own names for the minigames. Find your old entry in the left column:
 
-| Old name (2.2) | New name (3.0), under your version's title |
+| Old name (2.2) | New name, under your version's title |
 |---|---|
 | `60 FPS (English translation)`, `60 FPS (English translation, old version)`, `60 FPS (Japanese original)` | `Framerate - Core: 60 FPS` |
 | `120 FPS (English translation)`, `120 FPS (English translation, old version)`, `120 FPS (Japanese original)` | `Framerate - Core: 120 FPS` |
-| `Clean picture (English translation)`, `Clean picture (English translation, old version)`, `Clean picture (Japanese original)` | `Visuals and Functionality: Clean picture` |
+| `Clean picture (English translation)`, `Clean picture (English translation, old version)`, `Clean picture (Japanese original)` | `Visuals - Picture: Clean picture` |
 | `Minigame fixes - Bowling` | `Framerate - Minigames: Tokkuri Toppling` |
 | `Minigame fixes - Chohan (English translation)`, `Minigame fixes - Chohan (Japanese original)` | `Framerate - Minigames: Cho-han` |
 | `Minigame fixes - Hanafuda (English translation)`, `Minigame fixes - Hanafuda (Japanese original)` | `Framerate - Minigames: Koi-koi` |
@@ -324,9 +369,13 @@ Every entry, its values and its default. Each entry also carries notes in RPCS3.
 
 - **Framerate - Core** (2): `60 FPS` or `120 FPS`, the frame-rate patch of 2.2.
 - **Framerate - Minigames** (14): one entry per minigame that keeps it at the original speed. Tick all.
-- **Visuals and Functionality** (52): `Clean picture`, `Aspect ratio`, `Save from the pause menu`, the substory tracker, `Map markers (core)` and its 19 marker entries, Photo mode, the HUD, camera, shadows, bloom, depth of field, weather and time of day, text speed, fades, sticks, lock-on, vibration, sound.
-- **Gameplay cheats** (45): health, damage, Heat, money, experience, items, weapons, prices, street thugs, the Coliseum, and fifteen minigame assists.
-- **Bug fix** (1): a freeze of the original game in two Turtle Racing title races.
+- **Gameplay - Bug fix** (1): a freeze of the original game in two Turtle Racing title races.
+- **Gameplay - Controls** (9): camera distance, speed and reach, lock-on, running and sprinting, the stick dead zone, vibration.
+- **Gameplay - Convenience** (7): `Save from the pause menu`, the Notebook tracker, Retry on Legend, side missions at any hour, the idle monologue, boot logos, skip hold.
+- **Gameplay cheats - Combat** (15), **- Growth** (3), **- Minigames** (16), **- Money and items** (8), **- Street** (3): health, damage, Heat, experience, money, items, weapons, prices, street thugs, the Coliseum, and fifteen minigame assists. Cheats change the game's difficulty and economy, and what is written to your save: keep a copy of your save.
+- **Map markers - Base** (1), **- Collectibles** (6), **- Missions** (3), **- Places** (10): `Core (required)` and its 19 marker entries.
+- **Sound** (1): volume balance.
+- **Visuals - Camera** (1), **- Interface** (4), **- Picture** (8), **- World** (2): field of view, Photo mode, the HUD, text speed, fades, `Clean picture`, `Aspect ratio`, shadows, bloom, depth of field, stage detail, weather and time of day.
 
 <details>
 <summary>How to set values</summary>
@@ -376,125 +425,238 @@ Tick all 14. Each keeps its minigame at the original speed with the 60 or the 12
 </details>
 
 <details>
-<summary><b>Visuals and Functionality</b> (52)</summary>
+<summary><b>Gameplay - Bug fix</b> (1)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Antique salesman marker` | Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item and a NEW badge while a new item is waiting. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Bloom intensity` | Scales the glow the game adds around bright areas (lanterns, sky, sunlit walls). 0 removes the glow; 300 makes it three times as strong. | Bloom (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
-| `Camera distance` | Moves the gameplay camera further away or closer (Distance) and higher or lower (Height). Walls still pull it in. | Distance: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.2.<br>Height: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.0 (original). |
-| `Camera speed` | How fast the right stick turns the camera. Set both values to the same number. | Camera speed: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%.<br>Camera ramp: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%. |
-| `Camera vertical reach` | Lets the right stick move the camera further up and down than the original. | Vertical reach: x1.0 (original) / x1.25 / x1.5. Default: x1.5. |
-| `Cee-lo marker` | Marks the cee-lo player in Rakugai. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Clean picture` | Stops the game blurring every finished frame, removes the grid over blurred backgrounds and keeps edges clean at any Resolution Scale. No file to copy. See [Clean picture](#clean-picture). | No values: tick it to turn it on. |
-| `Contract markers` | A green "?" where a Contract can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
-| `Depth of field` | How strong the background blur of cutscenes and some talks is. 0 removes it. Use it with `Clean picture`. | Strength (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
-| `Fade speed` | Shortens the fades to and from black (doors, area changes and other screen fades). Instant fades stay instant. | Fade length: Original / x0.75 / x0.5 / x0.25. Default: x0.5. |
-| `Field of view` | Widens the view of the gameplay camera. Cutscene and talk cameras are not changed. | Field of view: x1.0 (original) / x1.1 / x1.2 / x1.3 / x1.4 / x1.5. Default: x1.2. |
-| `Hide HUD` | Hides the HUD while you walk the streets: the HUD, the minimap, the action prompt (such as Talk) and name labels, or only the minimap and its marks. Menus, talks, shops, minigames and fights keep their HUD. | Hide HUD: In free roam / Only the minimap. Default: In free roam. |
-| `Hozoin tournament marker` | Marks the tournament reception at the Hozoin, from chapter 9 on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Idle monologue` | How long you must stand still before Kiryu starts talking to himself in the street, or never. | Idle monologue after: 3.5 s / 7 s (original) / 15 s / 30 s / 60 s / Off. Default: 30 s. |
-| `Item markers` | Marks the items lying on the ground in the story, each with its own picture, until you pick them up. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Junk buyer marker` | Marks the man in Rakugai who buys your junk, from chapter 5 on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Koi-koi marker` | Marks the koi-koi player in Rakugai, with a NEW badge when a new opponent has been added. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Lock-on toggle` | Press R1 once to lock on and again to release, instead of holding it. | No values: tick it to turn it on. |
-| `Locker key markers` | Marks the locker keys you have not picked up yet in the area you are in, with the key's own picture, once the Request Storage Locker Instructions has explained the lockers. Needs `Map markers (core)`. See [Map markers](#map-markers). | Icon: Locker key / Locker. Default: Locker key. |
-| `Mahjong marker` | Marks the mahjong players in Gion. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Map markers (core)` | Draws the markers of all the marker entries on the minimap and the pause map. Tick it with the marker entries you want: on its own it draws nothing. See [Map markers](#map-markers). | Marker size: Small / Medium / Large. Default: Medium. |
-| `Mission item markers` | Marks the things a mission step asks you to find, each with its own picture, while that step is on. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Notebook tracker` | The Notebook's three lists (Requests, Contracts, Wanted Men) show every side mission as Locked (what to do first), Not now or Available (where to go). The row of Request 100 also counts what you have done. English builds only. See [Notebook tracker](#notebook-tracker). | No values: tick it to turn it on. |
-| `Notice Board marker` | Marks the notice board at the banya in Rakugai, with a NEW badge while a new wanted poster is there. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Oni's key markers` | Marks each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Photo mode` | Press L3 and R3 together in free roam: time stops, Kiryu stands still and the camera flies free, with the HUD hidden. Press them again to return. Opening the pause menu ends it. | Freeze time: On / Off (world keeps moving). Default: On.<br>Move speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game).<br>Look speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game). |
-| `Request markers` | A green "?" where a Request can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
-| `Retry on Legend` | Experimental. On Legend, losing a story fight shows the Retry menu instead of sending you to the title menu. | No values: tick it to turn it on. |
-| `Revelation markers` | Marks the places of the Revelations you can see now, with that Revelation's own sketch. Needs `Map markers (core)`. | Icon: Sketch / Item. Default: Sketch. |
-| `Run threshold` | How far you tilt the left stick before Kiryu runs instead of walking. | Run at: Full tilt (original) / 3/4 tilt / Half tilt / Any tilt. Default: Half tilt. |
-| `Save from the pause menu` | Experimental. Adds a Save prompt on Triangle to the pause menu. It opens the game's own save list. It is greyed out where a save is not safe. See [Save from the pause menu](#save-from-the-pause-menu) for where not to save. | No values: tick it to turn it on. |
-| `Shadow blur` | How far the soft edge of shadows spreads (Blur width) and how it fades (Blur shape). | Blur width: x1.5 (softer) / x1.25 / x1.0 (original) / x0.75 / x0.5 / x0.33 (sharpest). Default: x1.0 (original).<br>Blur shape: Even (original) / Tapered / Strongly tapered. Default: Even (original).<br>*At its defaults it changes nothing: pick a value.* |
-| `Shadow map 2048` | Doubles the size of the shadow map (1024 to 2048) for finer shadows. | No values: tick it to turn it on. |
-| `Shadow range` | Shadows reach further from the camera. Use it with `Shadow map 2048`. | Shadow range: 64 m (original) / 96 m / 128 m. Default: 128 m. |
-| `Shogi marker` | Marks the shogi challenge matches in Gion with a shogi piece. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Short boot logos` | The SEGA and HAVOK logos at boot pass quickly. The game still finishes loading behind them. | Logo time: Original / Short / Shortest. Default: Short. |
-| `Side missions at any hour` | Experimental. Side missions and people that only appear at one time of day can be met at any hour. Talks lets the time conditions of talks pass; People keeps such people always there. The clock, the light and the story do not change. | Talks: Original / Any hour. Default: Original.<br>People: Original / Any hour. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
-| `Skip hold` | Shortens how long you must hold the skip button in story videos and cutscenes. | Videos: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s.<br>Cutscenes: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s. |
-| `Smart lock-on` | The automatic target prefers enemies that are standing over enemies lying on the ground. | Downed enemies: Targeted as before (original) / Only when no standing enemy is near / Never. Default: Only when no standing enemy is near. |
-| `Sprint sooner` | How long you must run before Kiryu breaks into a sprint. In free roam the sprint still needs the Skanda Sandals or `Sprint from the start`, and Gion has none. | In free roam: 1 s (original) / 0.5 s / 0.25 s. Default: 0.5 s.<br>In fights: 3 s (original) / 2 s / 1 s / 0.5 s. Default: 3 s (original). |
-| `Stage detail` | Draws the full stage models where the game swaps in simplified far versions, such as the festival tower and the far part of the Gion street. | Far areas: Simplified when far (original) / Always full detail. Default: Simplified when far (original).<br>*At its defaults it changes nothing: pick a value.* |
-| `Stick dead zone` | Makes the game's own stick dead zone smaller, for both sticks. RPCS3's own dead zone setting still applies first. | Dead zone: 23% (original) / 16% / 10% / 5% / 2%. Default: 10%. |
-| `Text speed` | Dialogue text appears faster. | Text speed: x1 (original) / x1.5 / x2 / x3 / x4 / Instant. Default: x2. |
-| `Time of day` | Shows every area at the chosen time of day from the next area load, where the area has a look for it. People, shops and events still follow the real time. | Time of day: Original / Day / Evening / Night. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
-| `Turtle markers` | Marks the turtles you can find, each with its own picture: story turtles, the turtles in your room at the Tatsuya, turtles in the fields and streets, and the Eternal Turtle. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Turtle seller marker` | Marks the man in Rakugai who sells turtles, turtle food and turtle buckets, with a NEW badge while his free turtle bucket is on offer. Needs `Map markers (core)`. | No values: tick it to turn it on. |
-| `Vibration` | Controller vibration strength. Off stops both motors; the lower values weaken the strong motor only. | Strength: Off / 25 % / 50 % / 75 % / Original. Default: 50 %. |
-| `Volume balance` | Separate levels for spoken lines (Voice), for music and ambience, and for sound effects (Effects). | Voice: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Music and ambience: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Effects: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>*At its defaults it changes nothing: pick a value.* |
-| `Wanted Men markers` | Marks the Wanted Man on offer at the Notice Board with his own poster face; once you have taken him on, his face at his first place and a blue "?" where his next step is ready. Needs `Map markers (core)`. See [Map markers](#map-markers). | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
-| `Weather` | Forces the weather in every area from the next area load. With Clear, rain the story itself calls for may still show. | Weather: Rain / Storm / Clear. Default: Rain. |
-| `Yujo date markers` | Marks with a heart the place where a yujo waits for her date with you. Needs `Map markers (core)`. | No values: tick it to turn it on. |
+| `Turtle title race freeze` | Fixes a freeze of the original game. In Turtle Racing, entering a turtle of ability 59 or less in the Adamantine Cup or the Strongest Undefeated GP hangs the game for good. With the fix the game gives up its search after a while and lets in rivals it normally holds back. See [the turtle freeze](#the-turtle-title-race-freeze). | No values: tick it to turn it on. |
 
 </details>
 
 <details>
-<summary><b>Gameplay cheats</b> (45)</summary>
+<summary><b>Gameplay - Controls</b> (9)</summary>
 
-Cheats change the game's difficulty and economy, and what is written to your save. Keep a copy of your save. The minigame assists change the difficulty of their minigame.
+| Entry | What it does | Values |
+|---|---|---|
+| `Camera distance` | Moves the gameplay camera further away or closer (Distance) and higher or lower (Height). Walls still pull it in. | Distance: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.2.<br>Height: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.0 (original). |
+| `Camera speed` | How fast the right stick turns the camera. Set both values to the same number. | Camera speed: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%.<br>Camera ramp: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%. |
+| `Camera vertical reach` | Lets the right stick move the camera further up and down than the original. | Vertical reach: x1.0 (original) / x1.25 / x1.5. Default: x1.5. |
+| `Lock-on toggle` | Press R1 once to lock on and again to release, instead of holding it. | No values: tick it to turn it on. |
+| `Run threshold` | How far you tilt the left stick before Kiryu runs instead of walking. | Run at: Full tilt (original) / 3/4 tilt / Half tilt / Any tilt. Default: Half tilt. |
+| `Smart lock-on` | The automatic target prefers enemies that are standing over enemies lying on the ground. | Downed enemies: Targeted as before (original) / Only when no standing enemy is near / Never. Default: Only when no standing enemy is near. |
+| `Sprint sooner` | How long you must run before Kiryu breaks into a sprint. In free roam the sprint still needs the Skanda Sandals or `Sprint from the start`, and Gion has none. | In free roam: 1 s (original) / 0.5 s / 0.25 s. Default: 0.5 s.<br>In fights: 3 s (original) / 2 s / 1 s / 0.5 s. Default: 3 s (original). |
+| `Stick dead zone` | Makes the game's own stick dead zone smaller, for both sticks. RPCS3's own dead zone setting still applies first. | Dead zone: 23% (original) / 16% / 10% / 5% / 2%. Default: 10%. |
+| `Vibration` | Controller vibration strength. Off stops both motors; the lower values weaken the strong motor only. | Strength: Off / 25 % / 50 % / 75 % / Original. Default: 50 %. |
+
+</details>
+
+<details>
+<summary><b>Gameplay - Convenience</b> (7)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Idle monologue` | How long you must stand still before Kiryu starts talking to himself in the street, or never. | Idle monologue after: 3.5 s / 7 s (original) / 15 s / 30 s / 60 s / Off. Default: 30 s. |
+| `Notebook tracker` | The Notebook's three lists (Requests, Contracts, Wanted Men) show every side mission as Locked (what to do first), Not now or Available (where to go). The row of Request 100 also counts what you have done. English builds only. See [Notebook tracker](#notebook-tracker). | No values: tick it to turn it on. |
+| `Retry on Legend` | Experimental. On Legend, losing a story fight shows the Retry menu instead of sending you to the title menu. | No values: tick it to turn it on. |
+| `Save from the pause menu` | Experimental. Adds a Save prompt on Triangle to the pause menu. It opens the game's own save list. It is greyed out where a save is not safe. See [Save from the pause menu](#save-from-the-pause-menu) for where not to save. | No values: tick it to turn it on. |
+| `Short boot logos` | The SEGA and HAVOK logos at boot pass quickly. The game still finishes loading behind them. | Logo time: Original / Short / Shortest. Default: Short. |
+| `Side missions at any hour` | Experimental. Side missions and people that only appear at one time of day can be met at any hour. Talks lets the time conditions of talks pass; People keeps such people always there. The clock, the light and the story do not change. | Talks: Original / Any hour. Default: Original.<br>People: Original / Any hour. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
+| `Skip hold` | Shortens how long you must hold the skip button in story videos and cutscenes. | Videos: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s.<br>Cutscenes: 3 s (original) / 1.5 s / 1 s / 0.5 s / 0.3 s. Default: 1 s. |
+
+</details>
+
+<details>
+<summary><b>Gameplay cheats - Combat</b> (15)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
 | `Accessory effects` | Gives you the effect of up to two accessories without wearing them. | Accessory 1: None / Skanda Sandals (sprint, outside Gion) / Lucky Beads (no street thugs) / Coveted Shunga (street thugs everywhere) / Swordsman Training Mail (battle experience x1.5) / Anger Charm (Heat fills x2) / Bloodstained Sarashi (Heat fills x3) / War God Amulet (Heat always full) / Silent Sandals. Default: None.<br>Accessory 2: None / Skanda Sandals (sprint, outside Gion) / Lucky Beads (no street thugs) / Coveted Shunga (street thugs everywhere) / Swordsman Training Mail (battle experience x1.5) / Anger Charm (Heat fills x2) / Bloodstained Sarashi (Heat fills x3) / War God Amulet (Heat always full) / Silent Sandals. Default: None. |
-| `Assist - Cee-lo` | Multiplies what you win in a round of Cee-lo dice. The amount on screen stays the original; your money gets the multiplied amount. Losses are not changed. | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2. |
-| `Assist - Cho-han` | Multiplies what a won bet pays. Your call Always wins makes every even or odd call on the house bet win (the dice shown may still say otherwise). | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2.<br>Your call: Original / Always wins. Default: Original. |
-| `Assist - Iaigiri Spirit Tempering` | A wider window for each cut, and the top grade for every cut that lands. | Cut window: Original / Wide. Default: Wide.<br>Grading: Original / Always best. Default: Always best. |
-| `Assist - Iroha Karuta` | Each card you take counts 2 or 3 points. The yujo's takes and the fault rule are not changed. | Your card value: 1 point (original) / 2 points / 3 points. Default: 2 points. |
-| `Assist - Kabuki Acting` | Multiplies the coins the audience throws at each payment during the act. | Coins: x1 (original) / x2 / x3. Default: x2. |
-| `Assist - Koi-koi` | Multiplies the wooden tags a won Koi-koi match pays. Stakes and the match score are not changed. | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2. |
-| `Assist - Konpira Fune Fune` | The yujo makes wrong moves more often. | Opponent mistakes: Original / A few more (x0.95) / More (x0.9) / Many (x0.8). Default: More (x0.9). |
-| `Assist - Mahjong` | Sets the points you start a game with. The other three players keep 25,000. | Your starting points: 25,000 (original) / 35,000 / 45,000 / 50,000. Default: 35,000. |
-| `Assist - Scarecrow Formations` | Experimental. Scarecrow Formations at Koetsu's mansion: adds extra seconds to the time limit and to every rank's target time. | Extra time: Original / +10 s / +20 s / +30 s / +60 s. Default: +20 s. |
-| `Assist - Shogi` | You win once the move count of the match (both sides together) reaches this number after one of your moves. | Win after: 500 moves (original) / 200 moves / 100 moves / 60 moves. Default: 200 moves. |
-| `Assist - Tokkuri Toppling` | The opponent makes mistakes more often: sets the four mistake chances (position, power, aim, hook) to one value. It acts on opponents of the game's skill level 1; other levels keep their own play. | Opponent mistakes: 40% / 60% / 80% / Always. Default: 60%. |
-| `Assist - Tosenkyo` | Multiplies the points of your throws in the fan toss. The yujo's throws are not changed. | Your points: x1 (original) / x2 / x3. Default: x2. |
-| `Assist - Waterfall Meditation` | Lowers the gauge level you must keep at the end of a course, and can start the gauge higher. The rank is not made easier. | Pass line: Original / 12% lower / 25% lower / 50% lower. Default: 25% lower.<br>Starting gauge: Original / 25% higher / 50% higher. Default: Original. |
-| `Assist - Yabusame` | Lowers the hit rate needed for each rank, so a round earns a better rank. | No values: tick it to turn it on. |
-| `Coliseum prize item` | Chooses which of the four item prizes of a Coliseum tournament you get when you win. The original is a random pick; prizes 3 and 4 are the rare ones. | Item prize: Random (original) / Always prize 1 / Always prize 2 / Always prize 3 / Always prize 4 (rarest). Default: Random (original).<br>*At its defaults it changes nothing: pick a value.* |
-| `Coliseum prize money` | Multiplies the money prizes of the Coliseum tournaments at the Hozoin. Item prizes are not changed. | Prize money: x1 (original) / x2 / x3 / x5 / x10. Default: x2. |
 | `Damage dealt` | Scales the damage your attacks deal. Boss difficulty scaling still applies on top. | Damage dealt: x1 (original) / x1.5 / x2 / x3 / x5 / x10. Default: x2. |
 | `Damage taken` | Scales the damage you take. | Damage taken: x0 (invincible) / x0.25 / x0.5 / x1 (original) / x1.5 / x2 / x4. Default: x0.5. |
-| `Drunkenness` | How drunk drinks make you (Drinks) and how fast you sober up (Sobering). | Drinks: Original / Half / None. Default: Half.<br>Sobering: x1 (original) / x2 / x5 / x10 / At once. Default: x5. |
-| `Encounter rate` | How many groups of street thugs wait in each area. Off means none; Always fills every spot. Groups already placed stay until the game draws them again. | Encounters: Off / Fewer / Original / More / Always. Default: Off. |
-| `Encounter refresh` | How often the groups of street thugs are drawn again (the original: every fifth area change). Use it with `Encounter rate` to see that entry's effect at once. | Refresh: Original / Every area change / Every 2nd area change. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
 | `Enemies attacking at once` | How many enemies of a group may attack you at the same time, as on the chosen difficulty. Damage and health still follow your real difficulty. | Attackers: By difficulty (original) / As Easy (one fewer) / As Normal / As Hard (one more) / As Legend (two more). Default: As Easy (one fewer). |
 | `Enemies never block` | Enemies and bosses do not guard. Fighting allies are affected too. Untick it for the normal game. | No values: tick it to turn it on. |
 | `Enemy health` | Scales the health of enemies and of bosses when they appear. | Enemies: x0.1 (one hit) / x0.25 / x0.5 / x0.75 / x1 (original) / x1.5 / x2 / x3. Default: x1 (original).<br>Bosses: x0.1 (one hit) / x0.25 / x0.5 / x0.75 / x1 (original) / x1.5 / x2 / x3. Default: x1 (original).<br>*At its defaults it changes nothing: pick a value.* |
-| `Experience multiplier` | All experience multiplies every experience gain. Battle experience multiplies the experience for defeated enemies, on top of the first. | All experience: x1 (original) / x2 / x3 / x5 / x10. Default: x1 (original).<br>Battle experience: x1 (original) / x2 / x3 / x5 / x10. Default: x2. |
-| `Experience penalty` | Street fights cut your experience when you are at or above the level the chapter expects. Strength sets the cut; Starts sets how far above that level it begins. | Strength: 1/20 (original) / 1/10 / 1/4 / 1/2 / None. Default: 1/2.<br>Starts: At the expected level (original) / 1 level above / 3 levels above / 5 levels above / 10 levels above / Never. Default: At the expected level (original). |
-| `Forging materials` | Blacksmith forging without the recipe's materials, without using them up, or without the crafting book. The weapon and the fee are still needed. | Materials needed: Yes (original) / No. Default: Yes (original).<br>Materials used up: Yes (original) / No. Default: Yes (original).<br>Manuals needed: Yes (original) / No. Default: Yes (original).<br>*At its defaults it changes nothing: pick a value.* |
 | `Forgiving prompts` | A wrong press at a single-button prompt is ignored, so you can still press the right one before time runs out. No press still fails. Covers boss button prompts and the prompt sequences of Heat Actions, not mash prompts. | Wrong button: Fails the prompt (original) / Ignored. Default: Ignored. |
-| `Free spending` | Experimental. Your money does not go down when you pay. You still need the money in hand to buy. | No values: tick it to turn it on. |
 | `Healing` | Medicine heals more. | Healing: x1 (original) / x1.5 / x2 / x3. Default: x2. |
 | `Heat always full` | Your Heat gauge stays full, as with the War God Amulet. | No values: tick it to turn it on. |
 | `Heat gain` | Multiplies the Heat you gain from hits and taunts. Heat lost when you are hit and the slow drain are not changed. | Heat gain: x0.5 / x1 (original) / x1.5 / x2 / x3 / x5. Default: x2. |
 | `Hold to mash` | Hold the button instead of mashing: a held button counts as about 10 presses a second. Single-press prompts are not changed. Holding does not help against a stun. | No values: tick it to turn it on. |
-| `Items are not used up` | Items you use from the pause menu stay in your bag. Buying, selling and giving items work as before. | No values: tick it to turn it on. |
-| `Jiraiya Training pass lines` | Lowers the score needed for each rank in Jiraiya Training, the pass line and the top rank alike. Your shown score is not changed. | Score lines: Original / 20% lower / 33% lower / 50% lower. Default: 20% lower. |
-| `Money multiplier` | Experimental. Multiplies the money you gain. Spending is not changed. | Money: x1.5 / x2 / x3 / x5. Default: x2. |
 | `Never die` | You still take damage, but a hit cannot take your last point of health. | No values: tick it to turn it on. |
-| `Shop prices` | Changes what you pay in shops (Buying) and what shops pay you (Selling). Selling stacks with `Money multiplier`. Exchanges for wooden tags or prizes are not changed. | Buying: x0.25 / x0.5 / x0.75 / x1 (original) / x1.5 / x2. Default: x0.5.<br>Selling: x1 (original) / x1.5 / x2 / x3. Default: x1 (original). |
-| `Sprint from the start` | You can sprint outside Gion without the Skanda Sandals. Gion has no sprint, with or without them. | No values: tick it to turn it on. |
 | `Street weapon durability` | Weapons you pick up in street fights last longer before they break. Your own swords are not changed. | Durability: x1 (original) / x1.5 / x2 / x3. Default: x2. |
-| `Talk fees` | Lowers the fee a few people ask you to pay in talks. Palanquin rides and shops are not changed (shops: `Shop prices`). | Fees: Free / x0.25 / x0.5 / x0.75 / x1 (original). Default: x0.5. |
-| `Turtle title races` | The two Turtle Racing title races with the strongest rivals (the Adamantine Cup and the Strongest Undefeated GP) accept weaker rival turtles. This also ends the freeze; to end only the freeze, use `Turtle title race freeze` instead. | Rival strength needed: Original (79) / Easier (69) / Much easier (59). Default: Easier (69). |
 | `Untouchable` | Enemy attacks do no damage to you. | No values: tick it to turn it on. |
 | `Weapon wear` | How fast weapons lose durability. Off makes them unbreakable. | Weapon wear: Off (unbreakable) / Half / Original / Double. Default: Half. |
 
 </details>
 
 <details>
-<summary><b>Bug fix</b> (1)</summary>
+<summary><b>Gameplay cheats - Growth</b> (3)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Turtle title race freeze` | Fixes a freeze of the original game. In Turtle Racing, entering a turtle of ability 59 or less in the Adamantine Cup or the Strongest Undefeated GP hangs the game for good. With the fix the game gives up its search after a while and lets in rivals it normally holds back. See [the turtle freeze](#the-turtle-title-race-freeze). | No values: tick it to turn it on. |
+| `Experience multiplier` | All experience multiplies every experience gain. Battle experience multiplies the experience for defeated enemies, on top of the first. | All experience: x1 (original) / x2 / x3 / x5 / x10. Default: x1 (original).<br>Battle experience: x1 (original) / x2 / x3 / x5 / x10. Default: x2. |
+| `Experience penalty` | Street fights cut your experience when you are at or above the level the chapter expects. Strength sets the cut; Starts sets how far above that level it begins. | Strength: 1/20 (original) / 1/10 / 1/4 / 1/2 / None. Default: 1/2.<br>Starts: At the expected level (original) / 1 level above / 3 levels above / 5 levels above / 10 levels above / Never. Default: At the expected level (original). |
+| `Sprint from the start` | You can sprint outside Gion without the Skanda Sandals. Gion has no sprint, with or without them. | No values: tick it to turn it on. |
+
+</details>
+
+<details>
+<summary><b>Gameplay cheats - Minigames</b> (16)</summary>
+
+The minigame assists change the difficulty of their minigame.
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Cee-lo` | Multiplies what you win in a round of Cee-lo dice. The amount on screen stays the original; your money gets the multiplied amount. Losses are not changed. | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2. |
+| `Cho-han` | Multiplies what a won bet pays. Your call Always wins makes every even or odd call on the house bet win (the dice shown may still say otherwise). | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2.<br>Your call: Original / Always wins. Default: Original. |
+| `Iaigiri Spirit Tempering` | A wider window for each cut, and the top grade for every cut that lands. | Cut window: Original / Wide. Default: Wide.<br>Grading: Original / Always best. Default: Always best. |
+| `Iroha Karuta` | Each card you take counts 2 or 3 points. The yujo's takes and the fault rule are not changed. | Your card value: 1 point (original) / 2 points / 3 points. Default: 2 points. |
+| `Jiraiya Training` | Lowers the score needed for each rank in Jiraiya Training, the pass line and the top rank alike. Your shown score is not changed. | Score lines: Original / 20% lower / 33% lower / 50% lower. Default: 20% lower. |
+| `Kabuki Acting` | Multiplies the coins the audience throws at each payment during the act. | Coins: x1 (original) / x2 / x3. Default: x2. |
+| `Koi-koi` | Multiplies the wooden tags a won Koi-koi match pays. Stakes and the match score are not changed. | Winnings: x1 (original) / x1.5 / x2 / x3 / x5. Default: x2. |
+| `Konpira Fune Fune` | The yujo makes wrong moves more often. | Opponent mistakes: Original / A few more (x0.95) / More (x0.9) / Many (x0.8). Default: More (x0.9). |
+| `Mahjong` | Sets the points you start a game with. The other three players keep 25,000. | Your starting points: 25,000 (original) / 35,000 / 45,000 / 50,000. Default: 35,000. |
+| `Scarecrow Formations` | Experimental. Scarecrow Formations at Koetsu's mansion: adds extra seconds to the time limit and to every rank's target time. | Extra time: Original / +10 s / +20 s / +30 s / +60 s. Default: +20 s. |
+| `Shogi` | You win once the move count of the match (both sides together) reaches this number after one of your moves. | Win after: 500 moves (original) / 200 moves / 100 moves / 60 moves. Default: 200 moves. |
+| `Tokkuri Toppling` | The opponent makes mistakes more often: sets the four mistake chances (position, power, aim, hook) to one value. It acts on opponents of the game's skill level 1; other levels keep their own play. | Opponent mistakes: 40% / 60% / 80% / Always. Default: 60%. |
+| `Tosenkyo` | Multiplies the points of your throws in the fan toss. The yujo's throws are not changed. | Your points: x1 (original) / x2 / x3. Default: x2. |
+| `Turtle title races` | The two Turtle Racing title races with the strongest rivals (the Adamantine Cup and the Strongest Undefeated GP) accept weaker rival turtles. This also ends the freeze; to end only the freeze, use `Turtle title race freeze` instead. | Rival strength needed: Original (79) / Easier (69) / Much easier (59). Default: Easier (69). |
+| `Waterfall Meditation` | Lowers the gauge level you must keep at the end of a course, and can start the gauge higher. The rank is not made easier. | Pass line: Original / 12% lower / 25% lower / 50% lower. Default: 25% lower.<br>Starting gauge: Original / 25% higher / 50% higher. Default: Original. |
+| `Yabusame` | Lowers the hit rate needed for each rank, so a round earns a better rank. | No values: tick it to turn it on. |
+
+</details>
+
+<details>
+<summary><b>Gameplay cheats - Money and items</b> (8)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Coliseum prize item` | Chooses which of the four item prizes of a Coliseum tournament you get when you win. The original is a random pick; prizes 3 and 4 are the rare ones. | Item prize: Random (original) / Always prize 1 / Always prize 2 / Always prize 3 / Always prize 4 (rarest). Default: Random (original).<br>*At its defaults it changes nothing: pick a value.* |
+| `Coliseum prize money` | Multiplies the money prizes of the Coliseum tournaments at the Hozoin. Item prizes are not changed. | Prize money: x1 (original) / x2 / x3 / x5 / x10. Default: x2. |
+| `Forging materials` | Blacksmith forging without the recipe's materials, without using them up, or without the crafting book. The weapon and the fee are still needed. | Materials needed: Yes (original) / No. Default: Yes (original).<br>Materials used up: Yes (original) / No. Default: Yes (original).<br>Manuals needed: Yes (original) / No. Default: Yes (original).<br>*At its defaults it changes nothing: pick a value.* |
+| `Free spending` | Experimental. Your money does not go down when you pay. You still need the money in hand to buy. | No values: tick it to turn it on. |
+| `Items are not used up` | Items you use from the pause menu stay in your bag. Buying, selling and giving items work as before. | No values: tick it to turn it on. |
+| `Money multiplier` | Experimental. Multiplies the money you gain. Spending is not changed. | Money: x1.5 / x2 / x3 / x5. Default: x2. |
+| `Shop prices` | Changes what you pay in shops (Buying) and what shops pay you (Selling). Selling stacks with `Money multiplier`. Exchanges for wooden tags or prizes are not changed. | Buying: x0.25 / x0.5 / x0.75 / x1 (original) / x1.5 / x2. Default: x0.5.<br>Selling: x1 (original) / x1.5 / x2 / x3. Default: x1 (original). |
+| `Talk fees` | Lowers the fee a few people ask you to pay in talks. Palanquin rides and shops are not changed (shops: `Shop prices`). | Fees: Free / x0.25 / x0.5 / x0.75 / x1 (original). Default: x0.5. |
+
+</details>
+
+<details>
+<summary><b>Gameplay cheats - Street</b> (3)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Drunkenness` | How drunk drinks make you (Drinks) and how fast you sober up (Sobering). | Drinks: Original / Half / None. Default: Half.<br>Sobering: x1 (original) / x2 / x5 / x10 / At once. Default: x5. |
+| `Encounter rate` | How many groups of street thugs wait in each area. Off means none; Always fills every spot. Groups already placed stay until the game draws them again. | Encounters: Off / Fewer / Original / More / Always. Default: Off. |
+| `Encounter refresh` | How often the groups of street thugs are drawn again (the original: every fifth area change). Use it with `Encounter rate` to see that entry's effect at once. | Refresh: Original / Every area change / Every 2nd area change. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
+
+</details>
+
+<details>
+<summary><b>Map markers - Base</b> (1)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Core (required)` | Draws the markers of all the marker entries on the minimap and the pause map. Tick it with the marker entries you want: on its own it draws nothing. See [Map markers](#map-markers). | Marker size: Small / Medium / Large. Default: Medium. |
+
+</details>
+
+<details>
+<summary><b>Map markers - Collectibles</b> (6)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Items` | Marks the items lying on the ground in the story, each with its own picture, until you pick them up. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Locker keys` | Marks the locker keys you have not picked up yet in the area you are in, with the key's own picture, once the Request Storage Locker Instructions has explained the lockers. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Locker key / Locker. Default: Locker key. |
+| `Mission items` | Marks the things a mission step asks you to find, each with its own picture, while that step is on. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Oni's keys` | Marks each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Revelations` | Marks the places of the Revelations you can see now, with that Revelation's own sketch. Needs `Core (required)`. | Icon: Sketch / Item. Default: Sketch. |
+| `Turtles` | Marks the turtles you can find, each with its own picture: story turtles, the turtles in your room at the Tatsuya, turtles in the fields and streets, and the Eternal Turtle. Needs `Core (required)`. | No values: tick it to turn it on. |
+
+</details>
+
+<details>
+<summary><b>Map markers - Missions</b> (3)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Contracts` | A green "?" where a Contract can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
+| `Requests` | A green "?" where a Request can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
+| `Wanted Men` | Marks the Wanted Man on offer at the Notice Board with his own poster face; once you have taken him on, his face at his first place and a blue "?" where his next step is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
+
+</details>
+
+<details>
+<summary><b>Map markers - Places</b> (10)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Antique salesman` | Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item and a NEW badge while a new item is waiting. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Cee-lo` | Marks the cee-lo player in Rakugai. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Hozoin tournament` | Marks the tournament reception at the Hozoin, from chapter 9 on. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Junk buyer` | Marks the man in Rakugai who buys your junk, from chapter 5 on. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Koi-koi` | Marks the koi-koi player in Rakugai, with a NEW badge when a new opponent has been added. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Mahjong` | Marks the mahjong players in Gion. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Notice Board` | Marks the notice board at the banya in Rakugai, with a NEW badge while a new wanted poster is there. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Shogi` | Marks the shogi challenge matches in Gion with a shogi piece. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Turtle seller` | Marks the man in Rakugai who sells turtles, turtle food and turtle buckets, with a NEW badge while his free turtle bucket is on offer. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Yujo dates` | Marks with a heart the place where a yujo waits for her date with you. Needs `Core (required)`. | No values: tick it to turn it on. |
+
+</details>
+
+<details>
+<summary><b>Sound</b> (1)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Volume balance` | Separate levels for spoken lines (Voice), for music and ambience, and for sound effects (Effects). | Voice: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Music and ambience: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>Effects: 100% (original) / 85% / 70% / 55% / 40% / 25% / Off. Default: 100% (original).<br>*At its defaults it changes nothing: pick a value.* |
+
+</details>
+
+<details>
+<summary><b>Visuals - Camera</b> (1)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Field of view` | Widens the view of the gameplay camera. Cutscene and talk cameras are not changed. | Field of view: x1.0 (original) / x1.1 / x1.2 / x1.3 / x1.4 / x1.5. Default: x1.2. |
+
+</details>
+
+<details>
+<summary><b>Visuals - Interface</b> (4)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Fade speed` | Shortens the fades to and from black (doors, area changes and other screen fades). Instant fades stay instant. | Fade length: Original / x0.75 / x0.5 / x0.25. Default: x0.5. |
+| `Hide HUD` | Hides the HUD while you walk the streets: the HUD, the minimap, the action prompt (such as Talk) and name labels, or only the minimap and its marks. Menus, talks, shops, minigames and fights keep their HUD. | Hide HUD: In free roam / Only the minimap. Default: In free roam. |
+| `Photo mode` | Press L3 and R3 together in free roam: time stops, Kiryu stands still and the camera flies free, with the HUD hidden. Press them again to return. Opening the pause menu ends it. | Freeze time: On / Off (world keeps moving). Default: On.<br>Move speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game).<br>Look speed: x0.5 / x0.75 / x1 (30 FPS game) / x1.5 / x2 / x3. Default: x1 (30 FPS game). |
+| `Text speed` | Dialogue text appears faster. | Text speed: x1 (original) / x1.5 / x2 / x3 / x4 / Instant. Default: x2. |
+
+</details>
+
+<details>
+<summary><b>Visuals - Picture</b> (8)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Aspect ratio` | A picture for screens that are not 16:9. On 21:9 and 32:9 screens: a wider 3D view, the HUD, menus and text at their true shape, movies with black bars, fades and backdrops across the whole screen. On 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors): a taller 3D view, the HUD at its 16:9 distance from the top and bottom edges in play, menus letterboxed and centred, movies with bars at the top and bottom. Needs RPCS3's GPU > Stretch To Display Area: see [Aspect ratio setup](#aspect-ratio-setup). Two spots stay stretched: the Ultimate Match quit dialog and some menu backdrops at the sides. | Aspect ratio: 21:9 (2560x1080, 5120x2160) / 21:9 (3440x1440) / 21:9 (3840x1600) / 32:9 (3840x1080, 5120x1440, 7680x2160) / 16:10 (1280x800, 1920x1200, 2560x1600) / 3:2 (2160x1440, 2256x1504, 3000x2000) / 4:3 (1024x768, 1600x1200, 2048x1536). Default: 21:9 (3440x1440). |
+| `Bloom intensity` | Scales the glow the game adds around bright areas (lanterns, sky, sunlit walls). 0 removes the glow; 300 makes it three times as strong. | Bloom (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
+| `Clean picture` | Stops the game blurring every finished frame, removes the grid over blurred backgrounds and keeps edges clean at any Resolution Scale. No file to copy. See [Clean picture](#clean-picture). | No values: tick it to turn it on. |
+| `Depth of field` | How strong the background blur of cutscenes and some talks is. 0 removes it. Use it with `Clean picture`. | Strength (%): a number from 0 to 300 (100 is the original). Default: 100.<br>*At its defaults it changes nothing: pick a value.* |
+| `Shadow blur` | How far the soft edge of shadows spreads (Blur width) and how it fades (Blur shape). | Blur width: x1.5 (softer) / x1.25 / x1.0 (original) / x0.75 / x0.5 / x0.33 (sharpest). Default: x1.0 (original).<br>Blur shape: Even (original) / Tapered / Strongly tapered. Default: Even (original).<br>*At its defaults it changes nothing: pick a value.* |
+| `Shadow map 2048` | Doubles the size of the shadow map (1024 to 2048) for finer shadows. | No values: tick it to turn it on. |
+| `Shadow range` | Shadows reach further from the camera. Use it with `Shadow map 2048`. | Shadow range: 64 m (original) / 96 m / 128 m. Default: 128 m. |
+| `Stage detail` | Draws the full stage models where the game swaps in simplified far versions, such as the festival tower and the far part of the Gion street. | Far areas: Simplified when far (original) / Always full detail. Default: Simplified when far (original).<br>*At its defaults it changes nothing: pick a value.* |
+
+</details>
+
+<details>
+<summary><b>Visuals - World</b> (2)</summary>
+
+| Entry | What it does | Values |
+|---|---|---|
+| `Time of day` | Shows every area at the chosen time of day from the next area load, where the area has a look for it. People, shops and events still follow the real time. | Time of day: Original / Day / Evening / Night. Default: Original.<br>*At its defaults it changes nothing: pick a value.* |
+| `Weather` | Forces the weather in every area from the next area load. With Clear, rain the story itself calls for may still show. | Weather: Rain / Storm / Clear. Default: Rain. |
 
 </details>
 
@@ -631,7 +793,7 @@ The translation's initial release has its own folder. Any other folder means a b
 2. Check that it is ticked under your version's title, not under the plain title `Ryu ga Gotoku Kenzan!` of RPCS3's own list.
 3. Look for `PAT: Applied patch` with the entry's name in `RPCS3.log`. Entries for the minigames apply only when you enter that minigame.
 4. Some entries act only from the next area load (`Time of day`, `Weather`) or only in free roam (`Hide HUD`, `Photo mode`).
-5. A marker entry draws nothing without `Map markers (core)`, and most markers show only while there is something to find or do there.
+5. A marker entry draws nothing without `Core (required)`, and most markers show only while there is something to find or do there.
 
 </details>
 
