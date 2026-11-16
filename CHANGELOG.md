@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.2 (2026-11-16)
+
+**KenzanPatches 3.2:** hold L2 to skip Heat Actions, Gion open in the last chapter, and map markers that follow the game's own rules and icon sizes.
+
+### For users of 3.1
+
+- **Your ticks stay.** No entry changed its name, so RPCS3 keeps your ticks and values: replace the file and you are done.
+- The two new entries are off until you tick them.
+- Coming from 3.0 or older? Tick your entries again, once, under your version's title: see the 3.1 and 3.0 notes below.
+
+### New entries
+
+- `Hold L2 to skip Heat Actions` (`Gameplay - Controls`): hold L2 and press Triangle to do the normal move instead of a Heat Action, as in the later games of the series. The Heat Action cue hides while L2 is held.
+- `Gion stays open` (`Gameplay - Convenience`): from the last part of chapter 12 you can still go back to Gion through Tatsuya's back door, and side content stays available until you leave for Ganryujima.
+
+### Map markers
+
+- **Markers show only when the game would really let you.** A green "?" now shows only where the game itself would offer the Request or Contract now, with every condition it checks: the chapter, the time of day, earlier missions, and things like your money or your health where a mission asks for them. The same goes for the Wanted Man on the Notice Board and its NEW badge, the yujo dates, the Revelations and the antique salesman's items. A yujo's own Request now shows with a green "?" at her house's door on the visit that can start it.
+- **`Wanted Men` follows the man.** Once you have taken a man on, his face marks wherever his next step can be done now, instead of only his first place.
+- **Sizes that match the game's icons.** Markers now take the size of the game's own map icons in each area, on the minimap and the pause map, so they no longer look oversized on the highways and smaller maps. Missions are a step larger than shops and places. Marker size still scales them all.
+- **Show on: map, List or both.** `Core (required)` has a new **Show on** value (Both / Map / List, default Both): Map shows the markers as icons on the minimap and the pause map, List as named rows in the pause map's List, Both on both. Every marker entry has its own **Show on** too (Same as core, Map, List or Both), so one kind can go on the map or in the List on its own.
+- With `Gion stays open` ticked, the markers in Gion keep showing in the last part of chapter 12.
+
 ## 3.1 (2026-11-15)
 
 **KenzanPatches 3.1:** more aspect ratios (16:10, 3:2 and 4:3), and map markers for every collectible and side activity.

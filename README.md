@@ -19,12 +19,12 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 
 **[Drag the slider to see it for yourself](https://cptpakundo.github.io/KenzanPatches/compare/)**. Left: the original picture. Right: the `Clean picture` entry.
 
-**[Download 3.1](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
+**[Download 3.2](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.1](#coming-from-31) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
 
 > [!IMPORTANT]
-> **The entries are now grouped by type: tick your entries again.** The 3.1 file was updated on 2026-11-15. Every entry except the frame-rate entries has a new group in front of its name, so entries of one type sit together in Game Patches (`Gameplay - Controls`, `Map markers - Places`, `Visuals - Picture`, ...). RPCS3 keeps a tick under the entry name, so the old ticks no longer count. The frame-rate entries keep their names and their ticks. Nothing else changed.
+> **Coming from 3.1?** Replace the file and you are done: no entry changed its name, so your ticks and values stay. The two new entries, `Hold L2 to skip Heat Actions` and `Gion stays open`, are off until you tick them. See [Coming from 3.1](#coming-from-31).
 >
-> **Coming from 3.0?** Tick your entries again too. The map marker entries replace Side mission markers and More map markers, and Ultrawide is now `Aspect ratio`. See [Coming from 3.0](#coming-from-30).
+> **Coming from 3.0?** Tick your entries again. The entries are now grouped by type, the map marker entries replace Side mission markers and More map markers, and Ultrawide is now `Aspect ratio`. See [Coming from 3.0](#coming-from-30).
 >
 > **Coming from 2.2 or older? Tick your entries again, once.** 3.0 lists the game once per version and renames every entry, so RPCS3 no longer finds your old ticks. Also untick the old entries under the plain title `Ryu ga Gotoku Kenzan!`. See [Coming from 2.2 or older](#coming-from-22-or-older).
 
@@ -33,10 +33,10 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 1. **60 FPS and 120 FPS.** The whole game at the game's original speed: fights, Heat Actions, cutscenes, the open world and all 14 minigames. If your PC falls behind, the game draws fewer frames and keeps its pace.
 2. **Full ultrawide support, and more aspect ratios.** `Aspect ratio` gives 21:9 and 32:9 screens a wider 3D view and 16:10, 3:2 and 4:3 screens (Steam Deck, many laptops and tablets, older monitors) a taller one, with the HUD, menus and text at their true shape, movies with black bars, and fades and backdrops across the whole screen. Two spots stay stretched (see [Aspect ratio setup](#aspect-ratio-setup)).
 3. **Save anywhere (Experimental).** `Save from the pause menu` puts Save on Triangle in the pause menu, in free roam. It is greyed out where a save is not safe (see [Save from the pause menu](#save-from-the-pause-menu)).
-4. **Easier substory tracking, now with map markers for everything.** Markers on the minimap and the pause map for every collectible and side activity: a green "?" where a Request or Contract can start now and a blue "?" where its next step is ready, each Wanted Man's poster face, Revelation sketches, locker keys, turtles, items, the minigames, shops and more, with a NEW badge where there is something new. In the pause map's List (Triangle) each marker gets its own named row, and picking a row points at it. Tick `Core (required)` under `Map markers - Base` and the kinds you want (see [Map markers](#map-markers)). `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. Each of these entries works on its own: tick only `Core (required)` and `Requests` for the map marks without any hints in the Notebook.
-5. **A wide variety of patches for visuals and game functionality, with optional cheats.** `Clean picture` (the slider above), Photo mode, a hidden HUD, field of view, camera, shadows, bloom, depth of field, text speed, shorter fades, controls and comfort; cheats and fifteen minigame assists, all off until you tick them; and one fix for a freeze of the original game.
+4. **Easier substory tracking, now with map markers for everything.** Markers on the minimap and the pause map for every collectible and side activity: a green "?" where a Request or Contract can start now and a blue "?" where its next step is ready, each Wanted Man's poster face, Revelation sketches, locker keys, turtles, items, the minigames, shops and more, with a NEW badge where there is something new. A marker shows only when the game itself would let you start or do that thing now, and markers take the size of the game's own map icons in every area. In the pause map's List (Triangle) each marker gets its own named row, and picking a row points at it; show the markers on the map, in the List or both, for all of them or kind by kind. Tick `Core (required)` under `Map markers - Base` and the kinds you want (see [Map markers](#map-markers)). `Notebook tracker` makes the Notebook list every substory (Requests, Contracts, Wanted Men) as Locked with what to do first, Not now, or Available with where to go. Each of these entries works on its own: tick only `Core (required)` and `Requests` for the map marks without any hints in the Notebook.
+5. **A wide variety of patches for visuals and game functionality, with optional cheats.** `Clean picture` (the slider above), Photo mode, a hidden HUD, field of view, camera, shadows, bloom, depth of field, text speed, shorter fades, controls and comfort, now with `Hold L2 to skip Heat Actions` and `Gion stays open` in the last chapter; cheats and fifteen minigame assists, all off until you tick them; and one fix for a freeze of the original game.
 
-In all: 114 entries for each English title (2 frame-rate entries, 14 minigame entries, `Clean picture`, 96 optional entries and the bug fix). The Japanese original has 113: `Notebook tracker` is for the English builds only.
+In all: 116 entries for each English title (2 frame-rate entries, 14 minigame entries, `Clean picture`, 98 optional entries and the bug fix). The Japanese original has 115: `Notebook tracker` is for the English builds only.
 
 ## Supported versions
 
@@ -107,7 +107,7 @@ Not sure which one you have? Boot the game once, close RPCS3, and search `log\RP
 <summary><b>What the list looks like in Game Patches</b></summary>
 
 ```
-Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the default), 114 entries
+Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the default), 116 entries
 └─ BLJM60064 01.00
    ├─ Framerate - Core: 120 FPS | 60 FPS                       pick one
    ├─ Framerate - Minigames: (14, tick all)
@@ -115,12 +115,12 @@ Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the def
    │    Konpira Fune Fune, Mahjong, Shogi, Tokkuri Toppling, Tosenkyo, Turtle Racing,
    │    Waterfall Meditation, Yabusame
    ├─ Gameplay - Bug fix: Turtle title race freeze
-   ├─ Gameplay - Controls: (9)
-   │    Camera distance, Camera speed, Camera vertical reach, Lock-on toggle, Run threshold,
-   │    Smart lock-on, Sprint sooner, Stick dead zone, Vibration
-   ├─ Gameplay - Convenience: (7)
-   │    Idle monologue, Notebook tracker, Retry on Legend, Save from the pause menu,
-   │    Short boot logos, Side missions at any hour, Skip hold
+   ├─ Gameplay - Controls: (10)
+   │    Camera distance, Camera speed, Camera vertical reach, Hold L2 to skip Heat Actions,
+   │    Lock-on toggle, Run threshold, Smart lock-on, Sprint sooner, Stick dead zone, Vibration
+   ├─ Gameplay - Convenience: (8)
+   │    Gion stays open, Idle monologue, Notebook tracker, Retry on Legend,
+   │    Save from the pause menu, Short boot logos, Side missions at any hour, Skip hold
    ├─ Gameplay cheats - Combat: (15)
    │    Accessory effects, Damage dealt, Damage taken, Enemies attacking at once,
    │    Enemies never block, Enemy health, Forgiving prompts, Healing, Heat always full, Heat gain,
@@ -153,9 +153,9 @@ Ryu ga Gotoku Kenzan! (English translation)                    patch 13 (the def
    │    Shadow range, Stage detail
    └─ Visuals - World: (2)
         Time of day, Weather
-Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)   the same 114 entries
-Ryu ga Gotoku Kenzan! (English translation, initial release)   the same 114 entries
-Ryu ga Gotoku Kenzan! (Japanese original)                      113: no Notebook tracker
+Ryu ga Gotoku Kenzan! (English translation, patches 6 to 12)   the same 116 entries
+Ryu ga Gotoku Kenzan! (English translation, initial release)   the same 116 entries
+Ryu ga Gotoku Kenzan! (Japanese original)                      115: no Notebook tracker
 ```
 
 Each entry's full name is its group, a colon and its name, for example `Visuals - Picture: Aspect ratio`. RPCS3 sorts the entries by full name, so the entries of one group sit together, the groups are sorted by name, and so are the entries inside each group. The minigame names are the English translation's own words, as in the game's Completion List.
@@ -226,14 +226,22 @@ One setting in the game's custom configuration, and the `Aspect ratio` entry wit
 
 ### Map markers
 
-Tick `Core (required)` under `Map markers - Base` and the marker entries you want. Each kind is its own entry, and every marker shows on the minimap and on the pause map.
+Tick `Core (required)` under `Map markers - Base` and the marker entries you want. Each kind is its own entry, and every marker shows on the minimap and on the pause map. A marker shows only when the game's own conditions for it hold, so a green "?" means the game would really offer that mission now. Markers take the size of the game's own icons in each area, missions a step larger than shops and places.
+
+![A junction on the pause map with the markers beside the game's own icons](docs/shots/markers32_junction_pausemap.jpg)
+
+![The same junction on the minimap](docs/shots/markers32_junction_minimap.jpg)
+
+*At the Yoshioka Dojo junction: a Request's green "?" at the size of the game's own icons, and a locker key a step smaller, on the pause map and on the minimap.*
 
 <details>
 <summary><b>Every kind of marker, its icon and its values</b></summary>
 
-`Core (required)` draws the markers of all the marker entries: on its own it draws nothing, and a marker entry without it draws nothing. Its **Marker size** (Small / Medium / Large, default Medium) sets the size of every marker.
+`Core (required)` draws the markers of all the marker entries: on its own it draws nothing, and a marker entry without it draws nothing. Its **Marker size** (Small / Medium / Large, default Medium) sets the size of every marker, next to the game's own icons in each area. Its **Show on** (Both / Map / List, default Both) sets where the markers show: Map as icons on the minimap and the pause map, List as named rows in the pause map's List, Both on both.
 
-**Side missions** (`Map markers - Missions`). A green "?" marks where a Request or Contract can be started now; a Wanted Man on offer shows his own poster face at the Notice Board. **Mission progress** adds more:
+Every marker entry also has its own **Show on**: Same as core (the default) follows `Core (required)`; Map, List or Both sets it for that kind alone. For example, `Locker keys` at List keeps the keys off the map and lists them by name.
+
+**Side missions** (`Map markers - Missions`). A green "?" marks where a Request or Contract can be started now, under the same conditions the game checks before it offers the mission (the chapter, the time of day, earlier missions, and things like your money or your health where the mission asks for them). A Wanted Man on offer shows his own poster face at the Notice Board. **Mission progress** adds more:
 
 - Next step (the default): a blue "?" where the next step of a mission you have begun can be done now. For a step inside a building, the "?" shows at its door and inside.
 - Next step and blocked: also a red "?" where the next step is but cannot be done yet, for example at another time of day or later in the story.
@@ -241,41 +249,57 @@ Tick `Core (required)` under `Map markers - Base` and the marker entries you wan
 
 | Entry | What it marks | Values | Icon |
 |---|---|---|---|
-| `Requests` | Where a Request can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
-| `Contracts` | Where a Contract can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step. | Green, blue and red "?" |
-| `Wanted Men` | The man on offer at the Notice Board; once you have taken him on, his first place and the next step of his mission. Icon sets the mark at his first place. | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. | The man's poster face on the parchment; blue and red "?" |
+| `Requests` | Where a Request can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. | Green, blue and red "?" |
+| `Contracts` | Where a Contract can be started now, and its next step. | Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. | Green, blue and red "?" |
+| `Wanted Men` | The man on offer at the Notice Board; once you have taken him on, his face wherever his next step can be done now. Icon sets that mark. Mission progress at Next step and blocked also shows a red "?" where his next step cannot be done yet. | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. | The man's poster face on the parchment; red "?" |
 
 **Collectibles** (`Map markers - Collectibles`).
 
 | Entry | What it marks | Values | Icon |
 |---|---|---|---|
-| `Revelations` | The places of the Revelations you can see now: you have the sketch and have not learned the technique. | Icon: Sketch / Item. Default: Sketch. | That Revelation's own sketch |
-| `Locker keys` | The locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's marker goes once you pick it up. | Icon: Locker key / Locker. Default: Locker key. | The key's own picture |
-| `Turtles` | The overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, the turtles in the fields and streets from chapter 5 on (only while one is there), and the Eternal Turtle in Gion when he appears. | No values. | Each turtle's own picture |
-| `Items` | The items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3) until you pick them up. | No values. | Each item's own picture |
-| `Oni's keys` | Each Oni's Key the Oni drop in chapter 12 until you pick it up. | No values. | The key's own picture |
-| `Mission items` | The things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), only while that step is on. | No values. | Each item's own picture |
+| `Revelations` | The places of the Revelations you can see now: you have the sketch and have not learned the technique. | Icon: Sketch / Item. Default: Sketch.<br>Show on: Same as core / Map / List / Both. Default: Same as core. | That Revelation's own sketch |
+| `Locker keys` | The locker keys you have not picked up yet in the area you are in (keys J-3 to A-5), once the Request Storage Locker Instructions has explained the lockers. A key's marker goes once you pick it up. | Icon: Locker key / Locker. Default: Locker key.<br>Show on: Same as core / Map / List / Both. Default: Same as core. | The key's own picture |
+| `Turtles` | The overturned turtles during their story scenes, the rescued turtles waiting in your room at the Tatsuya, and the turtles in the fields and streets from chapter 5 on (only while one is there). | Show on: Same as core / Map / List / Both. Default: Same as core. | Each turtle's own picture |
+| `Items` | The items lying on the ground in the story (the temple in chapter 2, Ukiyo's house in chapter 3) until you pick them up. | Show on: Same as core / Map / List / Both. Default: Same as core. | Each item's own picture |
+| `Oni's keys` | Each Oni's Key the Oni drop in chapter 12 until you pick it up. | Show on: Same as core / Map / List / Both. Default: Same as core. | The key's own picture |
+| `Mission items` | The things a mission step asks you to find (Scrap of Paper, Rake, Bamboo Sticks, Red Book, the digging spot, Koetsu's Treasure), only while that step is on. | Show on: Same as core / Map / List / Both. Default: Same as core. | Each item's own picture |
 
 **Places and people** (`Map markers - Places`).
 
 | Entry | What it marks | Values | Icon |
 |---|---|---|---|
-| `Notice Board` | The notice board at the banya in Rakugai. With `Wanted Men` also ticked, the poster face of the man on offer takes the board's place. | No values. | The parchment; NEW while a new wanted poster is there |
-| `Mahjong` | The mahjong players in Gion. | No values. | Mahjong point sticks |
-| `Shogi` | The shogi challenge matches in Gion. | No values. | A shogi piece |
-| `Koi-koi` | The koi-koi player in Rakugai. | No values. | Gambling tags; NEW when a new opponent has been added |
-| `Cee-lo` | The cee-lo player in Rakugai. | No values. | Dice |
-| `Turtle seller` | The man in Rakugai who sells turtles, turtle food and turtle buckets. | No values. | A turtle bucket; NEW while his free turtle bucket is on offer |
-| `Junk buyer` | The man in Rakugai who buys your junk, from chapter 5 on. | No values. | A koban coin |
-| `Antique salesman` | The traveling salesman of antiques at the Sanjusangendo, from chapter 10 on. | No values. | The picture of his next item; NEW while a new item is waiting |
-| `Yujo dates` | The place where a yujo waits for her date with you. | No values. | A heart |
-| `Hozoin tournament` | The tournament reception at the Hozoin, from chapter 9 on. | No values. | A ticket |
+| `Notice Board` | The notice board at the banya in Rakugai. With `Wanted Men` also ticked, the poster face of the man on offer takes the board's place. | Show on: Same as core / Map / List / Both. Default: Same as core. | The parchment; NEW while a new wanted poster is there |
+| `Mahjong` | The mahjong players in Gion. | Show on: Same as core / Map / List / Both. Default: Same as core. | Mahjong point sticks |
+| `Shogi` | The shogi challenge matches in Gion. | Show on: Same as core / Map / List / Both. Default: Same as core. | A shogi piece |
+| `Koi-koi` | The koi-koi player in Rakugai. | Show on: Same as core / Map / List / Both. Default: Same as core. | Gambling tags; NEW when a new opponent has been added |
+| `Cee-lo` | The cee-lo player in Rakugai. | Show on: Same as core / Map / List / Both. Default: Same as core. | Dice |
+| `Turtle seller` | The man in Rakugai who sells turtles, turtle food and turtle buckets. | Show on: Same as core / Map / List / Both. Default: Same as core. | A turtle bucket; NEW while his free turtle bucket is on offer |
+| `Junk buyer` | The man in Rakugai who buys your junk, from chapter 5 on. | Show on: Same as core / Map / List / Both. Default: Same as core. | A koban coin |
+| `Antique salesman` | The traveling salesman of antiques at the Sanjusangendo, from chapter 10 on. | Show on: Same as core / Map / List / Both. Default: Same as core. | The picture of his next item; NEW while a new item is waiting |
+| `Yujo dates` | The place where a yujo waits for her date with you. | Show on: Same as core / Map / List / Both. Default: Same as core. | A heart |
+| `Hozoin tournament` | The tournament reception at the Hozoin, from chapter 9 on. | Show on: Same as core / Map / List / Both. Default: Same as core. | A ticket |
 
-**The List.** On the pause map, Triangle opens the List. Each marker gets its own row there, with its name (the Request's title, the Wanted Man's name, the sketch, the turtle) and a category chip, beside the game's own places. Picking a row points the map's pointer at that marker.
+**The List.** On the pause map, Triangle opens the List. Each marker gets its own row there, with its name (the Request's title, the Wanted Man's name, the sketch, the turtle) and a category chip, beside the game's own places. Picking a row points the map's pointer at that marker. With **Show on** at List, a kind shows only there, as rows without icons on the map.
+
+![The pause map's List with the markers as named rows and no icons on the map](docs/shots/markers32_list_only.jpg)
+
+*Show on at List: each marker is a named row in the List, and the map itself stays clear.*
+
+**Gion.** With `Gion stays open` ticked, the markers in Gion keep showing in the last part of chapter 12.
 
 `Hide HUD` set to Only the minimap hides the minimap with its markers; the pause map keeps them.
 
 </details>
+
+## Coming from 3.1
+
+Replace `imported_patch.yml`. No entry changed its name, so RPCS3 keeps your ticks and values. New in 3.2:
+
+- `Hold L2 to skip Heat Actions` (`Gameplay - Controls`): hold L2 and press Triangle to do the normal move instead of a Heat Action.
+- `Gion stays open` (`Gameplay - Convenience`): from the last part of chapter 12 you can still go back to Gion through Tatsuya's back door, and side content stays available until you leave for Ganryujima.
+- The map markers show only when the game would really let you start or do something there, and they take the size of the game's own icons in each area.
+- **Show on**, a new value of `Core (required)` and of every marker entry: markers on the map, in the List or both.
+- `Wanted Men`: once you have taken a man on, his face marks wherever his next step can be done now.
 
 ## Coming from 3.0
 
@@ -285,7 +309,7 @@ The same applies if you downloaded 3.1 before the update of 2026-11-15, when its
 
 From 3.0, the map markers and Ultrawide also changed. Side mission markers and More map markers are gone, and the marker entries replace them. Tick `Core (required)` under `Map markers - Base` and the kinds you want:
 
-| You had (3.0) | Tick now (3.1), with `Core (required)` |
+| You had (3.0) | Tick now (3.2), with `Core (required)` |
 |---|---|
 | Side mission markers | `Requests`, `Contracts` and `Wanted Men` (`Map markers - Missions`) |
 | More map markers, Revelations | `Revelations` (`Map markers - Collectibles`) |
@@ -370,8 +394,8 @@ Every entry, its values and its default. Each entry also carries notes in RPCS3.
 - **Framerate - Core** (2): `60 FPS` or `120 FPS`, the frame-rate patch of 2.2.
 - **Framerate - Minigames** (14): one entry per minigame that keeps it at the original speed. Tick all.
 - **Gameplay - Bug fix** (1): a freeze of the original game in two Turtle Racing title races.
-- **Gameplay - Controls** (9): camera distance, speed and reach, lock-on, running and sprinting, the stick dead zone, vibration.
-- **Gameplay - Convenience** (7): `Save from the pause menu`, the Notebook tracker, Retry on Legend, side missions at any hour, the idle monologue, boot logos, skip hold.
+- **Gameplay - Controls** (10): camera distance, speed and reach, holding L2 to skip a Heat Action, lock-on, running and sprinting, the stick dead zone, vibration.
+- **Gameplay - Convenience** (8): `Save from the pause menu`, the Notebook tracker, Gion open in the last chapter, Retry on Legend, side missions at any hour, the idle monologue, boot logos, skip hold.
 - **Gameplay cheats - Combat** (15), **- Growth** (3), **- Minigames** (16), **- Money and items** (8), **- Street** (3): health, damage, Heat, experience, money, items, weapons, prices, street thugs, the Coliseum, and fifteen minigame assists. Cheats change the game's difficulty and economy, and what is written to your save: keep a copy of your save.
 - **Map markers - Base** (1), **- Collectibles** (6), **- Missions** (3), **- Places** (10): `Core (required)` and its 19 marker entries.
 - **Sound** (1): volume balance.
@@ -434,13 +458,14 @@ Tick all 14. Each keeps its minigame at the original speed with the 60 or the 12
 </details>
 
 <details>
-<summary><b>Gameplay - Controls</b> (9)</summary>
+<summary><b>Gameplay - Controls</b> (10)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
 | `Camera distance` | Moves the gameplay camera further away or closer (Distance) and higher or lower (Height). Walls still pull it in. | Distance: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.2.<br>Height: x0.8 / x1.0 (original) / x1.2 / x1.4 / x1.6 / x2.0. Default: x1.0 (original). |
 | `Camera speed` | How fast the right stick turns the camera. Set both values to the same number. | Camera speed: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%.<br>Camera ramp: 50% / 75% / 100% (original) / 125% / 150% / 200% / 300%. Default: 150%. |
 | `Camera vertical reach` | Lets the right stick move the camera further up and down than the original. | Vertical reach: x1.0 (original) / x1.25 / x1.5. Default: x1.5. |
+| `Hold L2 to skip Heat Actions` | Hold L2 and press Triangle to do the normal move instead of a Heat Action. The Heat Action cue hides while L2 is held. | No values: tick it to turn it on. |
 | `Lock-on toggle` | Press R1 once to lock on and again to release, instead of holding it. | No values: tick it to turn it on. |
 | `Run threshold` | How far you tilt the left stick before Kiryu runs instead of walking. | Run at: Full tilt (original) / 3/4 tilt / Half tilt / Any tilt. Default: Half tilt. |
 | `Smart lock-on` | The automatic target prefers enemies that are standing over enemies lying on the ground. | Downed enemies: Targeted as before (original) / Only when no standing enemy is near / Never. Default: Only when no standing enemy is near. |
@@ -451,10 +476,11 @@ Tick all 14. Each keeps its minigame at the original speed with the 60 or the 12
 </details>
 
 <details>
-<summary><b>Gameplay - Convenience</b> (7)</summary>
+<summary><b>Gameplay - Convenience</b> (8)</summary>
 
 | Entry | What it does | Values |
 |---|---|---|
+| `Gion stays open` | From the last part of chapter 12 you can still go back to Gion through Tatsuya's back door, and side content stays available until you leave for Ganryujima. Map markers in Gion keep showing too. | No values: tick it to turn it on. |
 | `Idle monologue` | How long you must stand still before Kiryu starts talking to himself in the street, or never. | Idle monologue after: 3.5 s / 7 s (original) / 15 s / 30 s / 60 s / Off. Default: 30 s. |
 | `Notebook tracker` | The Notebook's three lists (Requests, Contracts, Wanted Men) show every side mission as Locked (what to do first), Not now or Available (where to go). The row of Request 100 also counts what you have done. English builds only. See [Notebook tracker](#notebook-tracker). | No values: tick it to turn it on. |
 | `Retry on Legend` | Experimental. On Legend, losing a story fight shows the Retry menu instead of sending you to the title menu. | No values: tick it to turn it on. |
@@ -557,7 +583,7 @@ The minigame assists change the difficulty of their minigame.
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Core (required)` | Draws the markers of all the marker entries on the minimap and the pause map. Tick it with the marker entries you want: on its own it draws nothing. See [Map markers](#map-markers). | Marker size: Small / Medium / Large. Default: Medium. |
+| `Core (required)` | Draws the markers of all the marker entries on the minimap and the pause map, at the size of the game's own icons in each area, and as named rows in the pause map's List. Tick it with the marker entries you want: on its own it draws nothing. See [Map markers](#map-markers). | Marker size: Small / Medium / Large. Default: Medium.<br>Show on: Both / Map / List. Default: Both. |
 
 </details>
 
@@ -566,12 +592,12 @@ The minigame assists change the difficulty of their minigame.
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Items` | Marks the items lying on the ground in the story, each with its own picture, until you pick them up. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Locker keys` | Marks the locker keys you have not picked up yet in the area you are in, with the key's own picture, once the Request Storage Locker Instructions has explained the lockers. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Locker key / Locker. Default: Locker key. |
-| `Mission items` | Marks the things a mission step asks you to find, each with its own picture, while that step is on. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Oni's keys` | Marks each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Revelations` | Marks the places of the Revelations you can see now, with that Revelation's own sketch. Needs `Core (required)`. | Icon: Sketch / Item. Default: Sketch. |
-| `Turtles` | Marks the turtles you can find, each with its own picture: story turtles, the turtles in your room at the Tatsuya, turtles in the fields and streets, and the Eternal Turtle. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Items` | Marks the items lying on the ground in the story, each with its own picture, until you pick them up. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Locker keys` | Marks the locker keys you have not picked up yet in the area you are in, with the key's own picture, once the Request Storage Locker Instructions has explained the lockers. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Locker key / Locker. Default: Locker key.<br>Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Mission items` | Marks the things a mission step asks you to find, each with its own picture, while that step is on. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Oni's keys` | Marks each Oni's Key the Oni drop in chapter 12, with the key's own picture, until you pick it up. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Revelations` | Marks the places of the Revelations you can see now, with that Revelation's own sketch. Needs `Core (required)`. | Icon: Sketch / Item. Default: Sketch.<br>Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Turtles` | Marks the turtles you can find, each with its own picture: story turtles, the turtles in your room at the Tatsuya, and turtles in the fields and streets. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
 
 </details>
 
@@ -580,9 +606,9 @@ The minigame assists change the difficulty of their minigame.
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Contracts` | A green "?" where a Contract can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
-| `Requests` | A green "?" where a Request can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
-| `Wanted Men` | Marks the Wanted Man on offer at the Notice Board with his own poster face; once you have taken him on, his face at his first place and a blue "?" where his next step is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step. |
+| `Contracts` | A green "?" where a Contract can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Requests` | A green "?" where a Request can be started now; a blue "?" where the next step of one you have begun is ready. Needs `Core (required)`. See [Map markers](#map-markers). | Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Wanted Men` | Marks the Wanted Man on offer at the Notice Board with his own poster face; once you have taken him on, his face wherever his next step can be done now. Needs `Core (required)`. See [Map markers](#map-markers). | Icon: Wanted poster / Pursuit / Item. Default: Wanted poster.<br>Mission progress: Next step / Next step and blocked / Off. Default: Next step.<br>Show on: Same as core / Map / List / Both. Default: Same as core. |
 
 </details>
 
@@ -591,16 +617,16 @@ The minigame assists change the difficulty of their minigame.
 
 | Entry | What it does | Values |
 |---|---|---|
-| `Antique salesman` | Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item and a NEW badge while a new item is waiting. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Cee-lo` | Marks the cee-lo player in Rakugai. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Hozoin tournament` | Marks the tournament reception at the Hozoin, from chapter 9 on. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Junk buyer` | Marks the man in Rakugai who buys your junk, from chapter 5 on. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Koi-koi` | Marks the koi-koi player in Rakugai, with a NEW badge when a new opponent has been added. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Mahjong` | Marks the mahjong players in Gion. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Notice Board` | Marks the notice board at the banya in Rakugai, with a NEW badge while a new wanted poster is there. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Shogi` | Marks the shogi challenge matches in Gion with a shogi piece. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Turtle seller` | Marks the man in Rakugai who sells turtles, turtle food and turtle buckets, with a NEW badge while his free turtle bucket is on offer. Needs `Core (required)`. | No values: tick it to turn it on. |
-| `Yujo dates` | Marks with a heart the place where a yujo waits for her date with you. Needs `Core (required)`. | No values: tick it to turn it on. |
+| `Antique salesman` | Marks the traveling salesman of antiques at the Sanjusangendo from chapter 10 on, with the picture of his next item and a NEW badge while a new item is waiting. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Cee-lo` | Marks the cee-lo player in Rakugai. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Hozoin tournament` | Marks the tournament reception at the Hozoin, from chapter 9 on. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Junk buyer` | Marks the man in Rakugai who buys your junk, from chapter 5 on. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Koi-koi` | Marks the koi-koi player in Rakugai, with a NEW badge when a new opponent has been added. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Mahjong` | Marks the mahjong players in Gion. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Notice Board` | Marks the notice board at the banya in Rakugai, with a NEW badge while a new wanted poster is there. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Shogi` | Marks the shogi challenge matches in Gion with a shogi piece. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Turtle seller` | Marks the man in Rakugai who sells turtles, turtle food and turtle buckets, with a NEW badge while his free turtle bucket is on offer. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
+| `Yujo dates` | Marks with a heart the place where a yujo waits for her date with you. Needs `Core (required)`. | Show on: Same as core / Map / List / Both. Default: Same as core. |
 
 </details>
 
@@ -793,7 +819,7 @@ The translation's initial release has its own folder. Any other folder means a b
 2. Check that it is ticked under your version's title, not under the plain title `Ryu ga Gotoku Kenzan!` of RPCS3's own list.
 3. Look for `PAT: Applied patch` with the entry's name in `RPCS3.log`. Entries for the minigames apply only when you enter that minigame.
 4. Some entries act only from the next area load (`Time of day`, `Weather`) or only in free roam (`Hide HUD`, `Photo mode`).
-5. A marker entry draws nothing without `Core (required)`, and most markers show only while there is something to find or do there.
+5. A marker entry draws nothing without `Core (required)`, and most markers show only while there is something to find or do there. A kind whose **Show on** is List shows only in the pause map's List.
 
 </details>
 
@@ -835,4 +861,4 @@ contains no game files. You need your own copy of the game.
 
 Project page: [github.com/CptPakundo/KenzanPatches](https://github.com/CptPakundo/KenzanPatches)
 
-<!-- readme-reviewed: 3.1 -->
+<!-- readme-reviewed: 3.2 -->
