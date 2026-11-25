@@ -19,7 +19,17 @@ KenzanPatches is one RPCS3 patch file, `imported_patch.yml`. Each change is an e
 
 **[Drag the slider to see it for yourself](https://cptpakundo.github.io/KenzanPatches/compare/)**. Left: the original picture. Right: the `Clean picture` entry.
 
-**[Download 3.2](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.1](#coming-from-31) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
+**[Download 3.2](https://github.com/CptPakundo/KenzanPatches/releases/latest)** · **[Try 4.0 Beta 1](https://github.com/CptPakundo/KenzanPatches/releases/tag/v4.0-beta.1)** · [Install](#install) · [120 FPS setup](#120-fps-setup) · [Aspect ratio setup](#aspect-ratio-setup) · [Map markers](#map-markers) · [Supported versions](#supported-versions) · [Coming from 3.1](#coming-from-31) · [Coming from 3.0](#coming-from-30) · [Coming from 2.2](#coming-from-22-or-older) · [All entries](#all-entries) · [Troubleshooting](#troubleshooting)
+
+> [!TIP]
+> **4.0 Beta 1 is out as a pre-release.** 3.2 stays the current release; try the beta if you want the new features early and don't mind [reporting what you find](https://github.com/CptPakundo/KenzanPatches/issues). Back up your saves first.
+>
+> - **Settings move into the game:** in RPCS3 you tick `KenzanPatches` and the 14 `Framerate - Minigames` entries; everything else is set in the new **In-Game Patch Manager** (Square on the pause menu), with a help box for every setting.
+> - **Frame rate** as one setting (Up to 120 / Up to 60 / 30), dropping to 60 and back by itself when your PC can't keep up.
+> - **Substory tracking:** a marker page in the pause map's List, `Set a course`, more marker kinds, a `Completion guide` to 100% and 50 `Feats`.
+> - **Post-game:** `Premium New Game`, and new camera, controls, scene-skip and quality-of-life options.
+>
+> Install steps and the full changelog: **[4.0 Beta 1 release page](https://github.com/CptPakundo/KenzanPatches/releases/tag/v4.0-beta.1)**.
 
 > [!IMPORTANT]
 > **Coming from 3.1?** Replace the file and you are done: no entry changed its name, so your ticks and values stay. The two new entries, `Hold L2 to skip Heat Actions` and `Gion stays open`, are off until you tick them. See [Coming from 3.1](#coming-from-31).
